@@ -96,7 +96,7 @@ public class Dealer implements Runnable {
      */
     private void removeCardsFromTable() {
         // TODO implement
-        List<Integer> OptionalSet = players[0].getSet();
+        List<Integer> OptionalSet = players[0].getPickedSlots();
         //find the set where the player clicked , check if it is legal and remove it
         int[] set = new int[3];
         set[0] = OptionalSet.get(0);
