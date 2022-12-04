@@ -108,9 +108,10 @@ public class Table {
         try {
             Thread.sleep(env.config.tableDelayMillis);
         } catch (InterruptedException ignored) {}
-
         // TODO implement
+        env.ui.removeCard(slot);
     }
+
 
     /**
      * Places a player token on a grid slot.

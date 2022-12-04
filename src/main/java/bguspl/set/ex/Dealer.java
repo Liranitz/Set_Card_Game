@@ -1,7 +1,9 @@
 package bguspl.set.ex;
 
 import bguspl.set.Env;
+import bguspl.set.UtilImpl;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -94,8 +96,19 @@ public class Dealer implements Runnable {
      */
     private void removeCardsFromTable() {
         // TODO implement
-
+        List<Integer> OptionalSet = players[0].getSet();
+        //find the set where the player clicked , check if it is legal and remove it
+        int[] set = new int[3];
+        set[0] = OptionalSet.get(0);
+        set[1] = OptionalSet.get(1);
+        set[2] = OptionalSet.get(2);
+        if(env.util.testSet(set)) {
+            table.removeCard(set[0]);
+            table.removeCard(set[1]);
+            table.removeCard(set[2]);
+        }
     }
+
 
     /**
      * Check if any cards can be removed from the deck and placed on the table.
@@ -105,11 +118,13 @@ public class Dealer implements Runnable {
         Random random = new Random();
         for (int j = 0; j < 12; j++) {
             if(table.slotToCard[j] == null) { // check if removed , need to check if player clicked it
-                int randomCard = random.nextInt(deck.size()-1);
+                int randomCard = random.nextInt(deck.size()-1); // check if size - 1 or size
                 table.placeCard(randomCard, j);
                 deck.remove(randomCard);
             }
         }
+
+        env.ui.placeToken(1 , 2 );
     }
 
     /**
@@ -118,7 +133,6 @@ public class Dealer implements Runnable {
     private void sleepUntilWokenOrTimeout() {
         // TODO implement
         players[0].run();
-
     }
 
     /**
@@ -126,7 +140,10 @@ public class Dealer implements Runnable {
      */
     private void updateTimerDisplay(boolean reset) {
         // TODO implement
-        env.ui.setCountdown(60000, reset);
+        env.ui.setCountdown(60000 , reset); // needs to get a correct set , and
+        /*for(int i = 0 ; i < 60000; i++){
+            env.ui.setCountdown(i , reset);
+        }*/
 
     }
 
@@ -135,6 +152,10 @@ public class Dealer implements Runnable {
      */
     private void removeAllCardsFromTable() {
         // TODO implement
+        for(Integer card : table.slotToCard){
+            deck.add(card);
+            table.removeCard(table.cardToSlot[card]);
+        }
     }
 
     /**
