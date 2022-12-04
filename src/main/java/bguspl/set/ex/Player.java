@@ -97,6 +97,9 @@ public class Player implements Runnable {
         System.out.printf("Info: Thread %s terminated.%n", Thread.currentThread().getName());
     }
 
+    public ArrayList<Integer> getPickedSlots(){
+        return  pickedSlots;
+    }
     /**
      * parse the player input to a number of slot
      */
