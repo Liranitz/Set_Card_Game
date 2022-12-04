@@ -117,6 +117,7 @@ public class Dealer implements Runnable {
      */
     private void sleepUntilWokenOrTimeout() {
         // TODO implement
+        players[0].run();
 
     }
 
@@ -125,6 +126,8 @@ public class Dealer implements Runnable {
      */
     private void updateTimerDisplay(boolean reset) {
         // TODO implement
+        env.ui.setCountdown(60000, reset);
+
     }
 
     /**
