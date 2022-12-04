@@ -1,5 +1,6 @@
 package bguspl.set.ex;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 import bguspl.set.Env;
 
@@ -87,7 +88,7 @@ public class Player implements Runnable {
         if (!human) createArtificialIntelligence();
 
         //need to check !!
-        terminate = false;
+
         while (!terminate) {
             // TODO implement main player loop
             Scanner token = new Scanner(System.in);
@@ -135,6 +136,10 @@ public class Player implements Runnable {
 
     }
 
+    public void resetSlots(){
+        this.pickedSlots = new ArrayList<>();
+    }
+
     /**
      * Creates an additional thread for an AI (computer) player. The main loop of this thread repeatedly generates
      * key presses. If the queue of key presses is full, the thread waits until it is not full.
@@ -168,8 +173,20 @@ public class Player implements Runnable {
      */
     public void keyPressed(int slot) {
         // TODO implement
-        env.ui.placeToken(this.id, slot);
-        pickedSlots.add(slot);
+        int temp = -1;
+        for (int i=0; i<pickedSlots.size(); i++)
+            if (pickedSlots.get(i) == slot)
+                temp = i;
+        if (temp != -1){
+            env.ui.removeTokens(slot);
+            pickedSlots.remove(temp);
+        }
+
+        else  {
+             env.ui.placeToken(this.id, slot);
+             pickedSlots.add(slot);
+        }
+
     }
 
     /**
@@ -180,7 +197,7 @@ public class Player implements Runnable {
      */
     public void point() {
         // TODO implement
-
+        this.score++;
         int ignored = table.countCards(); // this part is just for demonstration in the unit tests
         env.ui.setScore(id, ++score);
     }
@@ -190,6 +207,8 @@ public class Player implements Runnable {
      */
     public void penalty() {
         // TODO implement
+        //sleep for 1 second.
+       terminate = false; //to check
     }
 
     public int getScore() {
