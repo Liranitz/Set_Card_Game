@@ -1,5 +1,6 @@
 package bguspl.set.ex;
-
+import java.util.ArrayList;
+import java.util.Scanner;
 import bguspl.set.Env;
 
 /**
@@ -50,6 +51,11 @@ public class Player implements Runnable {
      */
     private int score;
 
+
+    /**
+     * The current score of the player.
+     */
+    private ArrayList<Integer> pickedSlots;
     /**
      * The class constructor.
      *
@@ -64,6 +70,7 @@ public class Player implements Runnable {
         this.table = table;
         this.id = id;
         this.human = human;
+        this.pickedSlots = new ArrayList<>();
     }
 
     /**
@@ -75,11 +82,53 @@ public class Player implements Runnable {
         System.out.printf("Info: Thread %s starting.%n", Thread.currentThread().getName());
         if (!human) createArtificialIntelligence();
 
+        //need to check !!
+        terminate = false;
         while (!terminate) {
             // TODO implement main player loop
+            Scanner token = new Scanner(System.in);
+            String i = token.nextLine();
+            int slot = parserInput(i.charAt(0));
+            keyPressed(slot);
+            if (pickedSlots.size() == 3)
+                terminate = true;
         }
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
         System.out.printf("Info: Thread %s terminated.%n", Thread.currentThread().getName());
+    }
+
+    /**
+     * parse the player input to a number of slot
+     */
+    public int parserInput(char ch) {
+        int pressKey=-1;
+        if (ch == 'Q' || ch == 'U')
+            pressKey = 0;
+        else if (ch == 'W' || ch == 'I')
+            pressKey = 1;
+        else if (ch == 'E' || ch == 'O')
+            pressKey = 2;
+        else if (ch == 'R' || ch == 'P')
+            pressKey = 3;
+        else if (ch == 'A' || ch == 'J')
+            pressKey = 4;
+        else if (ch == 'S' || ch == 'K')
+            pressKey = 5;
+        else if (ch == 'D' || ch == 'L')
+            pressKey = 6;
+        else if (ch == 'F' || ch == ';')
+            pressKey = 7;
+        else if (ch == 'Z' || ch == 'M')
+            pressKey = 8;
+        else if (ch == 'X' || ch == ',')
+            pressKey = 9;
+        else if (ch == 'C' || ch == '.')
+            pressKey = 10;
+        else if (ch == 'V' || ch == '/')
+            pressKey = 11;
+
+        return pressKey;
+
     }
 
     /**
@@ -115,6 +164,8 @@ public class Player implements Runnable {
      */
     public void keyPressed(int slot) {
         // TODO implement
+        env.ui.placeToken(this.id, slot);
+        pickedSlots.add(slot);
     }
 
     /**
