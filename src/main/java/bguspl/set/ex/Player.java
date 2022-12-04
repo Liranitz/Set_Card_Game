@@ -73,6 +73,10 @@ public class Player implements Runnable {
         this.pickedSlots = new ArrayList<>();
     }
 
+    public  ArrayList<Integer> getPickedSlots(){
+        return  pickedSlots;
+    }
+
     /**
      * The main player thread of each player starts here (main loop for the player thread).
      */
