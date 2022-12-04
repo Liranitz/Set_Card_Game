@@ -5,6 +5,7 @@ import bguspl.set.Env;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.Random;
 
 /**
  * This class manages the dealer's threads and data
@@ -93,6 +94,7 @@ public class Dealer implements Runnable {
      */
     private void removeCardsFromTable() {
         // TODO implement
+
     }
 
     /**
@@ -100,6 +102,14 @@ public class Dealer implements Runnable {
      */
     private void placeCardsOnTable() {
         // TODO implement
+        Random random = new Random();
+        for (int j = 0; j < 12; j++) {
+            if(table.slotToCard[j] == null) { // check if removed , need to check if player clicked it
+                int randomCard = random.nextInt(deck.size()-1);
+                table.placeCard(randomCard, j);
+                deck.remove(randomCard);
+            }
+        }
     }
 
     /**
@@ -107,6 +117,7 @@ public class Dealer implements Runnable {
      */
     private void sleepUntilWokenOrTimeout() {
         // TODO implement
+
     }
 
     /**

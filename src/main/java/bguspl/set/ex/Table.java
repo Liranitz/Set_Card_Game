@@ -95,6 +95,7 @@ public class Table {
         slotToCard[slot] = card;
 
         // TODO implement
+        env.ui.placeCard(card , slot);
     }
 
     /**
