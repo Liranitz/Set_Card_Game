@@ -91,48 +91,12 @@ public class Player implements Runnable {
 
         while (!terminate) {
             // TODO implement main player loop
-            //Thread.sleep(2000);
-            /*catch(Exception e){ // need to check if need to do something else
-                System.out.println("Insert input again please");
-            }*/
         }
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
         System.out.printf("Info: Thread %s terminated.%n", Thread.currentThread().getName());
     }
 
-    /**
-     * parse the player input to a number of slot
-     */
-    public int parserInput(char ch) {
 
-        int pressKey=-1;
-        if (ch == 'Q' || ch == 'U')
-            pressKey = 0;
-        else if (ch == 'W' || ch == 'I')
-            pressKey = 1;
-        else if (ch == 'E' || ch == 'O')
-            pressKey = 2;
-        else if (ch == 'R' || ch == 'P')
-            pressKey = 3;
-        else if (ch == 'A' || ch == 'J')
-            pressKey = 4;
-        else if (ch == 'S' || ch == 'K')
-            pressKey = 5;
-        else if (ch == 'D' || ch == 'L')
-            pressKey = 6;
-        else if (ch == 'F' || ch == ';')
-            pressKey = 7;
-        else if (ch == 'Z' || ch == 'M')
-            pressKey = 8;
-        else if (ch == 'X' || ch == ',')
-            pressKey = 9;
-        else if (ch == 'C' || ch == '.')
-            pressKey = 10;
-        else if (ch == 'V' || ch == '/')
-            pressKey = 11;
-        return pressKey;
-
-    }
 
     public void resetSlots(){
         this.pickedSlots = new ArrayList<>();
@@ -171,24 +135,27 @@ public class Player implements Runnable {
      */
     public void keyPressed(int slot) {
         // TODO implement
-        int temp = -1;
-        for (int i=0; i<pickedSlots.size(); i++)
-            if (pickedSlots.get(i) == slot)
-                temp = i;
-        if (temp != -1){
-            env.ui.removeTokens(slot);
-            pickedSlots.remove(temp);
+        if (table.slotToCard[slot] != null){
+            int temp = -1;
+            for (int i=0; i<pickedSlots.size(); i++)
+                if (pickedSlots.get(i) == slot)
+                    temp = i;
+            if (temp != -1){
+                env.ui.removeTokens(slot);
+                pickedSlots.remove(temp);
+            }
+
+            else if (pickedSlots.size() < 3) {
+                env.ui.placeToken(this.id, slot);
+                pickedSlots.add(slot);
+                if(pickedSlots.size() == 3){
+                    //this.playerThread.wait(200);
+                    terminate = true;
+                    this.playerThread.interrupt();
+                }
+            }
         }
 
-        else if (pickedSlots.size() < 3) {
-             env.ui.placeToken(this.id, slot);
-             pickedSlots.add(slot);
-             if(pickedSlots.size() == 3){
-                 //this.playerThread.wait(200);
-                 terminate = true;
-                 this.playerThread.interrupt();
-             }
-        }
 
     }
 
@@ -202,7 +169,7 @@ public class Player implements Runnable {
         // TODO implement
         this.score++;
         int ignored = table.countCards(); // this part is just for demonstration in the unit tests
-        env.ui.setScore(id, ++score);
+        env.ui.setScore(id, score);
     }
 
     /**
