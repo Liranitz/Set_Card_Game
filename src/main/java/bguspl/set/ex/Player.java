@@ -91,12 +91,10 @@ public class Player implements Runnable {
 
         while (!terminate) {
             // TODO implement main player loop
-            Scanner token = new Scanner(System.in);
-            String i = token.nextLine();
-            int slot = parserInput(i.charAt(0));
-            keyPressed(slot);
-            if (pickedSlots.size() == 3)
-                terminate = true;
+            //Thread.sleep(2000);
+            /*catch(Exception e){ // need to check if need to do something else
+                System.out.println("Insert input again please");
+            }*/
         }
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
         System.out.printf("Info: Thread %s terminated.%n", Thread.currentThread().getName());
@@ -106,6 +104,7 @@ public class Player implements Runnable {
      * parse the player input to a number of slot
      */
     public int parserInput(char ch) {
+
         int pressKey=-1;
         if (ch == 'Q' || ch == 'U')
             pressKey = 0;
@@ -131,7 +130,6 @@ public class Player implements Runnable {
             pressKey = 10;
         else if (ch == 'V' || ch == '/')
             pressKey = 11;
-
         return pressKey;
 
     }
@@ -182,9 +180,14 @@ public class Player implements Runnable {
             pickedSlots.remove(temp);
         }
 
-        else  {
+        else if (pickedSlots.size() < 3) {
              env.ui.placeToken(this.id, slot);
              pickedSlots.add(slot);
+             if(pickedSlots.size() == 3){
+                 //this.playerThread.wait(200);
+                 terminate = true;
+                 this.playerThread.interrupt();
+             }
         }
 
     }
@@ -208,6 +211,7 @@ public class Player implements Runnable {
     public void penalty() {
         // TODO implement
         //sleep for 1 second.
+        //this.playerThread.wait(5000);
        terminate = false; //to check
     }
 

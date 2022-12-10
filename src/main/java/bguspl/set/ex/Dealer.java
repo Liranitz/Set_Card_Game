@@ -99,13 +99,24 @@ public class Dealer implements Runnable {
         List<Integer> OptionalSet = players[0].getPickedSlots();
         //find the set where the player clicked , check if it is legal and remove it
         int[] set = new int[3];
-        set[0] = OptionalSet.get(0);
-        set[1] = OptionalSet.get(1);
-        set[2] = OptionalSet.get(2);
+        set[0] = table.slotToCard[OptionalSet.get(0)];
+        set[1] = table.slotToCard[OptionalSet.get(1)];
+        set[2] = table.slotToCard[OptionalSet.get(2)];
         if(env.util.testSet(set)) {
-            table.removeCard(set[0]);
-            table.removeCard(set[1]);
-            table.removeCard(set[2]);
+            env.ui.removeTokens();
+            players[0].resetSlots();
+            table.removeCard(table.cardToSlot[set[0]]);
+            table.removeCard(table.cardToSlot[set[1]]);
+            table.removeCard(table.cardToSlot[set[2]]);
+            players[0].penalty();
+            players[0].point();
+        }
+        else {
+
+            players[0].penalty();
+            players[0].penalty();
+            players[0].penalty();
+
         }
     }
 
@@ -123,8 +134,6 @@ public class Dealer implements Runnable {
                 deck.remove(randomCard);
             }
         }
-
-        env.ui.placeToken(1 , 2 );
     }
 
     /**
@@ -133,6 +142,8 @@ public class Dealer implements Runnable {
     private void sleepUntilWokenOrTimeout() {
         // TODO implement
         players[0].run();
+        if(players[0].getPickedSlots().size() == 3)
+            removeCardsFromTable();
     }
 
     /**
