@@ -110,8 +110,9 @@ public class Table {
         } catch (InterruptedException ignored) {}
         // TODO implement
         env.ui.removeCard(slot);
+        cardToSlot[slotToCard[slot]] = null;
+        slotToCard[slot] = null;
     }
-
 
     /**
      * Places a player token on a grid slot.
