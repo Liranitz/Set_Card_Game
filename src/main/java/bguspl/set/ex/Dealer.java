@@ -137,6 +137,8 @@ public class Dealer implements Runnable {
                 deck.remove(randomCard);
             }
         }
+        if(table.countCards() == 0)
+            announceWinners();
     }
 
     /**
@@ -179,7 +181,6 @@ public class Dealer implements Runnable {
     private void announceWinners() {
         // TODO implement
         int max = 0;
-        int counter = 0;
         List<Integer> playersWon = new LinkedList<>();
         for(int i = 0 ; i < players.length ; i++){
             if(max < players[i].getScore())
