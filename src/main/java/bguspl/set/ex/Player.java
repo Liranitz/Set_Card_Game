@@ -91,12 +91,11 @@ public class Player implements Runnable {
 
         while (!terminate) {
             // TODO implement main player loop
+            //env.ui.
         }
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
         System.out.printf("Info: Thread %s terminated.%n", Thread.currentThread().getName());
     }
-
-
 
     public void resetSlots(){
         this.pickedSlots = new ArrayList<>();

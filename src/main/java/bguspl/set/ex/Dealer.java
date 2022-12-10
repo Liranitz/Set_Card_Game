@@ -97,7 +97,12 @@ public class Dealer implements Runnable {
      */
     private void removeCardsFromTable() {
         // TODO implement
-        List<Integer> OptionalSet = players[0].getPickedSlots();
+        int curId = 0;
+        for(int i = 0 ; i < players.length ; i++){
+            if(players[i].getPickedSlots().size() == 3)
+                curId = i;
+        }
+        List<Integer> OptionalSet = players[curId].getPickedSlots();
         //find the set where the player clicked , check if it is legal and remove it
         int[] set = new int[3];
         set[0] = table.slotToCard[OptionalSet.get(0)];
@@ -106,17 +111,17 @@ public class Dealer implements Runnable {
         /*if(env.util.testSet(set))*/
         if(true){
             env.ui.removeTokens();
-            players[0].resetSlots();
+            players[curId].resetSlots();
             table.removeCard(table.cardToSlot[set[0]]);
             table.removeCard(table.cardToSlot[set[1]]);
             table.removeCard(table.cardToSlot[set[2]]);
-            players[0].penalty();
-            players[0].point();
+            players[curId].penalty();
+            players[curId].point();
         }
         else {
-            players[0].penalty();
-            players[0].penalty();
-            players[0].penalty();
+            players[curId].penalty();
+            players[curId].penalty();
+            players[curId].penalty();
         }
     }
 
@@ -137,8 +142,10 @@ public class Dealer implements Runnable {
                 deck.remove(randomCard);
             }
         }
-        if(table.countCards() == 0)
+        if(table.countCards() == 0) {
             announceWinners();
+            terminate = true; // not must
+        }
     }
 
     /**
@@ -146,8 +153,11 @@ public class Dealer implements Runnable {
      */
     private void sleepUntilWokenOrTimeout() {
         // TODO implement
+        env.ui.setCountdown(reshuffleTime, false);
+        //env.ui.
         players[0].run();
 
+        //players[1].run();
         /*if(players[0].getPickedSlots().size() == 3)
             removeCardsFromTable();*/
     }
@@ -157,8 +167,8 @@ public class Dealer implements Runnable {
      */
     private void updateTimerDisplay(boolean reset) {
         // TODO implement
-        env.ui.setCountdown(60000 , reset); // needs to get a correct set , and
-        /*for(int i = 0 ; i < 60000; i++){
+        env.ui.setCountdown(600000 , reset); // needs to get a correct set , and
+        /*for(int i = 0 ; i < 600000; i++){
             env.ui.setCountdown(i , reset);
         }*/
 
