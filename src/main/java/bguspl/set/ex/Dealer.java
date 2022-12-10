@@ -4,6 +4,7 @@ import bguspl.set.Env;
 import bguspl.set.UtilImpl;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -177,6 +178,23 @@ public class Dealer implements Runnable {
      */
     private void announceWinners() {
         // TODO implement
-        env.ui.announceWinner(players);
+        int max = 0;
+        int counter = 0;
+        List<Integer> playersWon = new LinkedList<>();
+        for(int i = 0 ; i < players.length ; i++){
+            if(max < players[i].getScore())
+                max = players[i].getScore();
+        }
+        for(int i = 0 ; i < players.length ; i++){
+            if(max == players[i].getScore()) {
+                playersWon.add(i);
+            }
+        }
+        int[] playerIntWon = new int[playersWon.size()];
+        for(int i = 0 ; i < playersWon.size() ; i++){
+            playerIntWon[i] = playersWon.get(i);
+        }
+        env.ui.announceWinner(playerIntWon);
+
     }
 }
