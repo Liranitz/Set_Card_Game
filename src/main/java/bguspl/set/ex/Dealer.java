@@ -142,10 +142,6 @@ public class Dealer implements Runnable {
                 deck.remove(randomCard);
             }
         }
-        if(table.countCards() == 0) {
-            announceWinners();
-            terminate = true; // not must
-        }
     }
 
     /**

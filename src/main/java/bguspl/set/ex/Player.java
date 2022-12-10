@@ -91,7 +91,7 @@ public class Player implements Runnable {
 
         while (!terminate) {
             // TODO implement main player loop
-            //env.ui.
+
         }
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
         System.out.printf("Info: Thread %s terminated.%n", Thread.currentThread().getName());
@@ -140,12 +140,12 @@ public class Player implements Runnable {
                 if (pickedSlots.get(i) == slot)
                     temp = i;
             if (temp != -1){
-                env.ui.removeTokens(slot);
+                table.removeToken(id, slot);
                 pickedSlots.remove(temp);
             }
 
             else if (pickedSlots.size() < 3) {
-                env.ui.placeToken(this.id, slot);
+                table.placeToken(this.id, slot);
                 pickedSlots.add(slot);
                 if(pickedSlots.size() == 3){
                     //this.playerThread.wait(200);

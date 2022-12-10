@@ -121,6 +121,7 @@ public class Table {
      */
     public void placeToken(int player, int slot) {
         // TODO implement
+        env.ui.placeToken(player, slot);
     }
 
     /**
@@ -131,6 +132,8 @@ public class Table {
      */
     public boolean removeToken(int player, int slot) {
         // TODO implement
+        env.ui.removeToken(player,slot);
+        // לברר למה זה צריך להיות בוליאני?
         return false;
     }
 }
