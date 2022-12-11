@@ -136,6 +136,7 @@ public class Dealer implements Runnable {
                 table.removeCard(table.cardToSlot[set[2]]);
                 players[curId].penalty();
                 players[curId].point();
+                reshuffleTime = System.currentTimeMillis() + 60000;
             }
             else {
                 players[curId].penalty();
