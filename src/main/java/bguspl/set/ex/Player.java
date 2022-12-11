@@ -1,7 +1,6 @@
 package bguspl.set.ex;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Scanner;
+import java.util.*;
+
 import bguspl.set.Env;
 import java.util.logging.Level;
 /**
@@ -93,6 +92,7 @@ public class Player implements Runnable {
             int i=0;
             // TODO implement main player loop
             try {
+                playerThread.join();
                 synchronized (this) { wait(); }
             } catch (InterruptedException ignored) {}
 
@@ -105,6 +105,23 @@ public class Player implements Runnable {
 
     public void resetSlots(){
         this.pickedSlots = new ArrayList<>();
+    }
+
+    public void deleteSlots(List<Integer> set){
+        //try {
+            //synchronized (this) {
+                for (int i : set) {
+                    for (int j = 0; j < pickedSlots.size(); j++) {
+                        if (i == pickedSlots.get(j))
+                            pickedSlots.remove(j);
+                    }
+                }
+
+
+            //}
+
+        //}
+        //catch(ConcurrentModificationException e) {} // needs to do something with the exception?
     }
 
     /**

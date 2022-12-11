@@ -90,6 +90,7 @@ public class Dealer implements Runnable {
      */
     public void terminate() {
         // TODO implement
+        Thread.currentThread().interrupt();
     }
 
     /**
@@ -120,7 +121,15 @@ public class Dealer implements Runnable {
             set[2] = table.slotToCard[OptionalSet.get(2)];
             /*if(env.util.testSet(set))*/
             if(true){
-                env.ui.removeTokens();
+                env.ui.removeTokens(OptionalSet.get(0));
+                env.ui.removeTokens(OptionalSet.get(1));
+                env.ui.removeTokens(OptionalSet.get(2));
+                for(Player p : players) {
+                    try{
+                        p.deleteSlots(OptionalSet);
+                }
+                    catch (Exception e){};
+                }
                 players[curId].resetSlots();
                 table.removeCard(table.cardToSlot[set[0]]);
                 table.removeCard(table.cardToSlot[set[1]]);
