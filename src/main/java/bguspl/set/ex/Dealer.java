@@ -58,6 +58,7 @@ public class Dealer implements Runnable {
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
         while (!shouldFinish()) {
             placeCardsOnTable();
+            reshuffleTime = System.currentTimeMillis() + 60000;
             timerLoop();
             updateTimerDisplay(false);
             removeAllCardsFromTable();
@@ -101,7 +102,7 @@ public class Dealer implements Runnable {
         // TODO implement
         int curId = 0;
         for(int i = 0 ; i < players.length ; i++){
-            if(players[i].getPickedSlots().size() == 3)
+            if(players[i].getPickedSlots() != null && players[i].getPickedSlots().size() == 3)
                 curId = i;
         }
         List<Integer> OptionalSet = players[curId].getPickedSlots();
@@ -152,7 +153,6 @@ public class Dealer implements Runnable {
         // TODO implement
         //env.ui.setCountdown(reshuffleTime, false);
         //env.ui.
-        reshuffleTime = System.currentTimeMillis() + 3000;
         players[0].run();
 
         //players[1].run();
@@ -165,8 +165,6 @@ public class Dealer implements Runnable {
      */
     private void updateTimerDisplay(boolean reset) {
         // TODO implement
-        reshuffleTime = System.currentTimeMillis() + 3000;
-
         env.ui.setElapsed(reshuffleTime - System.currentTimeMillis());
     }
 

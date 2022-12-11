@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 import bguspl.set.Env;
-
+import java.util.logging.Level;
 /**
  * This class manages the players' threads and data
  *
@@ -91,6 +91,7 @@ public class Player implements Runnable {
 
         while (!terminate) {
             // TODO implement main player loop
+            //table.countCards()
             //dealer.reshuffleTime = System.currentTimeMillis() + 60000;
         }
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
@@ -111,6 +112,7 @@ public class Player implements Runnable {
             env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
             while (!terminate) {
                 // TODO implement player key press simulator
+
                 try {
                     synchronized (this) { wait(); }
                 } catch (InterruptedException ignored) {}
