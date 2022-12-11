@@ -1,14 +1,12 @@
 package bguspl.set.ex;
 
 import bguspl.set.Env;
-import bguspl.set.UtilImpl;
 
-import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
+import java.util.logging.Level;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.Random;
 
 /**
  * This class manages the dealer's threads and data
@@ -53,7 +51,7 @@ public class Dealer implements Runnable {
      */
     @Override
     public void run() {
-        System.out.printf("Info: Thread %s starting.%n", Thread.currentThread().getName());
+        env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
         while (!shouldFinish()) {
             placeCardsOnTable();
             timerLoop();
@@ -61,7 +59,7 @@ public class Dealer implements Runnable {
             removeAllCardsFromTable();
         }
         announceWinners();
-        System.out.printf("Info: Thread %s terminated.%n", Thread.currentThread().getName());
+        env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
     }
 
     /**
@@ -93,7 +91,7 @@ public class Dealer implements Runnable {
     }
 
     /**
-     * Checks if any cards should be removed from the table and returns them to the deck.
+     * Checks cards should be removed from the table and removes them.
      */
     private void removeCardsFromTable() {
         // TODO implement
@@ -125,7 +123,6 @@ public class Dealer implements Runnable {
         }
     }
 
-
     /**
      * Check if any cards can be removed from the deck and placed on the table.
      */
@@ -149,8 +146,9 @@ public class Dealer implements Runnable {
      */
     private void sleepUntilWokenOrTimeout() {
         // TODO implement
-        env.ui.setCountdown(reshuffleTime, false);
+        //env.ui.setCountdown(reshuffleTime, false);
         //env.ui.
+        reshuffleTime = System.currentTimeMillis() + 3000;
         players[0].run();
 
         //players[1].run();
@@ -163,11 +161,6 @@ public class Dealer implements Runnable {
      */
     private void updateTimerDisplay(boolean reset) {
         // TODO implement
-        env.ui.setCountdown(600000 , reset); // needs to get a correct set , and
-        /*for(int i = 0 ; i < 600000; i++){
-            env.ui.setCountdown(i , reset);
-        }*/
-
     }
 
     /**
@@ -175,10 +168,6 @@ public class Dealer implements Runnable {
      */
     private void removeAllCardsFromTable() {
         // TODO implement
-        for(Integer card : table.slotToCard){
-            deck.add(card);
-            table.removeCard(table.cardToSlot[card]);
-        }
     }
 
     /**
@@ -186,21 +175,5 @@ public class Dealer implements Runnable {
      */
     private void announceWinners() {
         // TODO implement
-        int max = 0;
-        List<Integer> playersWon = new LinkedList<>();
-        for(int i = 0 ; i < players.length ; i++){
-            if(max < players[i].getScore())
-                max = players[i].getScore();
-        }
-        for(int i = 0 ; i < players.length ; i++){
-            if(max == players[i].getScore()) {
-                playersWon.add(i);
-            }
-        }
-        int[] playerIntWon = new int[playersWon.size()];
-        for(int i = 0 ; i < playersWon.size() ; i++){
-            playerIntWon[i] = playersWon.get(i);
-        }
-        env.ui.announceWinner(playerIntWon);
     }
 }
