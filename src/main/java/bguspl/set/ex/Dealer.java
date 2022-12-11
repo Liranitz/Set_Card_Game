@@ -149,8 +149,9 @@ public class Dealer implements Runnable {
      */
     private void sleepUntilWokenOrTimeout() {
         // TODO implement
-        env.ui.setCountdown(reshuffleTime, false);
+        //env.ui.setCountdown(reshuffleTime, false);
         //env.ui.
+        reshuffleTime = System.currentTimeMillis() + 3000;
         players[0].run();
 
         //players[1].run();
@@ -163,11 +164,9 @@ public class Dealer implements Runnable {
      */
     private void updateTimerDisplay(boolean reset) {
         // TODO implement
-        env.ui.setCountdown(600000 , reset); // needs to get a correct set , and
-        /*for(int i = 0 ; i < 600000; i++){
-            env.ui.setCountdown(i , reset);
-        }*/
+        reshuffleTime = System.currentTimeMillis() + 3000;
 
+        env.ui.setElapsed(reshuffleTime - System.currentTimeMillis());
     }
 
     /**

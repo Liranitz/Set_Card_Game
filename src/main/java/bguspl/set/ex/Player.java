@@ -91,7 +91,7 @@ public class Player implements Runnable {
 
         while (!terminate) {
             // TODO implement main player loop
-
+            //dealer.reshuffleTime = System.currentTimeMillis() + 60000;
         }
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
         System.out.printf("Info: Thread %s terminated.%n", Thread.currentThread().getName());
