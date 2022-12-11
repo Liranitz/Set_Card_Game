@@ -84,7 +84,7 @@ public class Player implements Runnable {
     @Override
     public void run() {
         playerThread = Thread.currentThread();
-        System.out.printf("Info: Thread %s starting.%n", Thread.currentThread().getName());
+        env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + "starting.");
         if (!human) createArtificialIntelligence();
 
         //need to check !!
@@ -94,7 +94,7 @@ public class Player implements Runnable {
             //dealer.reshuffleTime = System.currentTimeMillis() + 60000;
         }
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
-        System.out.printf("Info: Thread %s terminated.%n", Thread.currentThread().getName());
+        env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
     }
 
     public void resetSlots(){
@@ -108,14 +108,14 @@ public class Player implements Runnable {
     private void createArtificialIntelligence() {
         // note: this is a very very smart AI (!)
         aiThread = new Thread(() -> {
-            System.out.printf("Info: Thread %s starting.%n", Thread.currentThread().getName());
+            env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
             while (!terminate) {
                 // TODO implement player key press simulator
                 try {
                     synchronized (this) { wait(); }
                 } catch (InterruptedException ignored) {}
             }
-            System.out.printf("Info: Thread %s terminated.%n", Thread.currentThread().getName());
+            env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
         }, "computer-" + id);
         aiThread.start();
     }

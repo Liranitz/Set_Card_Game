@@ -1,12 +1,16 @@
 package bguspl.set.ex;
 
 import bguspl.set.Env;
+import bguspl.set.UtilImpl;
 
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.Random;
 
 /**
  * This class manages the dealer's threads and data
@@ -161,6 +165,9 @@ public class Dealer implements Runnable {
      */
     private void updateTimerDisplay(boolean reset) {
         // TODO implement
+        reshuffleTime = System.currentTimeMillis() + 3000;
+
+        env.ui.setElapsed(reshuffleTime - System.currentTimeMillis());
     }
 
     /**
