@@ -3,14 +3,12 @@ package bguspl.set.ex;
 import bguspl.set.Env;
 import bguspl.set.UtilImpl;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.Random;
+import java.util.Queue;
 
 /**
  * This class manages the dealer's threads and data
@@ -43,11 +41,17 @@ public class Dealer implements Runnable {
      */
     private long reshuffleTime = Long.MAX_VALUE;
 
+    private Queue<ArrayList<Integer>> CuncurrentSets;
+
+    private Thread dealerThread;
+
     public Dealer(Env env, Table table, Player[] players) {
         this.env = env;
         this.table = table;
         this.players = players;
         deck = IntStream.range(0, env.config.deckSize).boxed().collect(Collectors.toList());
+        dealerThread = Thread.currentThread();
+        CuncurrentSets = new LinkedList<>();
     }
 
     /**
@@ -56,15 +60,16 @@ public class Dealer implements Runnable {
     @Override
     public void run() {
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
+        Thread [] playersThreads = new Thread[this.players.length];
+        for (int i=0; i<this.players.length; i++)
+            playersThreads[i] = new Thread(this.players[i]);
         while (!shouldFinish()) {
             placeCardsOnTable();
             reshuffleTime = System.currentTimeMillis() + 60000;
             //making thread to each player and stary them
-            Thread [] playersThreads = new Thread[this.players.length];
-            for (int i=0; i<this.players.length; i++)
-                playersThreads[i] = new Thread(this.players[i]);
             for (int i=0; i<this.players.length; i++)
                 playersThreads[i].start();
+
             timerLoop();
             updateTimerDisplay(false);
             removeAllCardsFromTable();
@@ -107,20 +112,18 @@ public class Dealer implements Runnable {
      */
     private void removeCardsFromTable() {
         // TODO implement
-        int curId = -1;
-        for(int i = 0 ; i < players.length ; i++){
-            if(players[i].getPickedSlots() != null && players[i].getPickedSlots().size() == 3)
-                curId = i;
-        }
-        if (curId != -1){
-            List<Integer> OptionalSet = players[curId].getPickedSlots();
+
+        if (!this.CuncurrentSets.isEmpty()){
+            List<Integer> OptionalSet = CuncurrentSets.poll();
+            int curId = OptionalSet.remove(0);
             //find the set where the player clicked , check if it is legal and remove it
             int[] set = new int[3];
             set[0] = table.slotToCard[OptionalSet.get(0)];
             set[1] = table.slotToCard[OptionalSet.get(1)];
             set[2] = table.slotToCard[OptionalSet.get(2)];
-            /*if(env.util.testSet(set))*/
-            if(true){
+            //if(env.util.testSet(set))
+            if(true)
+            {
                 env.ui.removeTokens(OptionalSet.get(0));
                 env.ui.removeTokens(OptionalSet.get(1));
                 env.ui.removeTokens(OptionalSet.get(2));
@@ -134,14 +137,23 @@ public class Dealer implements Runnable {
                 table.removeCard(table.cardToSlot[set[0]]);
                 table.removeCard(table.cardToSlot[set[1]]);
                 table.removeCard(table.cardToSlot[set[2]]);
+                /*try{
+                    synchronized (players[curId]) {
+                        players[curId].penalty();
+                    }
+                }
+                catch (Exception e ) {} ;*/
                 players[curId].penalty();
                 players[curId].point();
                 reshuffleTime = System.currentTimeMillis() + 60000;
             }
             else {
-                players[curId].penalty();
-                players[curId].penalty();
-                players[curId].penalty();
+                try {
+                    //players[curId].wait(6000);
+                    players[curId].penalty();
+                    this.notifyAll();
+                }
+                catch (Exception e){}
             }
         }
 
@@ -218,5 +230,9 @@ public class Dealer implements Runnable {
             playerIntWon[i] = playersWon.get(i);
         }
         env.ui.announceWinner(playerIntWon);
+    }
+
+    public void putInSet(ArrayList<Integer> set){
+            this.CuncurrentSets.add(set);
     }
 }

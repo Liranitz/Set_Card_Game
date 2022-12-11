@@ -51,6 +51,7 @@ public class Player implements Runnable {
      */
     private int score;
 
+    private Dealer dealer;
 
     /**
      * The current score of the player.
@@ -71,6 +72,7 @@ public class Player implements Runnable {
         this.id = id;
         this.human = human;
         this.pickedSlots = new ArrayList<>();
+        this.dealer = dealer;
     }
 
     public  ArrayList<Integer> getPickedSlots(){
@@ -177,6 +179,15 @@ public class Player implements Runnable {
             else if (pickedSlots.size() < 3) {
                 table.placeToken(this.id, slot);
                 pickedSlots.add(slot);
+                if(pickedSlots.size()==3) {
+                    this.pickedSlots.add(0 , id);
+                    try {
+                        synchronized (this) {
+                            dealer.putInSet(this.pickedSlots);
+                        }
+                    }
+                    catch (Exception e) {};
+                }
                 /*if(pickedSlots.size() == 3){
                     //this.playerThread.interrupt();
                     this.playerThread.notifyAll();
@@ -206,8 +217,20 @@ public class Player implements Runnable {
     public void penalty() {
         // TODO implement
         //sleep for 1 second.
-        //this.playerThread.wait(5000);
-       terminate = false; //to check
+        try {
+            synchronized (this) {
+                terminate = false;
+                long freeze = env.config.pointFreezeMillis + System.currentTimeMillis();
+                env.ui.setFreeze(this.id, env.config.pointFreezeMillis);
+                Thread.sleep(env.config.pointFreezeMillis);
+                while (System.currentTimeMillis() <= freeze) {
+
+                }
+                env.ui.setFreeze(this.id, 0);
+                terminate = true;
+            }
+        }
+        catch (Exception e) {}
     }
 
     public int getScore() {
