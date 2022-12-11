@@ -1,7 +1,9 @@
 package bguspl.set.ex;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
 
 import java.util.logging.Level;
-
 import bguspl.set.Env;
 
 /**
@@ -52,6 +54,11 @@ public class Player implements Runnable {
      */
     private int score;
 
+
+    /**
+     * The current score of the player.
+     */
+    private ArrayList<Integer> pickedSlots;
     /**
      * The class constructor.
      *
@@ -66,6 +73,11 @@ public class Player implements Runnable {
         this.table = table;
         this.id = id;
         this.human = human;
+        this.pickedSlots = new ArrayList<>();
+    }
+
+    public  ArrayList<Integer> getPickedSlots(){
+        return  pickedSlots;
     }
 
     /**
@@ -77,11 +89,18 @@ public class Player implements Runnable {
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + "starting.");
         if (!human) createArtificialIntelligence();
 
+        //need to check !!
+
         while (!terminate) {
             // TODO implement main player loop
+            //dealer.reshuffleTime = System.currentTimeMillis() + 60000;
         }
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
+    }
+
+    public void resetSlots(){
+        this.pickedSlots = new ArrayList<>();
     }
 
     /**
@@ -117,6 +136,28 @@ public class Player implements Runnable {
      */
     public void keyPressed(int slot) {
         // TODO implement
+        if (table.slotToCard[slot] != null){
+            int temp = -1;
+            for (int i=0; i<pickedSlots.size(); i++)
+                if (pickedSlots.get(i) == slot)
+                    temp = i;
+            if (temp != -1){
+                table.removeToken(id, slot);
+                pickedSlots.remove(temp);
+            }
+
+            else if (pickedSlots.size() < 3) {
+                table.placeToken(this.id, slot);
+                pickedSlots.add(slot);
+                if(pickedSlots.size() == 3){
+                    //this.playerThread.wait(200);
+                    terminate = true;
+                    this.playerThread.interrupt();
+                }
+            }
+        }
+
+
     }
 
     /**
@@ -127,9 +168,9 @@ public class Player implements Runnable {
      */
     public void point() {
         // TODO implement
-
+        this.score++;
         int ignored = table.countCards(); // this part is just for demonstration in the unit tests
-        env.ui.setScore(id, ++score);
+        env.ui.setScore(id, score);
     }
 
     /**
@@ -137,6 +178,9 @@ public class Player implements Runnable {
      */
     public void penalty() {
         // TODO implement
+        //sleep for 1 second.
+        //this.playerThread.wait(5000);
+       terminate = false; //to check
     }
 
     public int getScore() {

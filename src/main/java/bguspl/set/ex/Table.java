@@ -29,6 +29,8 @@ public class Table {
      */
     protected final Integer[] cardToSlot; // slot per card (if any)
 
+
+
     /**
      * Constructor for testing.
      *
@@ -95,6 +97,7 @@ public class Table {
         slotToCard[slot] = card;
 
         // TODO implement
+        env.ui.placeCard(card , slot);
     }
 
     /**
@@ -105,8 +108,10 @@ public class Table {
         try {
             Thread.sleep(env.config.tableDelayMillis);
         } catch (InterruptedException ignored) {}
-
         // TODO implement
+        env.ui.removeCard(slot);
+        cardToSlot[slotToCard[slot]] = null;
+        slotToCard[slot] = null;
     }
 
     /**
@@ -116,6 +121,7 @@ public class Table {
      */
     public void placeToken(int player, int slot) {
         // TODO implement
+        env.ui.placeToken(player, slot);
     }
 
     /**
@@ -126,6 +132,8 @@ public class Table {
      */
     public boolean removeToken(int player, int slot) {
         // TODO implement
+        env.ui.removeToken(player,slot);
+        // לברר למה זה צריך להיות בוליאני?
         return false;
     }
 }

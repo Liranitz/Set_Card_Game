@@ -1,12 +1,16 @@
 package bguspl.set.ex;
 
 import bguspl.set.Env;
+import bguspl.set.UtilImpl;
 
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.Random;
 
 /**
  * This class manages the dealer's threads and data
@@ -161,6 +165,9 @@ public class Dealer implements Runnable {
      */
     private void updateTimerDisplay(boolean reset) {
         // TODO implement
+        reshuffleTime = System.currentTimeMillis() + 3000;
+
+        env.ui.setElapsed(reshuffleTime - System.currentTimeMillis());
     }
 
     /**
@@ -168,6 +175,10 @@ public class Dealer implements Runnable {
      */
     private void removeAllCardsFromTable() {
         // TODO implement
+        for(Integer card : table.slotToCard){
+            deck.add(card);
+            table.removeCard(table.cardToSlot[card]);
+        }
     }
 
     /**
@@ -175,5 +186,21 @@ public class Dealer implements Runnable {
      */
     private void announceWinners() {
         // TODO implement
+        int max = 0;
+        List<Integer> playersWon = new LinkedList<>();
+        for(int i = 0 ; i < players.length ; i++){
+            if(max < players[i].getScore())
+                max = players[i].getScore();
+        }
+        for(int i = 0 ; i < players.length ; i++){
+            if(max == players[i].getScore()) {
+                playersWon.add(i);
+            }
+        }
+        int[] playerIntWon = new int[playersWon.size()];
+        for(int i = 0 ; i < playersWon.size() ; i++){
+            playerIntWon[i] = playersWon.get(i);
+        }
+        env.ui.announceWinner(playerIntWon);
     }
 }
