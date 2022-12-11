@@ -168,6 +168,10 @@ public class Dealer implements Runnable {
      */
     private void removeAllCardsFromTable() {
         // TODO implement
+        for(Integer card : table.slotToCard){
+            deck.add(card);
+            table.removeCard(table.cardToSlot[card]);
+        }
     }
 
     /**
@@ -175,5 +179,21 @@ public class Dealer implements Runnable {
      */
     private void announceWinners() {
         // TODO implement
+        int max = 0;
+        List<Integer> playersWon = new LinkedList<>();
+        for(int i = 0 ; i < players.length ; i++){
+            if(max < players[i].getScore())
+                max = players[i].getScore();
+        }
+        for(int i = 0 ; i < players.length ; i++){
+            if(max == players[i].getScore()) {
+                playersWon.add(i);
+            }
+        }
+        int[] playerIntWon = new int[playersWon.size()];
+        for(int i = 0 ; i < playersWon.size() ; i++){
+            playerIntWon[i] = playersWon.get(i);
+        }
+        env.ui.announceWinner(playerIntWon);
     }
 }
