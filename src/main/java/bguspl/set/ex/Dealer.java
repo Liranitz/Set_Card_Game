@@ -59,6 +59,12 @@ public class Dealer implements Runnable {
         while (!shouldFinish()) {
             placeCardsOnTable();
             reshuffleTime = System.currentTimeMillis() + 60000;
+            //making thread to each player and stary them
+            Thread [] playersThreads = new Thread[this.players.length];
+            for (int i=0; i<this.players.length; i++)
+                playersThreads[i] = new Thread(this.players[i]);
+            for (int i=0; i<this.players.length; i++)
+                playersThreads[i].start();
             timerLoop();
             updateTimerDisplay(false);
             removeAllCardsFromTable();
@@ -100,32 +106,35 @@ public class Dealer implements Runnable {
      */
     private void removeCardsFromTable() {
         // TODO implement
-        int curId = 0;
+        int curId = -1;
         for(int i = 0 ; i < players.length ; i++){
             if(players[i].getPickedSlots() != null && players[i].getPickedSlots().size() == 3)
                 curId = i;
         }
-        List<Integer> OptionalSet = players[curId].getPickedSlots();
-        //find the set where the player clicked , check if it is legal and remove it
-        int[] set = new int[3];
-        set[0] = table.slotToCard[OptionalSet.get(0)];
-        set[1] = table.slotToCard[OptionalSet.get(1)];
-        set[2] = table.slotToCard[OptionalSet.get(2)];
-        /*if(env.util.testSet(set))*/
-        if(true){
-            env.ui.removeTokens();
-            players[curId].resetSlots();
-            table.removeCard(table.cardToSlot[set[0]]);
-            table.removeCard(table.cardToSlot[set[1]]);
-            table.removeCard(table.cardToSlot[set[2]]);
-            players[curId].penalty();
-            players[curId].point();
+        if (curId != -1){
+            List<Integer> OptionalSet = players[curId].getPickedSlots();
+            //find the set where the player clicked , check if it is legal and remove it
+            int[] set = new int[3];
+            set[0] = table.slotToCard[OptionalSet.get(0)];
+            set[1] = table.slotToCard[OptionalSet.get(1)];
+            set[2] = table.slotToCard[OptionalSet.get(2)];
+            /*if(env.util.testSet(set))*/
+            if(true){
+                env.ui.removeTokens();
+                players[curId].resetSlots();
+                table.removeCard(table.cardToSlot[set[0]]);
+                table.removeCard(table.cardToSlot[set[1]]);
+                table.removeCard(table.cardToSlot[set[2]]);
+                players[curId].penalty();
+                players[curId].point();
+            }
+            else {
+                players[curId].penalty();
+                players[curId].penalty();
+                players[curId].penalty();
+            }
         }
-        else {
-            players[curId].penalty();
-            players[curId].penalty();
-            players[curId].penalty();
-        }
+
     }
 
     /**
@@ -151,10 +160,9 @@ public class Dealer implements Runnable {
      */
     private void sleepUntilWokenOrTimeout() {
         // TODO implement
+
         //env.ui.setCountdown(reshuffleTime, false);
         //env.ui.
-        players[0].run();
-
         //players[1].run();
         /*if(players[0].getPickedSlots().size() == 3)
             removeCardsFromTable();*/

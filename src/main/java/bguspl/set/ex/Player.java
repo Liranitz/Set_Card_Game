@@ -90,7 +90,12 @@ public class Player implements Runnable {
         //need to check !!
 
         while (!terminate) {
+            int i=0;
             // TODO implement main player loop
+            try {
+                synchronized (this) { wait(); }
+            } catch (InterruptedException ignored) {}
+
             //table.countCards()
             //dealer.reshuffleTime = System.currentTimeMillis() + 60000;
         }
@@ -122,6 +127,11 @@ public class Player implements Runnable {
         aiThread.start();
     }
 
+    private ArrayList<Integer> aiPickedSlots(){
+        return null;
+
+    }
+
     /**
      * Called when the game should be terminated due to an external event.
      */
@@ -136,6 +146,7 @@ public class Player implements Runnable {
      */
     public void keyPressed(int slot) {
         // TODO implement
+
         if (table.slotToCard[slot] != null){
             int temp = -1;
             for (int i=0; i<pickedSlots.size(); i++)
@@ -149,11 +160,10 @@ public class Player implements Runnable {
             else if (pickedSlots.size() < 3) {
                 table.placeToken(this.id, slot);
                 pickedSlots.add(slot);
-                if(pickedSlots.size() == 3){
-                    //this.playerThread.wait(200);
-                    terminate = true;
-                    this.playerThread.interrupt();
-                }
+                /*if(pickedSlots.size() == 3){
+                    //this.playerThread.interrupt();
+                    this.playerThread.notifyAll();
+                }*/
             }
         }
 
