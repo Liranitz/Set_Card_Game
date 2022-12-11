@@ -1,0 +1,2361 @@
+[2022-12-11 20:28:11] [INFO   ] cannot read configuration file config.properties trying from resources.
+[2022-12-11 20:28:11] [INFO   ] configuration file was loaded from resources directory.
+[2022-12-11 20:28:12] [INFO   ] Thread dealer starting.
+[2022-12-11 20:28:13] [INFO   ] Thread Thread-1starting.
+[2022-12-11 20:28:13] [INFO   ] Thread Thread-0starting.
+[2022-12-11 20:28:13] [SEVERE ] placing card 37 in slot 0
+[2022-12-11 20:28:13] [SEVERE ] placing card 61 in slot 1
+[2022-12-11 20:28:13] [SEVERE ] placing card 65 in slot 2
+[2022-12-11 20:28:13] [SEVERE ] placing card 74 in slot 3
+[2022-12-11 20:28:13] [SEVERE ] placing card 47 in slot 4
+[2022-12-11 20:28:13] [SEVERE ] placing card 8 in slot 5
+[2022-12-11 20:28:13] [SEVERE ] placing card 33 in slot 6
+[2022-12-11 20:28:13] [SEVERE ] placing card 24 in slot 7
+[2022-12-11 20:28:13] [SEVERE ] placing card 17 in slot 8
+[2022-12-11 20:28:14] [SEVERE ] placing card 52 in slot 9
+[2022-12-11 20:28:14] [SEVERE ] placing card 59 in slot 10
+[2022-12-11 20:28:14] [SEVERE ] placing card 71 in slot 11
+[2022-12-11 20:28:17] [SEVERE ] removing card from slot 0
+[2022-12-11 20:28:17] [SEVERE ] removing card from slot 1
+[2022-12-11 20:28:17] [SEVERE ] removing card from slot 2
+[2022-12-11 20:28:17] [SEVERE ] removing card from slot 3
+[2022-12-11 20:28:17] [SEVERE ] removing card from slot 4
+[2022-12-11 20:28:17] [SEVERE ] removing card from slot 5
+[2022-12-11 20:28:18] [SEVERE ] removing card from slot 6
+[2022-12-11 20:28:18] [SEVERE ] removing card from slot 7
+[2022-12-11 20:28:18] [SEVERE ] removing card from slot 8
+[2022-12-11 20:28:18] [SEVERE ] removing card from slot 9
+[2022-12-11 20:28:18] [SEVERE ] removing card from slot 10
+[2022-12-11 20:28:18] [SEVERE ] removing card from slot 11
+[2022-12-11 20:28:18] [SEVERE ] placing card 52 in slot 0
+[2022-12-11 20:28:18] [SEVERE ] placing card 67 in slot 1
+[2022-12-11 20:28:18] [SEVERE ] placing card 77 in slot 2
+[2022-12-11 20:28:19] [SEVERE ] placing card 29 in slot 3
+[2022-12-11 20:28:19] [SEVERE ] placing card 21 in slot 4
+[2022-12-11 20:28:19] [SEVERE ] placing card 50 in slot 5
+[2022-12-11 20:28:19] [SEVERE ] placing card 38 in slot 6
+[2022-12-11 20:28:19] [SEVERE ] placing card 62 in slot 7
+[2022-12-11 20:28:19] [SEVERE ] placing card 33 in slot 8
+[2022-12-11 20:28:19] [SEVERE ] placing card 5 in slot 9
+[2022-12-11 20:28:19] [SEVERE ] placing card 17 in slot 10
+[2022-12-11 20:28:19] [SEVERE ] placing card 6 in slot 11
+[2022-12-11 20:28:23] [SEVERE ] removing card from slot 0
+[2022-12-11 20:28:23] [SEVERE ] removing card from slot 1
+[2022-12-11 20:28:23] [SEVERE ] removing card from slot 2
+[2022-12-11 20:28:23] [SEVERE ] removing card from slot 3
+[2022-12-11 20:28:23] [SEVERE ] removing card from slot 4
+[2022-12-11 20:28:23] [SEVERE ] removing card from slot 5
+[2022-12-11 20:28:23] [SEVERE ] removing card from slot 6
+[2022-12-11 20:28:23] [SEVERE ] removing card from slot 7
+[2022-12-11 20:28:23] [SEVERE ] removing card from slot 8
+[2022-12-11 20:28:24] [SEVERE ] removing card from slot 9
+[2022-12-11 20:28:24] [SEVERE ] removing card from slot 10
+[2022-12-11 20:28:24] [SEVERE ] removing card from slot 11
+[2022-12-11 20:28:24] [SEVERE ] placing card 57 in slot 0
+[2022-12-11 20:28:24] [SEVERE ] placing card 38 in slot 1
+[2022-12-11 20:28:24] [SEVERE ] placing card 49 in slot 2
+[2022-12-11 20:28:24] [SEVERE ] placing card 74 in slot 3
+[2022-12-11 20:28:24] [SEVERE ] placing card 47 in slot 4
+[2022-12-11 20:28:24] [SEVERE ] placing card 22 in slot 5
+[2022-12-11 20:28:24] [SEVERE ] placing card 59 in slot 6
+[2022-12-11 20:28:25] [SEVERE ] placing card 20 in slot 7
+[2022-12-11 20:28:25] [SEVERE ] placing card 14 in slot 8
+[2022-12-11 20:28:25] [SEVERE ] placing card 52 in slot 9
+[2022-12-11 20:28:25] [SEVERE ] placing card 5 in slot 10
+[2022-12-11 20:28:25] [SEVERE ] placing card 71 in slot 11
+[2022-12-11 20:28:28] [SEVERE ] removing card from slot 0
+[2022-12-11 20:28:28] [SEVERE ] removing card from slot 1
+[2022-12-11 20:28:28] [SEVERE ] removing card from slot 2
+[2022-12-11 20:28:28] [SEVERE ] removing card from slot 3
+[2022-12-11 20:28:29] [SEVERE ] removing card from slot 4
+[2022-12-11 20:28:29] [SEVERE ] removing card from slot 5
+[2022-12-11 20:28:29] [SEVERE ] removing card from slot 6
+[2022-12-11 20:28:29] [SEVERE ] removing card from slot 7
+[2022-12-11 20:28:29] [SEVERE ] removing card from slot 8
+[2022-12-11 20:28:29] [SEVERE ] removing card from slot 9
+[2022-12-11 20:28:29] [SEVERE ] removing card from slot 10
+[2022-12-11 20:28:29] [SEVERE ] removing card from slot 11
+[2022-12-11 20:28:29] [SEVERE ] placing card 9 in slot 0
+[2022-12-11 20:28:30] [SEVERE ] placing card 69 in slot 1
+[2022-12-11 20:28:30] [SEVERE ] placing card 8 in slot 2
+[2022-12-11 20:28:30] [SEVERE ] placing card 24 in slot 3
+[2022-12-11 20:28:30] [SEVERE ] placing card 40 in slot 4
+[2022-12-11 20:28:30] [SEVERE ] placing card 39 in slot 5
+[2022-12-11 20:28:30] [SEVERE ] placing card 36 in slot 6
+[2022-12-11 20:28:30] [SEVERE ] Key 81 was pressed by player 0
+[2022-12-11 20:28:30] [SEVERE ] player 0 placing token on slot 0
+[2022-12-11 20:28:30] [SEVERE ] placing card 53 in slot 7
+[2022-12-11 20:28:30] [SEVERE ] Key 87 was pressed by player 0
+[2022-12-11 20:28:30] [SEVERE ] player 0 placing token on slot 1
+[2022-12-11 20:28:30] [SEVERE ] placing card 16 in slot 8
+[2022-12-11 20:28:30] [SEVERE ] Key 69 was pressed by player 0
+[2022-12-11 20:28:30] [SEVERE ] player 0 placing token on slot 2
+[2022-12-11 20:28:30] [SEVERE ] placing card 37 in slot 9
+[2022-12-11 20:28:31] [SEVERE ] placing card 4 in slot 10
+[2022-12-11 20:28:31] [SEVERE ] Key 81 was pressed by player 0
+[2022-12-11 20:28:31] [SEVERE ] removing player 0 token from slot 0
+[2022-12-11 20:28:31] [SEVERE ] Key 87 was pressed by player 0
+[2022-12-11 20:28:31] [SEVERE ] removing player 0 token from slot 1
+[2022-12-11 20:28:31] [SEVERE ] placing card 41 in slot 11
+[2022-12-11 20:28:31] [SEVERE ] Key 69 was pressed by player 0
+[2022-12-11 20:28:31] [SEVERE ] removing player 0 token from slot 2
+[2022-12-11 20:28:31] [SEVERE ] Key 81 was pressed by player 0
+[2022-12-11 20:28:31] [SEVERE ] player 0 placing token on slot 0
+[2022-12-11 20:28:31] [SEVERE ] Key 87 was pressed by player 0
+[2022-12-11 20:28:31] [SEVERE ] player 0 placing token on slot 1
+[2022-12-11 20:28:31] [SEVERE ] Key 69 was pressed by player 0
+[2022-12-11 20:28:31] [SEVERE ] player 0 placing token on slot 2
+[2022-12-11 20:28:31] [SEVERE ] removing all tokens
+[2022-12-11 20:28:31] [SEVERE ] removing tokens from slot 0
+[2022-12-11 20:28:31] [SEVERE ] removing tokens from slot 1
+[2022-12-11 20:28:31] [SEVERE ] removing tokens from slot 2
+[2022-12-11 20:28:31] [SEVERE ] removing tokens from slot 3
+[2022-12-11 20:28:31] [SEVERE ] removing tokens from slot 4
+[2022-12-11 20:28:31] [SEVERE ] removing tokens from slot 5
+[2022-12-11 20:28:31] [SEVERE ] removing tokens from slot 6
+[2022-12-11 20:28:31] [SEVERE ] removing tokens from slot 7
+[2022-12-11 20:28:31] [SEVERE ] removing tokens from slot 8
+[2022-12-11 20:28:31] [SEVERE ] removing tokens from slot 9
+[2022-12-11 20:28:31] [SEVERE ] removing tokens from slot 10
+[2022-12-11 20:28:31] [SEVERE ] removing tokens from slot 11
+[2022-12-11 20:28:31] [SEVERE ] removing card from slot 0
+[2022-12-11 20:28:31] [SEVERE ] Key 81 was pressed by player 0
+[2022-12-11 20:28:31] [SEVERE ] Key 87 was pressed by player 0
+[2022-12-11 20:28:31] [SEVERE ] player 0 placing token on slot 1
+[2022-12-11 20:28:31] [SEVERE ] removing card from slot 1
+[2022-12-11 20:28:31] [SEVERE ] Key 69 was pressed by player 0
+[2022-12-11 20:28:31] [SEVERE ] player 0 placing token on slot 2
+[2022-12-11 20:28:31] [SEVERE ] removing card from slot 2
+[2022-12-11 20:28:31] [SEVERE ] setting player 0 score to 1
+[2022-12-11 20:28:31] [SEVERE ] Key 81 was pressed by player 0
+[2022-12-11 20:28:31] [SEVERE ] placing card 54 in slot 0
+[2022-12-11 20:28:31] [SEVERE ] Key 87 was pressed by player 0
+[2022-12-11 20:28:31] [SEVERE ] Key 69 was pressed by player 0
+[2022-12-11 20:28:32] [SEVERE ] placing card 74 in slot 1
+[2022-12-11 20:28:32] [SEVERE ] placing card 14 in slot 2
+[2022-12-11 20:28:32] [SEVERE ] Key 81 was pressed by player 0
+[2022-12-11 20:28:32] [SEVERE ] player 0 placing token on slot 0
+[2022-12-11 20:28:32] [SEVERE ] removing all tokens
+[2022-12-11 20:28:32] [SEVERE ] removing tokens from slot 0
+[2022-12-11 20:28:32] [SEVERE ] removing tokens from slot 1
+[2022-12-11 20:28:32] [SEVERE ] removing tokens from slot 2
+[2022-12-11 20:28:32] [SEVERE ] removing tokens from slot 3
+[2022-12-11 20:28:32] [SEVERE ] removing tokens from slot 4
+[2022-12-11 20:28:32] [SEVERE ] removing tokens from slot 5
+[2022-12-11 20:28:32] [SEVERE ] removing tokens from slot 6
+[2022-12-11 20:28:32] [SEVERE ] removing tokens from slot 7
+[2022-12-11 20:28:32] [SEVERE ] removing tokens from slot 8
+[2022-12-11 20:28:32] [SEVERE ] removing tokens from slot 9
+[2022-12-11 20:28:32] [SEVERE ] removing tokens from slot 10
+[2022-12-11 20:28:32] [SEVERE ] removing tokens from slot 11
+[2022-12-11 20:28:32] [SEVERE ] Key 87 was pressed by player 0
+[2022-12-11 20:28:32] [SEVERE ] player 0 placing token on slot 1
+[2022-12-11 20:28:32] [SEVERE ] Key 69 was pressed by player 0
+[2022-12-11 20:28:32] [SEVERE ] player 0 placing token on slot 2
+[2022-12-11 20:28:32] [SEVERE ] removing card from slot 1
+[2022-12-11 20:28:32] [SEVERE ] removing card from slot 2
+[2022-12-11 20:28:32] [SEVERE ] removing card from slot 0
+[2022-12-11 20:28:32] [SEVERE ] setting player 0 score to 2
+[2022-12-11 20:28:33] [SEVERE ] placing card 2 in slot 0
+[2022-12-11 20:28:33] [SEVERE ] placing card 73 in slot 1
+[2022-12-11 20:28:33] [SEVERE ] placing card 34 in slot 2
+[2022-12-11 20:28:33] [SEVERE ] Key 81 was pressed by player 0
+[2022-12-11 20:28:33] [SEVERE ] player 0 placing token on slot 0
+[2022-12-11 20:28:33] [SEVERE ] removing all tokens
+[2022-12-11 20:28:33] [SEVERE ] removing tokens from slot 0
+[2022-12-11 20:28:33] [SEVERE ] removing tokens from slot 1
+[2022-12-11 20:28:33] [SEVERE ] removing tokens from slot 2
+[2022-12-11 20:28:33] [SEVERE ] removing tokens from slot 3
+[2022-12-11 20:28:33] [SEVERE ] removing tokens from slot 4
+[2022-12-11 20:28:33] [SEVERE ] removing tokens from slot 5
+[2022-12-11 20:28:33] [SEVERE ] removing tokens from slot 6
+[2022-12-11 20:28:33] [SEVERE ] removing tokens from slot 7
+[2022-12-11 20:28:33] [SEVERE ] removing tokens from slot 8
+[2022-12-11 20:28:33] [SEVERE ] removing tokens from slot 9
+[2022-12-11 20:28:33] [SEVERE ] removing tokens from slot 10
+[2022-12-11 20:28:33] [SEVERE ] removing tokens from slot 11
+[2022-12-11 20:28:33] [SEVERE ] Key 87 was pressed by player 0
+[2022-12-11 20:28:33] [SEVERE ] player 0 placing token on slot 1
+[2022-12-11 20:28:33] [SEVERE ] removing card from slot 1
+[2022-12-11 20:28:33] [SEVERE ] Key 69 was pressed by player 0
+[2022-12-11 20:28:33] [SEVERE ] player 0 placing token on slot 2
+[2022-12-11 20:28:33] [SEVERE ] removing card from slot 2
+[2022-12-11 20:28:33] [SEVERE ] removing card from slot 0
+[2022-12-11 20:28:33] [SEVERE ] setting player 0 score to 3
+[2022-12-11 20:28:33] [SEVERE ] placing card 65 in slot 0
+[2022-12-11 20:28:33] [SEVERE ] placing card 55 in slot 1
+[2022-12-11 20:28:33] [SEVERE ] Key 81 was pressed by player 0
+[2022-12-11 20:28:33] [SEVERE ] player 0 placing token on slot 0
+[2022-12-11 20:28:34] [SEVERE ] Key 87 was pressed by player 0
+[2022-12-11 20:28:34] [SEVERE ] removing player 0 token from slot 1
+[2022-12-11 20:28:34] [SEVERE ] placing card 77 in slot 2
+[2022-12-11 20:28:34] [SEVERE ] Key 69 was pressed by player 0
+[2022-12-11 20:28:34] [SEVERE ] removing player 0 token from slot 2
+[2022-12-11 20:28:34] [SEVERE ] removing card from slot 0
+[2022-12-11 20:28:34] [SEVERE ] removing card from slot 1
+[2022-12-11 20:28:34] [SEVERE ] removing card from slot 2
+[2022-12-11 20:28:34] [SEVERE ] removing card from slot 3
+[2022-12-11 20:28:34] [SEVERE ] removing card from slot 4
+[2022-12-11 20:28:34] [SEVERE ] removing card from slot 5
+[2022-12-11 20:28:34] [SEVERE ] removing card from slot 6
+[2022-12-11 20:28:35] [SEVERE ] removing card from slot 7
+[2022-12-11 20:28:35] [SEVERE ] removing card from slot 8
+[2022-12-11 20:28:35] [SEVERE ] removing card from slot 9
+[2022-12-11 20:28:35] [SEVERE ] removing card from slot 10
+[2022-12-11 20:28:35] [SEVERE ] removing card from slot 11
+[2022-12-11 20:28:35] [SEVERE ] placing card 3 in slot 0
+[2022-12-11 20:28:35] [SEVERE ] placing card 31 in slot 1
+[2022-12-11 20:28:35] [SEVERE ] placing card 79 in slot 2
+[2022-12-11 20:28:35] [SEVERE ] placing card 24 in slot 3
+[2022-12-11 20:28:35] [SEVERE ] placing card 75 in slot 4
+[2022-12-11 20:28:36] [SEVERE ] placing card 16 in slot 5
+[2022-12-11 20:28:36] [SEVERE ] placing card 20 in slot 6
+[2022-12-11 20:28:36] [SEVERE ] placing card 38 in slot 7
+[2022-12-11 20:28:36] [SEVERE ] placing card 10 in slot 8
+[2022-12-11 20:28:36] [SEVERE ] placing card 28 in slot 9
+[2022-12-11 20:28:36] [SEVERE ] placing card 44 in slot 10
+[2022-12-11 20:28:36] [SEVERE ] placing card 45 in slot 11
+[2022-12-11 20:28:38] [SEVERE ] Key 81 was pressed by player 0
+[2022-12-11 20:28:38] [SEVERE ] removing player 0 token from slot 0
+[2022-12-11 20:28:38] [SEVERE ] Key 87 was pressed by player 0
+[2022-12-11 20:28:38] [SEVERE ] player 0 placing token on slot 1
+[2022-12-11 20:28:38] [SEVERE ] Key 69 was pressed by player 0
+[2022-12-11 20:28:38] [SEVERE ] player 0 placing token on slot 2
+[2022-12-11 20:28:39] [SEVERE ] Key 81 was pressed by player 0
+[2022-12-11 20:28:39] [SEVERE ] player 0 placing token on slot 0
+[2022-12-11 20:28:39] [SEVERE ] removing all tokens
+[2022-12-11 20:28:39] [SEVERE ] removing tokens from slot 0
+[2022-12-11 20:28:39] [SEVERE ] removing tokens from slot 1
+[2022-12-11 20:28:39] [SEVERE ] removing tokens from slot 2
+[2022-12-11 20:28:39] [SEVERE ] removing tokens from slot 3
+[2022-12-11 20:28:39] [SEVERE ] removing tokens from slot 4
+[2022-12-11 20:28:39] [SEVERE ] removing tokens from slot 5
+[2022-12-11 20:28:39] [SEVERE ] removing tokens from slot 6
+[2022-12-11 20:28:39] [SEVERE ] removing tokens from slot 7
+[2022-12-11 20:28:39] [SEVERE ] removing tokens from slot 8
+[2022-12-11 20:28:39] [SEVERE ] removing tokens from slot 9
+[2022-12-11 20:28:39] [SEVERE ] removing tokens from slot 10
+[2022-12-11 20:28:39] [SEVERE ] removing tokens from slot 11
+[2022-12-11 20:28:39] [SEVERE ] Key 87 was pressed by player 0
+[2022-12-11 20:28:39] [SEVERE ] player 0 placing token on slot 1
+[2022-12-11 20:28:39] [SEVERE ] removing card from slot 1
+[2022-12-11 20:28:39] [SEVERE ] Key 69 was pressed by player 0
+[2022-12-11 20:28:39] [SEVERE ] player 0 placing token on slot 2
+[2022-12-11 20:28:39] [SEVERE ] removing card from slot 2
+[2022-12-11 20:28:39] [SEVERE ] removing card from slot 0
+[2022-12-11 20:28:39] [SEVERE ] setting player 0 score to 4
+[2022-12-11 20:28:39] [SEVERE ] placing card 46 in slot 0
+[2022-12-11 20:28:40] [SEVERE ] placing card 63 in slot 1
+[2022-12-11 20:28:40] [SEVERE ] placing card 13 in slot 2
+[2022-12-11 20:28:40] [SEVERE ] removing card from slot 0
+[2022-12-11 20:28:40] [SEVERE ] removing card from slot 1
+[2022-12-11 20:28:40] [SEVERE ] removing card from slot 2
+[2022-12-11 20:28:40] [SEVERE ] removing card from slot 3
+[2022-12-11 20:28:40] [SEVERE ] removing card from slot 4
+[2022-12-11 20:28:40] [SEVERE ] removing card from slot 5
+[2022-12-11 20:28:40] [SEVERE ] removing card from slot 6
+[2022-12-11 20:28:41] [SEVERE ] removing card from slot 7
+[2022-12-11 20:28:41] [SEVERE ] removing card from slot 8
+[2022-12-11 20:28:41] [SEVERE ] removing card from slot 9
+[2022-12-11 20:28:41] [SEVERE ] removing card from slot 10
+[2022-12-11 20:28:41] [SEVERE ] removing card from slot 11
+[2022-12-11 20:28:41] [SEVERE ] placing card 67 in slot 0
+[2022-12-11 20:28:41] [SEVERE ] placing card 37 in slot 1
+[2022-12-11 20:28:41] [SEVERE ] placing card 77 in slot 2
+[2022-12-11 20:28:41] [SEVERE ] placing card 1 in slot 3
+[2022-12-11 20:28:42] [SEVERE ] placing card 6 in slot 4
+[2022-12-11 20:28:42] [SEVERE ] placing card 41 in slot 5
+[2022-12-11 20:28:42] [SEVERE ] placing card 4 in slot 6
+[2022-12-11 20:28:42] [SEVERE ] placing card 58 in slot 7
+[2022-12-11 20:28:42] [SEVERE ] placing card 59 in slot 8
+[2022-12-11 20:28:42] [SEVERE ] placing card 49 in slot 9
+[2022-12-11 20:28:42] [SEVERE ] placing card 10 in slot 10
+[2022-12-11 20:28:42] [SEVERE ] placing card 32 in slot 11
+[2022-12-11 20:28:45] [SEVERE ] removing card from slot 0
+[2022-12-11 20:28:45] [SEVERE ] removing card from slot 1
+[2022-12-11 20:28:46] [SEVERE ] removing card from slot 2
+[2022-12-11 20:28:46] [SEVERE ] removing card from slot 3
+[2022-12-11 20:28:46] [SEVERE ] removing card from slot 4
+[2022-12-11 20:28:46] [SEVERE ] removing card from slot 5
+[2022-12-11 20:28:46] [SEVERE ] removing card from slot 6
+[2022-12-11 20:28:46] [SEVERE ] removing card from slot 7
+[2022-12-11 20:28:46] [SEVERE ] removing card from slot 8
+[2022-12-11 20:28:46] [SEVERE ] removing card from slot 9
+[2022-12-11 20:28:46] [SEVERE ] removing card from slot 10
+[2022-12-11 20:28:47] [SEVERE ] removing card from slot 11
+[2022-12-11 20:28:47] [SEVERE ] placing card 44 in slot 0
+[2022-12-11 20:28:47] [SEVERE ] placing card 50 in slot 1
+[2022-12-11 20:28:47] [SEVERE ] placing card 46 in slot 2
+[2022-12-11 20:28:47] [SEVERE ] placing card 72 in slot 3
+[2022-12-11 20:28:47] [SEVERE ] placing card 53 in slot 4
+[2022-12-11 20:28:47] [SEVERE ] placing card 52 in slot 5
+[2022-12-11 20:28:47] [SEVERE ] placing card 45 in slot 6
+[2022-12-11 20:28:47] [SEVERE ] placing card 58 in slot 7
+[2022-12-11 20:28:48] [SEVERE ] placing card 17 in slot 8
+[2022-12-11 20:28:48] [SEVERE ] placing card 55 in slot 9
+[2022-12-11 20:28:48] [SEVERE ] placing card 16 in slot 10
+[2022-12-11 20:28:48] [SEVERE ] placing card 30 in slot 11
+[2022-12-11 20:28:51] [SEVERE ] removing card from slot 0
+[2022-12-11 20:28:51] [SEVERE ] removing card from slot 1
+[2022-12-11 20:28:51] [SEVERE ] removing card from slot 2
+[2022-12-11 20:28:51] [SEVERE ] removing card from slot 3
+[2022-12-11 20:28:51] [SEVERE ] removing card from slot 4
+[2022-12-11 20:28:52] [SEVERE ] removing card from slot 5
+[2022-12-11 20:28:52] [SEVERE ] removing card from slot 6
+[2022-12-11 20:28:52] [SEVERE ] removing card from slot 7
+[2022-12-11 20:28:52] [SEVERE ] removing card from slot 8
+[2022-12-11 20:28:52] [SEVERE ] removing card from slot 9
+[2022-12-11 20:28:52] [SEVERE ] removing card from slot 10
+[2022-12-11 20:28:52] [SEVERE ] removing card from slot 11
+[2022-12-11 20:28:52] [SEVERE ] placing card 20 in slot 0
+[2022-12-11 20:28:52] [SEVERE ] placing card 17 in slot 1
+[2022-12-11 20:28:53] [SEVERE ] placing card 68 in slot 2
+[2022-12-11 20:28:53] [SEVERE ] placing card 26 in slot 3
+[2022-12-11 20:28:53] [SEVERE ] placing card 51 in slot 4
+[2022-12-11 20:28:53] [SEVERE ] placing card 19 in slot 5
+[2022-12-11 20:28:53] [SEVERE ] placing card 46 in slot 6
+[2022-12-11 20:28:53] [SEVERE ] placing card 36 in slot 7
+[2022-12-11 20:28:53] [SEVERE ] placing card 16 in slot 8
+[2022-12-11 20:28:53] [SEVERE ] placing card 71 in slot 9
+[2022-12-11 20:28:53] [SEVERE ] placing card 58 in slot 10
+[2022-12-11 20:28:54] [SEVERE ] placing card 41 in slot 11
+[2022-12-11 20:28:57] [SEVERE ] removing card from slot 0
+[2022-12-11 20:28:57] [SEVERE ] removing card from slot 1
+[2022-12-11 20:28:57] [SEVERE ] removing card from slot 2
+[2022-12-11 20:28:57] [SEVERE ] removing card from slot 3
+[2022-12-11 20:28:57] [SEVERE ] removing card from slot 4
+[2022-12-11 20:28:57] [SEVERE ] removing card from slot 5
+[2022-12-11 20:28:57] [SEVERE ] removing card from slot 6
+[2022-12-11 20:28:57] [SEVERE ] removing card from slot 7
+[2022-12-11 20:28:58] [SEVERE ] removing card from slot 8
+[2022-12-11 20:28:58] [SEVERE ] removing card from slot 9
+[2022-12-11 20:28:58] [SEVERE ] removing card from slot 10
+[2022-12-11 20:28:58] [SEVERE ] removing card from slot 11
+[2022-12-11 20:28:58] [SEVERE ] placing card 20 in slot 0
+[2022-12-11 20:28:58] [SEVERE ] placing card 62 in slot 1
+[2022-12-11 20:28:58] [SEVERE ] placing card 16 in slot 2
+[2022-12-11 20:28:58] [SEVERE ] placing card 17 in slot 3
+[2022-12-11 20:28:58] [SEVERE ] placing card 7 in slot 4
+[2022-12-11 20:28:58] [SEVERE ] placing card 4 in slot 5
+[2022-12-11 20:28:59] [SEVERE ] placing card 47 in slot 6
+[2022-12-11 20:28:59] [SEVERE ] placing card 0 in slot 7
+[2022-12-11 20:28:59] [SEVERE ] placing card 58 in slot 8
+[2022-12-11 20:28:59] [SEVERE ] placing card 70 in slot 9
+[2022-12-11 20:28:59] [SEVERE ] placing card 1 in slot 10
+[2022-12-11 20:28:59] [SEVERE ] placing card 46 in slot 11
+[2022-12-11 20:29:02] [SEVERE ] removing card from slot 0
+[2022-12-11 20:29:02] [SEVERE ] removing card from slot 1
+[2022-12-11 20:29:02] [SEVERE ] removing card from slot 2
+[2022-12-11 20:29:03] [SEVERE ] removing card from slot 3
+[2022-12-11 20:29:03] [SEVERE ] removing card from slot 4
+[2022-12-11 20:29:03] [SEVERE ] removing card from slot 5
+[2022-12-11 20:29:03] [SEVERE ] removing card from slot 6
+[2022-12-11 20:29:03] [SEVERE ] removing card from slot 7
+[2022-12-11 20:29:03] [SEVERE ] removing card from slot 8
+[2022-12-11 20:29:03] [SEVERE ] removing card from slot 9
+[2022-12-11 20:29:03] [SEVERE ] removing card from slot 10
+[2022-12-11 20:29:03] [SEVERE ] removing card from slot 11
+[2022-12-11 20:29:04] [SEVERE ] placing card 78 in slot 0
+[2022-12-11 20:29:04] [SEVERE ] placing card 70 in slot 1
+[2022-12-11 20:29:04] [SEVERE ] placing card 41 in slot 2
+[2022-12-11 20:29:04] [SEVERE ] placing card 43 in slot 3
+[2022-12-11 20:29:04] [SEVERE ] placing card 50 in slot 4
+[2022-12-11 20:29:04] [SEVERE ] placing card 25 in slot 5
+[2022-12-11 20:29:04] [SEVERE ] placing card 49 in slot 6
+[2022-12-11 20:29:04] [SEVERE ] placing card 58 in slot 7
+[2022-12-11 20:29:04] [SEVERE ] placing card 27 in slot 8
+[2022-12-11 20:29:05] [SEVERE ] placing card 68 in slot 9
+[2022-12-11 20:29:05] [SEVERE ] placing card 48 in slot 10
+[2022-12-11 20:29:05] [SEVERE ] placing card 40 in slot 11
+[2022-12-11 20:29:08] [SEVERE ] removing card from slot 0
+[2022-12-11 20:29:08] [SEVERE ] removing card from slot 1
+[2022-12-11 20:29:08] [SEVERE ] removing card from slot 2
+[2022-12-11 20:29:08] [SEVERE ] removing card from slot 3
+[2022-12-11 20:29:08] [SEVERE ] removing card from slot 4
+[2022-12-11 20:29:08] [SEVERE ] removing card from slot 5
+[2022-12-11 20:29:08] [SEVERE ] removing card from slot 6
+[2022-12-11 20:29:09] [SEVERE ] removing card from slot 7
+[2022-12-11 20:29:09] [SEVERE ] removing card from slot 8
+[2022-12-11 20:29:09] [SEVERE ] removing card from slot 9
+[2022-12-11 20:29:09] [SEVERE ] removing card from slot 10
+[2022-12-11 20:29:09] [SEVERE ] removing card from slot 11
+[2022-12-11 20:29:09] [SEVERE ] placing card 48 in slot 0
+[2022-12-11 20:29:09] [SEVERE ] placing card 30 in slot 1
+[2022-12-11 20:29:09] [SEVERE ] placing card 46 in slot 2
+[2022-12-11 20:29:09] [SEVERE ] placing card 23 in slot 3
+[2022-12-11 20:29:10] [SEVERE ] placing card 77 in slot 4
+[2022-12-11 20:29:10] [SEVERE ] placing card 12 in slot 5
+[2022-12-11 20:29:10] [SEVERE ] placing card 28 in slot 6
+[2022-12-11 20:29:10] [SEVERE ] placing card 26 in slot 7
+[2022-12-11 20:29:10] [SEVERE ] placing card 0 in slot 8
+[2022-12-11 20:29:10] [SEVERE ] placing card 78 in slot 9
+[2022-12-11 20:29:10] [SEVERE ] placing card 11 in slot 10
+[2022-12-11 20:29:10] [SEVERE ] placing card 45 in slot 11
+[2022-12-11 20:29:13] [SEVERE ] removing card from slot 0
+[2022-12-11 20:29:14] [SEVERE ] removing card from slot 1
+[2022-12-11 20:29:14] [SEVERE ] removing card from slot 2
+[2022-12-11 20:29:14] [SEVERE ] removing card from slot 3
+[2022-12-11 20:29:14] [SEVERE ] removing card from slot 4
+[2022-12-11 20:29:14] [SEVERE ] removing card from slot 5
+[2022-12-11 20:29:14] [SEVERE ] removing card from slot 6
+[2022-12-11 20:29:14] [SEVERE ] removing card from slot 7
+[2022-12-11 20:29:14] [SEVERE ] removing card from slot 8
+[2022-12-11 20:29:14] [SEVERE ] removing card from slot 9
+[2022-12-11 20:29:15] [SEVERE ] removing card from slot 10
+[2022-12-11 20:29:15] [SEVERE ] removing card from slot 11
+[2022-12-11 20:29:15] [SEVERE ] placing card 49 in slot 0
+[2022-12-11 20:29:15] [SEVERE ] placing card 6 in slot 1
+[2022-12-11 20:29:15] [SEVERE ] placing card 46 in slot 2
+[2022-12-11 20:29:15] [SEVERE ] placing card 28 in slot 3
+[2022-12-11 20:29:15] [SEVERE ] placing card 51 in slot 4
+[2022-12-11 20:29:15] [SEVERE ] placing card 19 in slot 5
+[2022-12-11 20:29:15] [SEVERE ] placing card 53 in slot 6
+[2022-12-11 20:29:16] [SEVERE ] placing card 20 in slot 7
+[2022-12-11 20:29:16] [SEVERE ] placing card 48 in slot 8
+[2022-12-11 20:29:16] [SEVERE ] placing card 61 in slot 9
+[2022-12-11 20:29:16] [SEVERE ] placing card 57 in slot 10
+[2022-12-11 20:29:16] [SEVERE ] placing card 70 in slot 11
+[2022-12-11 20:29:19] [SEVERE ] removing card from slot 0
+[2022-12-11 20:29:19] [SEVERE ] removing card from slot 1
+[2022-12-11 20:29:19] [SEVERE ] removing card from slot 2
+[2022-12-11 20:29:19] [SEVERE ] removing card from slot 3
+[2022-12-11 20:29:19] [SEVERE ] removing card from slot 4
+[2022-12-11 20:29:20] [SEVERE ] removing card from slot 5
+[2022-12-11 20:29:20] [SEVERE ] removing card from slot 6
+[2022-12-11 20:29:20] [SEVERE ] removing card from slot 7
+[2022-12-11 20:29:20] [SEVERE ] removing card from slot 8
+[2022-12-11 20:29:20] [SEVERE ] removing card from slot 9
+[2022-12-11 20:29:20] [SEVERE ] removing card from slot 10
+[2022-12-11 20:29:20] [SEVERE ] removing card from slot 11
+[2022-12-11 20:29:20] [SEVERE ] placing card 38 in slot 0
+[2022-12-11 20:29:20] [SEVERE ] placing card 12 in slot 1
+[2022-12-11 20:29:21] [SEVERE ] placing card 68 in slot 2
+[2022-12-11 20:29:21] [SEVERE ] placing card 67 in slot 3
+[2022-12-11 20:29:21] [SEVERE ] placing card 39 in slot 4
+[2022-12-11 20:29:21] [SEVERE ] placing card 64 in slot 5
+[2022-12-11 20:29:21] [SEVERE ] placing card 56 in slot 6
+[2022-12-11 20:29:21] [SEVERE ] placing card 11 in slot 7
+[2022-12-11 20:29:21] [SEVERE ] placing card 80 in slot 8
+[2022-12-11 20:29:21] [SEVERE ] placing card 42 in slot 9
+[2022-12-11 20:29:21] [SEVERE ] placing card 46 in slot 10
+[2022-12-11 20:29:22] [SEVERE ] placing card 44 in slot 11
+[2022-12-11 20:29:25] [SEVERE ] removing card from slot 0
+[2022-12-11 20:29:25] [SEVERE ] removing card from slot 1
+[2022-12-11 20:29:25] [SEVERE ] removing card from slot 2
+[2022-12-11 20:29:25] [SEVERE ] removing card from slot 3
+[2022-12-11 20:29:25] [SEVERE ] removing card from slot 4
+[2022-12-11 20:29:25] [SEVERE ] removing card from slot 5
+[2022-12-11 20:29:25] [SEVERE ] removing card from slot 6
+[2022-12-11 20:29:25] [SEVERE ] removing card from slot 7
+[2022-12-11 20:29:26] [SEVERE ] removing card from slot 8
+[2022-12-11 20:29:26] [SEVERE ] removing card from slot 9
+[2022-12-11 20:29:26] [SEVERE ] removing card from slot 10
+[2022-12-11 20:29:26] [SEVERE ] removing card from slot 11
+[2022-12-11 20:29:26] [SEVERE ] placing card 26 in slot 0
+[2022-12-11 20:29:26] [SEVERE ] placing card 60 in slot 1
+[2022-12-11 20:29:26] [SEVERE ] placing card 35 in slot 2
+[2022-12-11 20:29:26] [SEVERE ] placing card 78 in slot 3
+[2022-12-11 20:29:26] [SEVERE ] placing card 75 in slot 4
+[2022-12-11 20:29:26] [SEVERE ] placing card 68 in slot 5
+[2022-12-11 20:29:27] [SEVERE ] placing card 4 in slot 6
+[2022-12-11 20:29:27] [SEVERE ] placing card 80 in slot 7
+[2022-12-11 20:29:27] [SEVERE ] placing card 11 in slot 8
+[2022-12-11 20:29:27] [SEVERE ] placing card 17 in slot 9
+[2022-12-11 20:29:27] [SEVERE ] placing card 12 in slot 10
+[2022-12-11 20:29:27] [SEVERE ] placing card 47 in slot 11
+[2022-12-11 20:29:30] [SEVERE ] removing card from slot 0
+[2022-12-11 20:29:30] [SEVERE ] removing card from slot 1
+[2022-12-11 20:29:30] [SEVERE ] removing card from slot 2
+[2022-12-11 20:29:31] [SEVERE ] removing card from slot 3
+[2022-12-11 20:29:31] [SEVERE ] removing card from slot 4
+[2022-12-11 20:29:31] [SEVERE ] removing card from slot 5
+[2022-12-11 20:29:31] [SEVERE ] removing card from slot 6
+[2022-12-11 20:29:31] [SEVERE ] removing card from slot 7
+[2022-12-11 20:29:31] [SEVERE ] removing card from slot 8
+[2022-12-11 20:29:31] [SEVERE ] removing card from slot 9
+[2022-12-11 20:29:31] [SEVERE ] removing card from slot 10
+[2022-12-11 20:29:31] [SEVERE ] removing card from slot 11
+[2022-12-11 20:29:32] [SEVERE ] placing card 66 in slot 0
+[2022-12-11 20:29:32] [SEVERE ] placing card 36 in slot 1
+[2022-12-11 20:29:32] [SEVERE ] placing card 6 in slot 2
+[2022-12-11 20:29:32] [SEVERE ] placing card 26 in slot 3
+[2022-12-11 20:29:32] [SEVERE ] placing card 71 in slot 4
+[2022-12-11 20:29:32] [SEVERE ] placing card 1 in slot 5
+[2022-12-11 20:29:32] [SEVERE ] placing card 18 in slot 6
+[2022-12-11 20:29:32] [SEVERE ] placing card 77 in slot 7
+[2022-12-11 20:29:32] [SEVERE ] placing card 55 in slot 8
+[2022-12-11 20:29:33] [SEVERE ] placing card 50 in slot 9
+[2022-12-11 20:29:33] [SEVERE ] placing card 25 in slot 10
+[2022-12-11 20:29:33] [SEVERE ] placing card 45 in slot 11
+[2022-12-11 20:29:36] [SEVERE ] removing card from slot 0
+[2022-12-11 20:29:36] [SEVERE ] removing card from slot 1
+[2022-12-11 20:29:36] [SEVERE ] removing card from slot 2
+[2022-12-11 20:29:36] [SEVERE ] removing card from slot 3
+[2022-12-11 20:29:36] [SEVERE ] removing card from slot 4
+[2022-12-11 20:29:36] [SEVERE ] removing card from slot 5
+[2022-12-11 20:29:36] [SEVERE ] removing card from slot 6
+[2022-12-11 20:29:37] [SEVERE ] removing card from slot 7
+[2022-12-11 20:29:37] [SEVERE ] removing card from slot 8
+[2022-12-11 20:29:37] [SEVERE ] removing card from slot 9
+[2022-12-11 20:29:37] [SEVERE ] removing card from slot 10
+[2022-12-11 20:29:37] [SEVERE ] removing card from slot 11
+[2022-12-11 20:29:37] [SEVERE ] placing card 41 in slot 0
+[2022-12-11 20:29:37] [SEVERE ] placing card 28 in slot 1
+[2022-12-11 20:29:37] [SEVERE ] placing card 11 in slot 2
+[2022-12-11 20:29:37] [SEVERE ] placing card 16 in slot 3
+[2022-12-11 20:29:38] [SEVERE ] placing card 39 in slot 4
+[2022-12-11 20:29:38] [SEVERE ] placing card 15 in slot 5
+[2022-12-11 20:29:38] [SEVERE ] placing card 58 in slot 6
+[2022-12-11 20:29:38] [SEVERE ] placing card 70 in slot 7
+[2022-12-11 20:29:38] [SEVERE ] placing card 46 in slot 8
+[2022-12-11 20:29:38] [SEVERE ] placing card 63 in slot 9
+[2022-12-11 20:29:38] [SEVERE ] placing card 80 in slot 10
+[2022-12-11 20:29:38] [SEVERE ] placing card 24 in slot 11
+[2022-12-11 20:29:41] [SEVERE ] removing card from slot 0
+[2022-12-11 20:29:42] [SEVERE ] removing card from slot 1
+[2022-12-11 20:29:42] [SEVERE ] removing card from slot 2
+[2022-12-11 20:29:42] [SEVERE ] removing card from slot 3
+[2022-12-11 20:29:42] [SEVERE ] removing card from slot 4
+[2022-12-11 20:29:42] [SEVERE ] removing card from slot 5
+[2022-12-11 20:29:42] [SEVERE ] removing card from slot 6
+[2022-12-11 20:29:42] [SEVERE ] removing card from slot 7
+[2022-12-11 20:29:42] [SEVERE ] removing card from slot 8
+[2022-12-11 20:29:42] [SEVERE ] removing card from slot 9
+[2022-12-11 20:29:43] [SEVERE ] removing card from slot 10
+[2022-12-11 20:29:43] [SEVERE ] removing card from slot 11
+[2022-12-11 20:29:43] [SEVERE ] placing card 45 in slot 0
+[2022-12-11 20:29:43] [SEVERE ] placing card 10 in slot 1
+[2022-12-11 20:29:43] [SEVERE ] placing card 48 in slot 2
+[2022-12-11 20:29:43] [SEVERE ] placing card 80 in slot 3
+[2022-12-11 20:29:43] [SEVERE ] placing card 4 in slot 4
+[2022-12-11 20:29:43] [SEVERE ] placing card 43 in slot 5
+[2022-12-11 20:29:43] [SEVERE ] placing card 15 in slot 6
+[2022-12-11 20:29:43] [SEVERE ] placing card 60 in slot 7
+[2022-12-11 20:29:44] [SEVERE ] placing card 50 in slot 8
+[2022-12-11 20:29:44] [SEVERE ] placing card 42 in slot 9
+[2022-12-11 20:29:44] [SEVERE ] placing card 58 in slot 10
+[2022-12-11 20:29:44] [SEVERE ] placing card 62 in slot 11
+[2022-12-11 20:29:47] [SEVERE ] removing card from slot 0
+[2022-12-11 20:29:47] [SEVERE ] removing card from slot 1
+[2022-12-11 20:29:47] [SEVERE ] removing card from slot 2
+[2022-12-11 20:29:47] [SEVERE ] removing card from slot 3
+[2022-12-11 20:29:47] [SEVERE ] removing card from slot 4
+[2022-12-11 20:29:48] [SEVERE ] removing card from slot 5
+[2022-12-11 20:29:48] [SEVERE ] removing card from slot 6
+[2022-12-11 20:29:48] [SEVERE ] removing card from slot 7
+[2022-12-11 20:29:48] [SEVERE ] removing card from slot 8
+[2022-12-11 20:29:48] [SEVERE ] removing card from slot 9
+[2022-12-11 20:29:48] [SEVERE ] removing card from slot 10
+[2022-12-11 20:29:48] [SEVERE ] removing card from slot 11
+[2022-12-11 20:29:48] [SEVERE ] placing card 50 in slot 0
+[2022-12-11 20:29:48] [SEVERE ] placing card 11 in slot 1
+[2022-12-11 20:29:49] [SEVERE ] placing card 32 in slot 2
+[2022-12-11 20:29:49] [SEVERE ] placing card 56 in slot 3
+[2022-12-11 20:29:49] [SEVERE ] placing card 5 in slot 4
+[2022-12-11 20:29:49] [SEVERE ] placing card 18 in slot 5
+[2022-12-11 20:29:49] [SEVERE ] placing card 30 in slot 6
+[2022-12-11 20:29:49] [SEVERE ] placing card 64 in slot 7
+[2022-12-11 20:29:49] [SEVERE ] placing card 21 in slot 8
+[2022-12-11 20:29:49] [SEVERE ] placing card 76 in slot 9
+[2022-12-11 20:29:49] [SEVERE ] placing card 47 in slot 10
+[2022-12-11 20:29:50] [SEVERE ] placing card 46 in slot 11
+[2022-12-11 20:29:53] [SEVERE ] removing card from slot 0
+[2022-12-11 20:29:53] [SEVERE ] removing card from slot 1
+[2022-12-11 20:29:53] [SEVERE ] removing card from slot 2
+[2022-12-11 20:29:53] [SEVERE ] removing card from slot 3
+[2022-12-11 20:29:53] [SEVERE ] removing card from slot 4
+[2022-12-11 20:29:53] [SEVERE ] removing card from slot 5
+[2022-12-11 20:29:53] [SEVERE ] removing card from slot 6
+[2022-12-11 20:29:53] [SEVERE ] removing card from slot 7
+[2022-12-11 20:29:53] [SEVERE ] removing card from slot 8
+[2022-12-11 20:29:54] [SEVERE ] removing card from slot 9
+[2022-12-11 20:29:54] [SEVERE ] removing card from slot 10
+[2022-12-11 20:29:54] [SEVERE ] removing card from slot 11
+[2022-12-11 20:29:54] [SEVERE ] placing card 25 in slot 0
+[2022-12-11 20:29:54] [SEVERE ] placing card 49 in slot 1
+[2022-12-11 20:29:54] [SEVERE ] placing card 19 in slot 2
+[2022-12-11 20:29:54] [SEVERE ] placing card 50 in slot 3
+[2022-12-11 20:29:54] [SEVERE ] placing card 4 in slot 4
+[2022-12-11 20:29:54] [SEVERE ] placing card 21 in slot 5
+[2022-12-11 20:29:55] [SEVERE ] placing card 64 in slot 6
+[2022-12-11 20:29:55] [SEVERE ] placing card 13 in slot 7
+[2022-12-11 20:29:55] [SEVERE ] placing card 37 in slot 8
+[2022-12-11 20:29:55] [SEVERE ] placing card 68 in slot 9
+[2022-12-11 20:29:55] [SEVERE ] placing card 12 in slot 10
+[2022-12-11 20:29:55] [SEVERE ] placing card 43 in slot 11
+[2022-12-11 20:29:58] [SEVERE ] removing card from slot 0
+[2022-12-11 20:29:58] [SEVERE ] removing card from slot 1
+[2022-12-11 20:29:58] [SEVERE ] removing card from slot 2
+[2022-12-11 20:29:59] [SEVERE ] removing card from slot 3
+[2022-12-11 20:29:59] [SEVERE ] removing card from slot 4
+[2022-12-11 20:29:59] [SEVERE ] removing card from slot 5
+[2022-12-11 20:29:59] [SEVERE ] removing card from slot 6
+[2022-12-11 20:29:59] [SEVERE ] removing card from slot 7
+[2022-12-11 20:29:59] [SEVERE ] removing card from slot 8
+[2022-12-11 20:29:59] [SEVERE ] removing card from slot 9
+[2022-12-11 20:29:59] [SEVERE ] removing card from slot 10
+[2022-12-11 20:29:59] [SEVERE ] removing card from slot 11
+[2022-12-11 20:30:00] [SEVERE ] placing card 24 in slot 0
+[2022-12-11 20:30:00] [SEVERE ] placing card 10 in slot 1
+[2022-12-11 20:30:00] [SEVERE ] placing card 52 in slot 2
+[2022-12-11 20:30:00] [SEVERE ] placing card 36 in slot 3
+[2022-12-11 20:30:00] [SEVERE ] placing card 57 in slot 4
+[2022-12-11 20:30:00] [SEVERE ] placing card 44 in slot 5
+[2022-12-11 20:30:00] [SEVERE ] placing card 0 in slot 6
+[2022-12-11 20:30:00] [SEVERE ] placing card 16 in slot 7
+[2022-12-11 20:30:00] [SEVERE ] placing card 37 in slot 8
+[2022-12-11 20:30:01] [SEVERE ] placing card 40 in slot 9
+[2022-12-11 20:30:01] [SEVERE ] placing card 50 in slot 10
+[2022-12-11 20:30:01] [SEVERE ] placing card 58 in slot 11
+[2022-12-11 20:30:04] [SEVERE ] removing card from slot 0
+[2022-12-11 20:30:04] [SEVERE ] removing card from slot 1
+[2022-12-11 20:30:04] [SEVERE ] removing card from slot 2
+[2022-12-11 20:30:04] [SEVERE ] removing card from slot 3
+[2022-12-11 20:30:04] [SEVERE ] removing card from slot 4
+[2022-12-11 20:30:04] [SEVERE ] removing card from slot 5
+[2022-12-11 20:30:05] [SEVERE ] removing card from slot 6
+[2022-12-11 20:30:05] [SEVERE ] removing card from slot 7
+[2022-12-11 20:30:05] [SEVERE ] removing card from slot 8
+[2022-12-11 20:30:05] [SEVERE ] removing card from slot 9
+[2022-12-11 20:30:05] [SEVERE ] removing card from slot 10
+[2022-12-11 20:30:05] [SEVERE ] removing card from slot 11
+[2022-12-11 20:30:05] [SEVERE ] placing card 70 in slot 0
+[2022-12-11 20:30:05] [SEVERE ] placing card 35 in slot 1
+[2022-12-11 20:30:05] [SEVERE ] placing card 64 in slot 2
+[2022-12-11 20:30:05] [SEVERE ] placing card 53 in slot 3
+[2022-12-11 20:30:06] [SEVERE ] placing card 77 in slot 4
+[2022-12-11 20:30:06] [SEVERE ] placing card 12 in slot 5
+[2022-12-11 20:30:06] [SEVERE ] placing card 13 in slot 6
+[2022-12-11 20:30:06] [SEVERE ] placing card 1 in slot 7
+[2022-12-11 20:30:06] [SEVERE ] placing card 18 in slot 8
+[2022-12-11 20:30:06] [SEVERE ] placing card 61 in slot 9
+[2022-12-11 20:30:06] [SEVERE ] placing card 67 in slot 10
+[2022-12-11 20:30:06] [SEVERE ] placing card 62 in slot 11
+[2022-12-11 20:30:09] [SEVERE ] removing card from slot 0
+[2022-12-11 20:30:10] [SEVERE ] removing card from slot 1
+[2022-12-11 20:30:10] [SEVERE ] removing card from slot 2
+[2022-12-11 20:30:10] [SEVERE ] removing card from slot 3
+[2022-12-11 20:30:10] [SEVERE ] removing card from slot 4
+[2022-12-11 20:30:10] [SEVERE ] removing card from slot 5
+[2022-12-11 20:30:10] [SEVERE ] removing card from slot 6
+[2022-12-11 20:30:10] [SEVERE ] removing card from slot 7
+[2022-12-11 20:30:10] [SEVERE ] removing card from slot 8
+[2022-12-11 20:30:10] [SEVERE ] removing card from slot 9
+[2022-12-11 20:30:11] [SEVERE ] removing card from slot 10
+[2022-12-11 20:30:11] [SEVERE ] removing card from slot 11
+[2022-12-11 20:30:11] [SEVERE ] placing card 47 in slot 0
+[2022-12-11 20:30:11] [SEVERE ] placing card 45 in slot 1
+[2022-12-11 20:30:11] [SEVERE ] placing card 29 in slot 2
+[2022-12-11 20:30:11] [SEVERE ] placing card 15 in slot 3
+[2022-12-11 20:30:11] [SEVERE ] placing card 10 in slot 4
+[2022-12-11 20:30:11] [SEVERE ] placing card 80 in slot 5
+[2022-12-11 20:30:11] [SEVERE ] placing card 48 in slot 6
+[2022-12-11 20:30:12] [SEVERE ] placing card 59 in slot 7
+[2022-12-11 20:30:12] [SEVERE ] placing card 70 in slot 8
+[2022-12-11 20:30:12] [SEVERE ] placing card 40 in slot 9
+[2022-12-11 20:30:12] [SEVERE ] placing card 67 in slot 10
+[2022-12-11 20:30:12] [SEVERE ] placing card 60 in slot 11
+[2022-12-11 20:30:15] [SEVERE ] removing card from slot 0
+[2022-12-11 20:30:15] [SEVERE ] removing card from slot 1
+[2022-12-11 20:30:15] [SEVERE ] removing card from slot 2
+[2022-12-11 20:30:15] [SEVERE ] removing card from slot 3
+[2022-12-11 20:30:16] [SEVERE ] removing card from slot 4
+[2022-12-11 20:30:16] [SEVERE ] removing card from slot 5
+[2022-12-11 20:30:16] [SEVERE ] removing card from slot 6
+[2022-12-11 20:30:16] [SEVERE ] removing card from slot 7
+[2022-12-11 20:30:16] [SEVERE ] removing card from slot 8
+[2022-12-11 20:30:16] [SEVERE ] removing card from slot 9
+[2022-12-11 20:30:16] [SEVERE ] removing card from slot 10
+[2022-12-11 20:30:16] [SEVERE ] removing card from slot 11
+[2022-12-11 20:30:16] [SEVERE ] placing card 75 in slot 0
+[2022-12-11 20:30:16] [SEVERE ] placing card 59 in slot 1
+[2022-12-11 20:30:17] [SEVERE ] placing card 44 in slot 2
+[2022-12-11 20:30:17] [SEVERE ] placing card 68 in slot 3
+[2022-12-11 20:30:17] [SEVERE ] placing card 29 in slot 4
+[2022-12-11 20:30:17] [SEVERE ] placing card 72 in slot 5
+[2022-12-11 20:30:17] [SEVERE ] placing card 18 in slot 6
+[2022-12-11 20:30:17] [SEVERE ] placing card 13 in slot 7
+[2022-12-11 20:30:17] [SEVERE ] placing card 33 in slot 8
+[2022-12-11 20:30:17] [SEVERE ] placing card 28 in slot 9
+[2022-12-11 20:30:17] [SEVERE ] placing card 38 in slot 10
+[2022-12-11 20:30:18] [SEVERE ] placing card 21 in slot 11
+[2022-12-11 20:30:21] [SEVERE ] removing card from slot 0
+[2022-12-11 20:30:21] [SEVERE ] removing card from slot 1
+[2022-12-11 20:30:21] [SEVERE ] removing card from slot 2
+[2022-12-11 20:30:21] [SEVERE ] removing card from slot 3
+[2022-12-11 20:30:21] [SEVERE ] removing card from slot 4
+[2022-12-11 20:30:21] [SEVERE ] removing card from slot 5
+[2022-12-11 20:30:21] [SEVERE ] removing card from slot 6
+[2022-12-11 20:30:21] [SEVERE ] removing card from slot 7
+[2022-12-11 20:30:22] [SEVERE ] removing card from slot 8
+[2022-12-11 20:30:22] [SEVERE ] removing card from slot 9
+[2022-12-11 20:30:22] [SEVERE ] removing card from slot 10
+[2022-12-11 20:30:22] [SEVERE ] removing card from slot 11
+[2022-12-11 20:30:22] [SEVERE ] placing card 45 in slot 0
+[2022-12-11 20:30:22] [SEVERE ] placing card 20 in slot 1
+[2022-12-11 20:30:22] [SEVERE ] placing card 67 in slot 2
+[2022-12-11 20:30:22] [SEVERE ] placing card 42 in slot 3
+[2022-12-11 20:30:22] [SEVERE ] placing card 46 in slot 4
+[2022-12-11 20:30:23] [SEVERE ] placing card 57 in slot 5
+[2022-12-11 20:30:23] [SEVERE ] placing card 53 in slot 6
+[2022-12-11 20:30:23] [SEVERE ] placing card 27 in slot 7
+[2022-12-11 20:30:23] [SEVERE ] placing card 61 in slot 8
+[2022-12-11 20:30:23] [SEVERE ] placing card 48 in slot 9
+[2022-12-11 20:30:23] [SEVERE ] placing card 33 in slot 10
+[2022-12-11 20:30:23] [SEVERE ] placing card 44 in slot 11
+[2022-12-11 20:30:26] [SEVERE ] removing card from slot 0
+[2022-12-11 20:30:26] [SEVERE ] removing card from slot 1
+[2022-12-11 20:30:27] [SEVERE ] removing card from slot 2
+[2022-12-11 20:30:27] [SEVERE ] removing card from slot 3
+[2022-12-11 20:30:27] [SEVERE ] removing card from slot 4
+[2022-12-11 20:30:27] [SEVERE ] removing card from slot 5
+[2022-12-11 20:30:27] [SEVERE ] removing card from slot 6
+[2022-12-11 20:30:27] [SEVERE ] removing card from slot 7
+[2022-12-11 20:30:27] [SEVERE ] removing card from slot 8
+[2022-12-11 20:30:27] [SEVERE ] removing card from slot 9
+[2022-12-11 20:30:27] [SEVERE ] removing card from slot 10
+[2022-12-11 20:30:27] [SEVERE ] removing card from slot 11
+[2022-12-11 20:30:28] [SEVERE ] placing card 32 in slot 0
+[2022-12-11 20:30:28] [SEVERE ] placing card 68 in slot 1
+[2022-12-11 20:30:28] [SEVERE ] placing card 63 in slot 2
+[2022-12-11 20:30:28] [SEVERE ] placing card 52 in slot 3
+[2022-12-11 20:30:28] [SEVERE ] placing card 58 in slot 4
+[2022-12-11 20:30:28] [SEVERE ] placing card 7 in slot 5
+[2022-12-11 20:30:28] [SEVERE ] placing card 51 in slot 6
+[2022-12-11 20:30:28] [SEVERE ] placing card 10 in slot 7
+[2022-12-11 20:30:28] [SEVERE ] placing card 49 in slot 8
+[2022-12-11 20:30:29] [SEVERE ] placing card 66 in slot 9
+[2022-12-11 20:30:29] [SEVERE ] placing card 16 in slot 10
+[2022-12-11 20:30:29] [SEVERE ] placing card 50 in slot 11
+[2022-12-11 20:30:32] [SEVERE ] removing card from slot 0
+[2022-12-11 20:30:32] [SEVERE ] removing card from slot 1
+[2022-12-11 20:30:32] [SEVERE ] removing card from slot 2
+[2022-12-11 20:30:32] [SEVERE ] removing card from slot 3
+[2022-12-11 20:30:32] [SEVERE ] removing card from slot 4
+[2022-12-11 20:30:32] [SEVERE ] removing card from slot 5
+[2022-12-11 20:30:33] [SEVERE ] removing card from slot 6
+[2022-12-11 20:30:33] [SEVERE ] removing card from slot 7
+[2022-12-11 20:30:33] [SEVERE ] removing card from slot 8
+[2022-12-11 20:30:33] [SEVERE ] removing card from slot 9
+[2022-12-11 20:30:33] [SEVERE ] removing card from slot 10
+[2022-12-11 20:30:33] [SEVERE ] removing card from slot 11
+[2022-12-11 20:30:33] [SEVERE ] placing card 71 in slot 0
+[2022-12-11 20:30:33] [SEVERE ] placing card 32 in slot 1
+[2022-12-11 20:30:33] [SEVERE ] placing card 61 in slot 2
+[2022-12-11 20:30:34] [SEVERE ] placing card 1 in slot 3
+[2022-12-11 20:30:34] [SEVERE ] placing card 48 in slot 4
+[2022-12-11 20:30:34] [SEVERE ] placing card 37 in slot 5
+[2022-12-11 20:30:34] [SEVERE ] placing card 26 in slot 6
+[2022-12-11 20:30:34] [SEVERE ] placing card 11 in slot 7
+[2022-12-11 20:30:34] [SEVERE ] placing card 10 in slot 8
+[2022-12-11 20:30:34] [SEVERE ] placing card 68 in slot 9
+[2022-12-11 20:30:34] [SEVERE ] placing card 56 in slot 10
+[2022-12-11 20:30:34] [SEVERE ] placing card 75 in slot 11
+[2022-12-11 20:30:37] [SEVERE ] removing card from slot 0
+[2022-12-11 20:30:38] [SEVERE ] removing card from slot 1
+[2022-12-11 20:30:38] [SEVERE ] removing card from slot 2
+[2022-12-11 20:30:38] [SEVERE ] removing card from slot 3
+[2022-12-11 20:30:38] [SEVERE ] removing card from slot 4
+[2022-12-11 20:30:38] [SEVERE ] removing card from slot 5
+[2022-12-11 20:30:38] [SEVERE ] removing card from slot 6
+[2022-12-11 20:30:38] [SEVERE ] removing card from slot 7
+[2022-12-11 20:30:38] [SEVERE ] removing card from slot 8
+[2022-12-11 20:30:38] [SEVERE ] removing card from slot 9
+[2022-12-11 20:30:39] [SEVERE ] removing card from slot 10
+[2022-12-11 20:30:39] [SEVERE ] removing card from slot 11
+[2022-12-11 20:30:39] [SEVERE ] placing card 67 in slot 0
+[2022-12-11 20:30:39] [SEVERE ] placing card 48 in slot 1
+[2022-12-11 20:30:39] [SEVERE ] placing card 12 in slot 2
+[2022-12-11 20:30:39] [SEVERE ] placing card 63 in slot 3
+[2022-12-11 20:30:39] [SEVERE ] placing card 66 in slot 4
+[2022-12-11 20:30:39] [SEVERE ] placing card 35 in slot 5
+[2022-12-11 20:30:39] [SEVERE ] placing card 55 in slot 6
+[2022-12-11 20:30:40] [SEVERE ] placing card 47 in slot 7
+[2022-12-11 20:30:40] [SEVERE ] placing card 20 in slot 8
+[2022-12-11 20:30:40] [SEVERE ] placing card 71 in slot 9
+[2022-12-11 20:30:40] [SEVERE ] placing card 30 in slot 10
+[2022-12-11 20:30:40] [SEVERE ] placing card 68 in slot 11
+[2022-12-11 20:30:43] [SEVERE ] removing card from slot 0
+[2022-12-11 20:30:43] [SEVERE ] removing card from slot 1
+[2022-12-11 20:30:43] [SEVERE ] removing card from slot 2
+[2022-12-11 20:30:43] [SEVERE ] removing card from slot 3
+[2022-12-11 20:30:44] [SEVERE ] removing card from slot 4
+[2022-12-11 20:30:44] [SEVERE ] removing card from slot 5
+[2022-12-11 20:30:44] [SEVERE ] removing card from slot 6
+[2022-12-11 20:30:44] [SEVERE ] removing card from slot 7
+[2022-12-11 20:30:44] [SEVERE ] removing card from slot 8
+[2022-12-11 20:30:44] [SEVERE ] removing card from slot 9
+[2022-12-11 20:30:44] [SEVERE ] removing card from slot 10
+[2022-12-11 20:30:44] [SEVERE ] removing card from slot 11
+[2022-12-11 20:30:44] [SEVERE ] placing card 63 in slot 0
+[2022-12-11 20:30:45] [SEVERE ] placing card 66 in slot 1
+[2022-12-11 20:30:45] [SEVERE ] placing card 36 in slot 2
+[2022-12-11 20:30:45] [SEVERE ] placing card 1 in slot 3
+[2022-12-11 20:30:45] [SEVERE ] placing card 39 in slot 4
+[2022-12-11 20:30:45] [SEVERE ] placing card 60 in slot 5
+[2022-12-11 20:30:45] [SEVERE ] placing card 38 in slot 6
+[2022-12-11 20:30:45] [SEVERE ] placing card 59 in slot 7
+[2022-12-11 20:30:45] [SEVERE ] placing card 25 in slot 8
+[2022-12-11 20:30:45] [SEVERE ] placing card 67 in slot 9
+[2022-12-11 20:30:45] [SEVERE ] placing card 61 in slot 10
+[2022-12-11 20:30:46] [SEVERE ] placing card 42 in slot 11
+[2022-12-11 20:30:49] [SEVERE ] removing card from slot 0
+[2022-12-11 20:30:49] [SEVERE ] removing card from slot 1
+[2022-12-11 20:30:49] [SEVERE ] removing card from slot 2
+[2022-12-11 20:30:49] [SEVERE ] removing card from slot 3
+[2022-12-11 20:30:49] [SEVERE ] removing card from slot 4
+[2022-12-11 20:30:49] [SEVERE ] removing card from slot 5
+[2022-12-11 20:30:49] [SEVERE ] removing card from slot 6
+[2022-12-11 20:30:49] [SEVERE ] removing card from slot 7
+[2022-12-11 20:30:50] [SEVERE ] removing card from slot 8
+[2022-12-11 20:30:50] [SEVERE ] removing card from slot 9
+[2022-12-11 20:30:50] [SEVERE ] removing card from slot 10
+[2022-12-11 20:30:50] [SEVERE ] removing card from slot 11
+[2022-12-11 20:30:50] [SEVERE ] placing card 44 in slot 0
+[2022-12-11 20:30:50] [SEVERE ] placing card 76 in slot 1
+[2022-12-11 20:30:50] [SEVERE ] placing card 13 in slot 2
+[2022-12-11 20:30:50] [SEVERE ] placing card 33 in slot 3
+[2022-12-11 20:30:50] [SEVERE ] placing card 38 in slot 4
+[2022-12-11 20:30:51] [SEVERE ] placing card 19 in slot 5
+[2022-12-11 20:30:51] [SEVERE ] placing card 26 in slot 6
+[2022-12-11 20:30:51] [SEVERE ] placing card 6 in slot 7
+[2022-12-11 20:30:51] [SEVERE ] placing card 78 in slot 8
+[2022-12-11 20:30:51] [SEVERE ] placing card 36 in slot 9
+[2022-12-11 20:30:51] [SEVERE ] placing card 64 in slot 10
+[2022-12-11 20:30:51] [SEVERE ] placing card 70 in slot 11
+[2022-12-11 20:30:54] [SEVERE ] removing card from slot 0
+[2022-12-11 20:30:54] [SEVERE ] removing card from slot 1
+[2022-12-11 20:30:55] [SEVERE ] removing card from slot 2
+[2022-12-11 20:30:55] [SEVERE ] removing card from slot 3
+[2022-12-11 20:30:55] [SEVERE ] removing card from slot 4
+[2022-12-11 20:30:55] [SEVERE ] removing card from slot 5
+[2022-12-11 20:30:55] [SEVERE ] removing card from slot 6
+[2022-12-11 20:30:55] [SEVERE ] removing card from slot 7
+[2022-12-11 20:30:55] [SEVERE ] removing card from slot 8
+[2022-12-11 20:30:55] [SEVERE ] removing card from slot 9
+[2022-12-11 20:30:55] [SEVERE ] removing card from slot 10
+[2022-12-11 20:30:55] [SEVERE ] removing card from slot 11
+[2022-12-11 20:30:56] [SEVERE ] placing card 39 in slot 0
+[2022-12-11 20:30:56] [SEVERE ] placing card 0 in slot 1
+[2022-12-11 20:30:56] [SEVERE ] placing card 42 in slot 2
+[2022-12-11 20:30:56] [SEVERE ] placing card 19 in slot 3
+[2022-12-11 20:30:56] [SEVERE ] placing card 64 in slot 4
+[2022-12-11 20:30:56] [SEVERE ] placing card 13 in slot 5
+[2022-12-11 20:30:56] [SEVERE ] placing card 44 in slot 6
+[2022-12-11 20:30:56] [SEVERE ] placing card 50 in slot 7
+[2022-12-11 20:30:56] [SEVERE ] placing card 28 in slot 8
+[2022-12-11 20:30:57] [SEVERE ] placing card 52 in slot 9
+[2022-12-11 20:30:57] [SEVERE ] placing card 35 in slot 10
+[2022-12-11 20:30:57] [SEVERE ] placing card 10 in slot 11
+[2022-12-11 20:31:00] [SEVERE ] removing card from slot 0
+[2022-12-11 20:31:00] [SEVERE ] removing card from slot 1
+[2022-12-11 20:31:00] [SEVERE ] removing card from slot 2
+[2022-12-11 20:31:00] [SEVERE ] removing card from slot 3
+[2022-12-11 20:31:00] [SEVERE ] removing card from slot 4
+[2022-12-11 20:31:00] [SEVERE ] removing card from slot 5
+[2022-12-11 20:31:01] [SEVERE ] removing card from slot 6
+[2022-12-11 20:31:01] [SEVERE ] removing card from slot 7
+[2022-12-11 20:31:01] [SEVERE ] removing card from slot 8
+[2022-12-11 20:31:01] [SEVERE ] removing card from slot 9
+[2022-12-11 20:31:01] [SEVERE ] removing card from slot 10
+[2022-12-11 20:31:01] [SEVERE ] removing card from slot 11
+[2022-12-11 20:31:01] [SEVERE ] placing card 72 in slot 0
+[2022-12-11 20:31:01] [SEVERE ] placing card 55 in slot 1
+[2022-12-11 20:31:01] [SEVERE ] placing card 24 in slot 2
+[2022-12-11 20:31:02] [SEVERE ] placing card 52 in slot 3
+[2022-12-11 20:31:02] [SEVERE ] placing card 22 in slot 4
+[2022-12-11 20:31:02] [SEVERE ] placing card 1 in slot 5
+[2022-12-11 20:31:02] [SEVERE ] placing card 53 in slot 6
+[2022-12-11 20:31:02] [SEVERE ] placing card 26 in slot 7
+[2022-12-11 20:31:02] [SEVERE ] placing card 67 in slot 8
+[2022-12-11 20:31:02] [SEVERE ] placing card 33 in slot 9
+[2022-12-11 20:31:02] [SEVERE ] placing card 71 in slot 10
+[2022-12-11 20:31:02] [SEVERE ] placing card 6 in slot 11
+[2022-12-11 20:31:05] [SEVERE ] removing card from slot 0
+[2022-12-11 20:31:06] [SEVERE ] removing card from slot 1
+[2022-12-11 20:31:06] [SEVERE ] removing card from slot 2
+[2022-12-11 20:31:06] [SEVERE ] removing card from slot 3
+[2022-12-11 20:31:06] [SEVERE ] removing card from slot 4
+[2022-12-11 20:31:06] [SEVERE ] removing card from slot 5
+[2022-12-11 20:31:06] [SEVERE ] removing card from slot 6
+[2022-12-11 20:31:06] [SEVERE ] removing card from slot 7
+[2022-12-11 20:31:06] [SEVERE ] removing card from slot 8
+[2022-12-11 20:31:06] [SEVERE ] removing card from slot 9
+[2022-12-11 20:31:07] [SEVERE ] removing card from slot 10
+[2022-12-11 20:31:07] [SEVERE ] removing card from slot 11
+[2022-12-11 20:31:07] [SEVERE ] placing card 20 in slot 0
+[2022-12-11 20:31:07] [SEVERE ] placing card 75 in slot 1
+[2022-12-11 20:31:07] [SEVERE ] placing card 51 in slot 2
+[2022-12-11 20:31:07] [SEVERE ] placing card 11 in slot 3
+[2022-12-11 20:31:07] [SEVERE ] placing card 64 in slot 4
+[2022-12-11 20:31:07] [SEVERE ] placing card 61 in slot 5
+[2022-12-11 20:31:07] [SEVERE ] placing card 22 in slot 6
+[2022-12-11 20:31:08] [SEVERE ] placing card 7 in slot 7
+[2022-12-11 20:31:08] [SEVERE ] placing card 71 in slot 8
+[2022-12-11 20:31:08] [SEVERE ] placing card 53 in slot 9
+[2022-12-11 20:31:08] [SEVERE ] placing card 27 in slot 10
+[2022-12-11 20:31:08] [SEVERE ] placing card 21 in slot 11
+[2022-12-11 20:31:11] [SEVERE ] removing card from slot 0
+[2022-12-11 20:31:11] [SEVERE ] removing card from slot 1
+[2022-12-11 20:31:11] [SEVERE ] removing card from slot 2
+[2022-12-11 20:31:11] [SEVERE ] removing card from slot 3
+[2022-12-11 20:31:12] [SEVERE ] removing card from slot 4
+[2022-12-11 20:31:12] [SEVERE ] removing card from slot 5
+[2022-12-11 20:31:12] [SEVERE ] removing card from slot 6
+[2022-12-11 20:31:12] [SEVERE ] removing card from slot 7
+[2022-12-11 20:31:12] [SEVERE ] removing card from slot 8
+[2022-12-11 20:31:12] [SEVERE ] removing card from slot 9
+[2022-12-11 20:31:12] [SEVERE ] removing card from slot 10
+[2022-12-11 20:31:12] [SEVERE ] removing card from slot 11
+[2022-12-11 20:31:12] [SEVERE ] placing card 35 in slot 0
+[2022-12-11 20:31:12] [SEVERE ] placing card 50 in slot 1
+[2022-12-11 20:31:13] [SEVERE ] placing card 56 in slot 2
+[2022-12-11 20:31:13] [SEVERE ] placing card 39 in slot 3
+[2022-12-11 20:31:13] [SEVERE ] placing card 22 in slot 4
+[2022-12-11 20:31:13] [SEVERE ] placing card 0 in slot 5
+[2022-12-11 20:31:13] [SEVERE ] placing card 13 in slot 6
+[2022-12-11 20:31:13] [SEVERE ] placing card 65 in slot 7
+[2022-12-11 20:31:13] [SEVERE ] placing card 15 in slot 8
+[2022-12-11 20:31:13] [SEVERE ] placing card 44 in slot 9
+[2022-12-11 20:31:13] [SEVERE ] placing card 64 in slot 10
+[2022-12-11 20:31:14] [SEVERE ] placing card 75 in slot 11
+[2022-12-11 20:31:17] [SEVERE ] removing card from slot 0
+[2022-12-11 20:31:17] [SEVERE ] removing card from slot 1
+[2022-12-11 20:31:17] [SEVERE ] removing card from slot 2
+[2022-12-11 20:31:17] [SEVERE ] removing card from slot 3
+[2022-12-11 20:31:17] [SEVERE ] removing card from slot 4
+[2022-12-11 20:31:17] [SEVERE ] removing card from slot 5
+[2022-12-11 20:31:17] [SEVERE ] removing card from slot 6
+[2022-12-11 20:31:17] [SEVERE ] removing card from slot 7
+[2022-12-11 20:31:18] [SEVERE ] removing card from slot 8
+[2022-12-11 20:31:18] [SEVERE ] removing card from slot 9
+[2022-12-11 20:31:18] [SEVERE ] removing card from slot 10
+[2022-12-11 20:31:18] [SEVERE ] removing card from slot 11
+[2022-12-11 20:31:18] [SEVERE ] placing card 7 in slot 0
+[2022-12-11 20:31:18] [SEVERE ] placing card 76 in slot 1
+[2022-12-11 20:31:18] [SEVERE ] placing card 20 in slot 2
+[2022-12-11 20:31:18] [SEVERE ] placing card 32 in slot 3
+[2022-12-11 20:31:18] [SEVERE ] placing card 28 in slot 4
+[2022-12-11 20:31:19] [SEVERE ] placing card 72 in slot 5
+[2022-12-11 20:31:19] [SEVERE ] placing card 37 in slot 6
+[2022-12-11 20:31:19] [SEVERE ] placing card 35 in slot 7
+[2022-12-11 20:31:19] [SEVERE ] placing card 53 in slot 8
+[2022-12-11 20:31:19] [SEVERE ] placing card 59 in slot 9
+[2022-12-11 20:31:19] [SEVERE ] placing card 26 in slot 10
+[2022-12-11 20:31:19] [SEVERE ] placing card 58 in slot 11
+[2022-12-11 20:31:22] [SEVERE ] removing card from slot 0
+[2022-12-11 20:31:22] [SEVERE ] removing card from slot 1
+[2022-12-11 20:31:22] [SEVERE ] removing card from slot 2
+[2022-12-11 20:31:23] [SEVERE ] removing card from slot 3
+[2022-12-11 20:31:23] [SEVERE ] removing card from slot 4
+[2022-12-11 20:31:23] [SEVERE ] removing card from slot 5
+[2022-12-11 20:31:23] [SEVERE ] removing card from slot 6
+[2022-12-11 20:31:23] [SEVERE ] removing card from slot 7
+[2022-12-11 20:31:23] [SEVERE ] removing card from slot 8
+[2022-12-11 20:31:23] [SEVERE ] removing card from slot 9
+[2022-12-11 20:31:23] [SEVERE ] removing card from slot 10
+[2022-12-11 20:31:23] [SEVERE ] removing card from slot 11
+[2022-12-11 20:31:24] [SEVERE ] placing card 7 in slot 0
+[2022-12-11 20:31:24] [SEVERE ] placing card 19 in slot 1
+[2022-12-11 20:31:24] [SEVERE ] placing card 23 in slot 2
+[2022-12-11 20:31:24] [SEVERE ] placing card 0 in slot 3
+[2022-12-11 20:31:24] [SEVERE ] placing card 38 in slot 4
+[2022-12-11 20:31:24] [SEVERE ] placing card 39 in slot 5
+[2022-12-11 20:31:24] [SEVERE ] placing card 60 in slot 6
+[2022-12-11 20:31:24] [SEVERE ] placing card 51 in slot 7
+[2022-12-11 20:31:24] [SEVERE ] placing card 50 in slot 8
+[2022-12-11 20:31:25] [SEVERE ] placing card 61 in slot 9
+[2022-12-11 20:31:25] [SEVERE ] placing card 20 in slot 10
+[2022-12-11 20:31:25] [SEVERE ] placing card 12 in slot 11
+[2022-12-11 20:31:28] [SEVERE ] removing card from slot 0
+[2022-12-11 20:31:28] [SEVERE ] removing card from slot 1
+[2022-12-11 20:31:28] [SEVERE ] removing card from slot 2
+[2022-12-11 20:31:28] [SEVERE ] removing card from slot 3
+[2022-12-11 20:31:28] [SEVERE ] removing card from slot 4
+[2022-12-11 20:31:28] [SEVERE ] removing card from slot 5
+[2022-12-11 20:31:29] [SEVERE ] removing card from slot 6
+[2022-12-11 20:31:29] [SEVERE ] removing card from slot 7
+[2022-12-11 20:31:29] [SEVERE ] removing card from slot 8
+[2022-12-11 20:31:29] [SEVERE ] removing card from slot 9
+[2022-12-11 20:31:29] [SEVERE ] removing card from slot 10
+[2022-12-11 20:31:29] [SEVERE ] removing card from slot 11
+[2022-12-11 20:31:29] [SEVERE ] placing card 43 in slot 0
+[2022-12-11 20:31:29] [SEVERE ] placing card 32 in slot 1
+[2022-12-11 20:31:29] [SEVERE ] placing card 18 in slot 2
+[2022-12-11 20:31:30] [SEVERE ] placing card 24 in slot 3
+[2022-12-11 20:31:30] [SEVERE ] placing card 36 in slot 4
+[2022-12-11 20:31:30] [SEVERE ] placing card 62 in slot 5
+[2022-12-11 20:31:30] [SEVERE ] placing card 10 in slot 6
+[2022-12-11 20:31:30] [SEVERE ] placing card 56 in slot 7
+[2022-12-11 20:31:30] [SEVERE ] placing card 27 in slot 8
+[2022-12-11 20:31:30] [SEVERE ] placing card 59 in slot 9
+[2022-12-11 20:31:30] [SEVERE ] placing card 61 in slot 10
+[2022-12-11 20:31:30] [SEVERE ] placing card 78 in slot 11
+[2022-12-11 20:31:34] [SEVERE ] removing card from slot 0
+[2022-12-11 20:31:34] [SEVERE ] removing card from slot 1
+[2022-12-11 20:31:34] [SEVERE ] removing card from slot 2
+[2022-12-11 20:31:34] [SEVERE ] removing card from slot 3
+[2022-12-11 20:31:34] [SEVERE ] removing card from slot 4
+[2022-12-11 20:31:34] [SEVERE ] removing card from slot 5
+[2022-12-11 20:31:34] [SEVERE ] removing card from slot 6
+[2022-12-11 20:31:34] [SEVERE ] removing card from slot 7
+[2022-12-11 20:31:34] [SEVERE ] removing card from slot 8
+[2022-12-11 20:31:34] [SEVERE ] removing card from slot 9
+[2022-12-11 20:31:35] [SEVERE ] removing card from slot 10
+[2022-12-11 20:31:35] [SEVERE ] removing card from slot 11
+[2022-12-11 20:31:35] [SEVERE ] placing card 45 in slot 0
+[2022-12-11 20:31:35] [SEVERE ] placing card 19 in slot 1
+[2022-12-11 20:31:35] [SEVERE ] placing card 27 in slot 2
+[2022-12-11 20:31:35] [SEVERE ] placing card 15 in slot 3
+[2022-12-11 20:31:35] [SEVERE ] placing card 36 in slot 4
+[2022-12-11 20:31:35] [SEVERE ] placing card 21 in slot 5
+[2022-12-11 20:31:35] [SEVERE ] placing card 17 in slot 6
+[2022-12-11 20:31:36] [SEVERE ] placing card 60 in slot 7
+[2022-12-11 20:31:36] [SEVERE ] placing card 29 in slot 8
+[2022-12-11 20:31:36] [SEVERE ] placing card 65 in slot 9
+[2022-12-11 20:31:36] [SEVERE ] placing card 32 in slot 10
+[2022-12-11 20:31:36] [SEVERE ] placing card 43 in slot 11
+[2022-12-11 20:31:39] [SEVERE ] removing card from slot 0
+[2022-12-11 20:31:39] [SEVERE ] removing card from slot 1
+[2022-12-11 20:31:39] [SEVERE ] removing card from slot 2
+[2022-12-11 20:31:39] [SEVERE ] removing card from slot 3
+[2022-12-11 20:31:40] [SEVERE ] removing card from slot 4
+[2022-12-11 20:31:40] [SEVERE ] removing card from slot 5
+[2022-12-11 20:31:40] [SEVERE ] removing card from slot 6
+[2022-12-11 20:31:40] [SEVERE ] removing card from slot 7
+[2022-12-11 20:31:40] [SEVERE ] removing card from slot 8
+[2022-12-11 20:31:40] [SEVERE ] removing card from slot 9
+[2022-12-11 20:31:40] [SEVERE ] removing card from slot 10
+[2022-12-11 20:31:40] [SEVERE ] removing card from slot 11
+[2022-12-11 20:31:40] [SEVERE ] placing card 33 in slot 0
+[2022-12-11 20:31:41] [SEVERE ] placing card 22 in slot 1
+[2022-12-11 20:31:41] [SEVERE ] placing card 21 in slot 2
+[2022-12-11 20:31:41] [SEVERE ] placing card 18 in slot 3
+[2022-12-11 20:31:41] [SEVERE ] placing card 61 in slot 4
+[2022-12-11 20:31:41] [SEVERE ] placing card 46 in slot 5
+[2022-12-11 20:31:41] [SEVERE ] placing card 1 in slot 6
+[2022-12-11 20:31:41] [SEVERE ] placing card 77 in slot 7
+[2022-12-11 20:31:41] [SEVERE ] placing card 63 in slot 8
+[2022-12-11 20:31:41] [SEVERE ] placing card 28 in slot 9
+[2022-12-11 20:31:41] [SEVERE ] placing card 60 in slot 10
+[2022-12-11 20:31:42] [SEVERE ] placing card 4 in slot 11
+[2022-12-11 20:31:45] [SEVERE ] removing card from slot 0
+[2022-12-11 20:31:45] [SEVERE ] removing card from slot 1
+[2022-12-11 20:31:45] [SEVERE ] removing card from slot 2
+[2022-12-11 20:31:45] [SEVERE ] removing card from slot 3
+[2022-12-11 20:31:45] [SEVERE ] removing card from slot 4
+[2022-12-11 20:31:45] [SEVERE ] removing card from slot 5
+[2022-12-11 20:31:45] [SEVERE ] removing card from slot 6
+[2022-12-11 20:31:45] [SEVERE ] removing card from slot 7
+[2022-12-11 20:31:46] [SEVERE ] removing card from slot 8
+[2022-12-11 20:31:46] [SEVERE ] removing card from slot 9
+[2022-12-11 20:31:46] [SEVERE ] removing card from slot 10
+[2022-12-11 20:31:46] [SEVERE ] removing card from slot 11
+[2022-12-11 20:31:46] [SEVERE ] placing card 11 in slot 0
+[2022-12-11 20:31:46] [SEVERE ] placing card 43 in slot 1
+[2022-12-11 20:31:46] [SEVERE ] placing card 70 in slot 2
+[2022-12-11 20:31:46] [SEVERE ] placing card 71 in slot 3
+[2022-12-11 20:31:46] [SEVERE ] placing card 21 in slot 4
+[2022-12-11 20:31:47] [SEVERE ] placing card 28 in slot 5
+[2022-12-11 20:31:47] [SEVERE ] placing card 7 in slot 6
+[2022-12-11 20:31:47] [SEVERE ] placing card 53 in slot 7
+[2022-12-11 20:31:47] [SEVERE ] placing card 37 in slot 8
+[2022-12-11 20:31:47] [SEVERE ] placing card 1 in slot 9
+[2022-12-11 20:31:47] [SEVERE ] placing card 47 in slot 10
+[2022-12-11 20:31:47] [SEVERE ] placing card 59 in slot 11
+[2022-12-11 20:31:50] [SEVERE ] removing card from slot 0
+[2022-12-11 20:31:50] [SEVERE ] removing card from slot 1
+[2022-12-11 20:31:51] [SEVERE ] removing card from slot 2
+[2022-12-11 20:31:51] [SEVERE ] removing card from slot 3
+[2022-12-11 20:31:51] [SEVERE ] removing card from slot 4
+[2022-12-11 20:31:51] [SEVERE ] removing card from slot 5
+[2022-12-11 20:31:51] [SEVERE ] removing card from slot 6
+[2022-12-11 20:31:51] [SEVERE ] removing card from slot 7
+[2022-12-11 20:31:51] [SEVERE ] removing card from slot 8
+[2022-12-11 20:31:51] [SEVERE ] removing card from slot 9
+[2022-12-11 20:31:51] [SEVERE ] removing card from slot 10
+[2022-12-11 20:31:51] [SEVERE ] removing card from slot 11
+[2022-12-11 20:31:52] [SEVERE ] placing card 45 in slot 0
+[2022-12-11 20:31:52] [SEVERE ] placing card 56 in slot 1
+[2022-12-11 20:31:52] [SEVERE ] placing card 67 in slot 2
+[2022-12-11 20:31:52] [SEVERE ] placing card 50 in slot 3
+[2022-12-11 20:31:52] [SEVERE ] placing card 40 in slot 4
+[2022-12-11 20:31:52] [SEVERE ] placing card 47 in slot 5
+[2022-12-11 20:31:52] [SEVERE ] placing card 21 in slot 6
+[2022-12-11 20:31:52] [SEVERE ] placing card 48 in slot 7
+[2022-12-11 20:31:52] [SEVERE ] placing card 71 in slot 8
+[2022-12-11 20:31:53] [SEVERE ] placing card 68 in slot 9
+[2022-12-11 20:31:53] [SEVERE ] placing card 27 in slot 10
+[2022-12-11 20:31:53] [SEVERE ] placing card 24 in slot 11
+[2022-12-11 20:31:56] [SEVERE ] removing card from slot 0
+[2022-12-11 20:31:56] [SEVERE ] removing card from slot 1
+[2022-12-11 20:31:56] [SEVERE ] removing card from slot 2
+[2022-12-11 20:31:56] [SEVERE ] removing card from slot 3
+[2022-12-11 20:31:56] [SEVERE ] removing card from slot 4
+[2022-12-11 20:31:56] [SEVERE ] removing card from slot 5
+[2022-12-11 20:31:57] [SEVERE ] removing card from slot 6
+[2022-12-11 20:31:57] [SEVERE ] removing card from slot 7
+[2022-12-11 20:31:57] [SEVERE ] removing card from slot 8
+[2022-12-11 20:31:57] [SEVERE ] removing card from slot 9
+[2022-12-11 20:31:57] [SEVERE ] removing card from slot 10
+[2022-12-11 20:31:57] [SEVERE ] removing card from slot 11
+[2022-12-11 20:31:57] [SEVERE ] placing card 33 in slot 0
+[2022-12-11 20:31:57] [SEVERE ] placing card 6 in slot 1
+[2022-12-11 20:31:57] [SEVERE ] placing card 30 in slot 2
+[2022-12-11 20:31:58] [SEVERE ] placing card 10 in slot 3
+[2022-12-11 20:31:58] [SEVERE ] placing card 20 in slot 4
+[2022-12-11 20:31:58] [SEVERE ] placing card 43 in slot 5
+[2022-12-11 20:31:58] [SEVERE ] placing card 63 in slot 6
+[2022-12-11 20:31:58] [SEVERE ] placing card 65 in slot 7
+[2022-12-11 20:31:58] [SEVERE ] placing card 22 in slot 8
+[2022-12-11 20:31:58] [SEVERE ] placing card 40 in slot 9
+[2022-12-11 20:31:58] [SEVERE ] placing card 55 in slot 10
+[2022-12-11 20:31:58] [SEVERE ] placing card 66 in slot 11
+[2022-12-11 20:32:01] [SEVERE ] removing card from slot 0
+[2022-12-11 20:32:02] [SEVERE ] removing card from slot 1
+[2022-12-11 20:32:02] [SEVERE ] removing card from slot 2
+[2022-12-11 20:32:02] [SEVERE ] removing card from slot 3
+[2022-12-11 20:32:02] [SEVERE ] removing card from slot 4
+[2022-12-11 20:32:02] [SEVERE ] removing card from slot 5
+[2022-12-11 20:32:02] [SEVERE ] removing card from slot 6
+[2022-12-11 20:32:02] [SEVERE ] removing card from slot 7
+[2022-12-11 20:32:02] [SEVERE ] removing card from slot 8
+[2022-12-11 20:32:02] [SEVERE ] removing card from slot 9
+[2022-12-11 20:32:03] [SEVERE ] removing card from slot 10
+[2022-12-11 20:32:03] [SEVERE ] removing card from slot 11
+[2022-12-11 20:32:03] [SEVERE ] placing card 67 in slot 0
+[2022-12-11 20:32:03] [SEVERE ] placing card 1 in slot 1
+[2022-12-11 20:32:03] [SEVERE ] placing card 5 in slot 2
+[2022-12-11 20:32:03] [SEVERE ] placing card 49 in slot 3
+[2022-12-11 20:32:03] [SEVERE ] placing card 61 in slot 4
+[2022-12-11 20:32:03] [SEVERE ] placing card 52 in slot 5
+[2022-12-11 20:32:03] [SEVERE ] placing card 10 in slot 6
+[2022-12-11 20:32:04] [SEVERE ] placing card 30 in slot 7
+[2022-12-11 20:32:04] [SEVERE ] placing card 50 in slot 8
+[2022-12-11 20:32:04] [SEVERE ] placing card 68 in slot 9
+[2022-12-11 20:32:04] [SEVERE ] placing card 65 in slot 10
+[2022-12-11 20:32:04] [SEVERE ] placing card 23 in slot 11
+[2022-12-11 20:32:07] [SEVERE ] removing card from slot 0
+[2022-12-11 20:32:07] [SEVERE ] removing card from slot 1
+[2022-12-11 20:32:07] [SEVERE ] removing card from slot 2
+[2022-12-11 20:32:07] [SEVERE ] removing card from slot 3
+[2022-12-11 20:32:08] [SEVERE ] removing card from slot 4
+[2022-12-11 20:32:08] [SEVERE ] removing card from slot 5
+[2022-12-11 20:32:08] [SEVERE ] removing card from slot 6
+[2022-12-11 20:32:08] [SEVERE ] removing card from slot 7
+[2022-12-11 20:32:08] [SEVERE ] removing card from slot 8
+[2022-12-11 20:32:08] [SEVERE ] removing card from slot 9
+[2022-12-11 20:32:08] [SEVERE ] removing card from slot 10
+[2022-12-11 20:32:08] [SEVERE ] removing card from slot 11
+[2022-12-11 20:32:08] [SEVERE ] placing card 43 in slot 0
+[2022-12-11 20:32:09] [SEVERE ] placing card 47 in slot 1
+[2022-12-11 20:32:09] [SEVERE ] placing card 7 in slot 2
+[2022-12-11 20:32:09] [SEVERE ] placing card 12 in slot 3
+[2022-12-11 20:32:09] [SEVERE ] placing card 68 in slot 4
+[2022-12-11 20:32:09] [SEVERE ] placing card 60 in slot 5
+[2022-12-11 20:32:09] [SEVERE ] placing card 71 in slot 6
+[2022-12-11 20:32:09] [SEVERE ] placing card 18 in slot 7
+[2022-12-11 20:32:09] [SEVERE ] placing card 52 in slot 8
+[2022-12-11 20:32:09] [SEVERE ] placing card 22 in slot 9
+[2022-12-11 20:32:09] [SEVERE ] placing card 36 in slot 10
+[2022-12-11 20:32:10] [SEVERE ] placing card 37 in slot 11
+[2022-12-11 20:32:13] [SEVERE ] removing card from slot 0
+[2022-12-11 20:32:13] [SEVERE ] removing card from slot 1
+[2022-12-11 20:32:13] [SEVERE ] removing card from slot 2
+[2022-12-11 20:32:13] [SEVERE ] removing card from slot 3
+[2022-12-11 20:32:13] [SEVERE ] removing card from slot 4
+[2022-12-11 20:32:13] [SEVERE ] removing card from slot 5
+[2022-12-11 20:32:13] [SEVERE ] removing card from slot 6
+[2022-12-11 20:32:13] [SEVERE ] removing card from slot 7
+[2022-12-11 20:32:14] [SEVERE ] removing card from slot 8
+[2022-12-11 20:32:14] [SEVERE ] removing card from slot 9
+[2022-12-11 20:32:14] [SEVERE ] removing card from slot 10
+[2022-12-11 20:32:14] [SEVERE ] removing card from slot 11
+[2022-12-11 20:32:14] [SEVERE ] placing card 47 in slot 0
+[2022-12-11 20:32:14] [SEVERE ] placing card 68 in slot 1
+[2022-12-11 20:32:14] [SEVERE ] placing card 35 in slot 2
+[2022-12-11 20:32:14] [SEVERE ] placing card 72 in slot 3
+[2022-12-11 20:32:14] [SEVERE ] placing card 50 in slot 4
+[2022-12-11 20:32:15] [SEVERE ] placing card 24 in slot 5
+[2022-12-11 20:32:15] [SEVERE ] placing card 76 in slot 6
+[2022-12-11 20:32:15] [SEVERE ] placing card 28 in slot 7
+[2022-12-11 20:32:15] [SEVERE ] placing card 4 in slot 8
+[2022-12-11 20:32:15] [SEVERE ] placing card 19 in slot 9
+[2022-12-11 20:32:15] [SEVERE ] placing card 39 in slot 10
+[2022-12-11 20:32:15] [SEVERE ] placing card 22 in slot 11
+[2022-12-11 20:32:18] [SEVERE ] removing card from slot 0
+[2022-12-11 20:32:18] [SEVERE ] removing card from slot 1
+[2022-12-11 20:32:19] [SEVERE ] removing card from slot 2
+[2022-12-11 20:32:19] [SEVERE ] removing card from slot 3
+[2022-12-11 20:32:19] [SEVERE ] removing card from slot 4
+[2022-12-11 20:32:19] [SEVERE ] removing card from slot 5
+[2022-12-11 20:32:19] [SEVERE ] removing card from slot 6
+[2022-12-11 20:32:19] [SEVERE ] removing card from slot 7
+[2022-12-11 20:32:19] [SEVERE ] removing card from slot 8
+[2022-12-11 20:32:19] [SEVERE ] removing card from slot 9
+[2022-12-11 20:32:19] [SEVERE ] removing card from slot 10
+[2022-12-11 20:32:19] [SEVERE ] removing card from slot 11
+[2022-12-11 20:32:20] [SEVERE ] placing card 51 in slot 0
+[2022-12-11 20:32:20] [SEVERE ] placing card 64 in slot 1
+[2022-12-11 20:32:20] [SEVERE ] placing card 77 in slot 2
+[2022-12-11 20:32:20] [SEVERE ] placing card 25 in slot 3
+[2022-12-11 20:32:20] [SEVERE ] placing card 7 in slot 4
+[2022-12-11 20:32:20] [SEVERE ] placing card 1 in slot 5
+[2022-12-11 20:32:20] [SEVERE ] placing card 58 in slot 6
+[2022-12-11 20:32:20] [SEVERE ] placing card 42 in slot 7
+[2022-12-11 20:32:20] [SEVERE ] placing card 13 in slot 8
+[2022-12-11 20:32:21] [SEVERE ] placing card 68 in slot 9
+[2022-12-11 20:32:21] [SEVERE ] placing card 5 in slot 10
+[2022-12-11 20:32:21] [SEVERE ] placing card 12 in slot 11
+[2022-12-11 20:32:24] [SEVERE ] removing card from slot 0
+[2022-12-11 20:32:24] [SEVERE ] removing card from slot 1
+[2022-12-11 20:32:24] [SEVERE ] removing card from slot 2
+[2022-12-11 20:32:24] [SEVERE ] removing card from slot 3
+[2022-12-11 20:32:24] [SEVERE ] removing card from slot 4
+[2022-12-11 20:32:24] [SEVERE ] removing card from slot 5
+[2022-12-11 20:32:25] [SEVERE ] removing card from slot 6
+[2022-12-11 20:32:25] [SEVERE ] removing card from slot 7
+[2022-12-11 20:32:25] [SEVERE ] removing card from slot 8
+[2022-12-11 20:32:25] [SEVERE ] removing card from slot 9
+[2022-12-11 20:32:25] [SEVERE ] removing card from slot 10
+[2022-12-11 20:32:25] [SEVERE ] removing card from slot 11
+[2022-12-11 20:32:25] [SEVERE ] placing card 63 in slot 0
+[2022-12-11 20:32:25] [SEVERE ] placing card 4 in slot 1
+[2022-12-11 20:32:25] [SEVERE ] placing card 11 in slot 2
+[2022-12-11 20:32:26] [SEVERE ] placing card 10 in slot 3
+[2022-12-11 20:32:26] [SEVERE ] placing card 1 in slot 4
+[2022-12-11 20:32:26] [SEVERE ] placing card 36 in slot 5
+[2022-12-11 20:32:26] [SEVERE ] placing card 43 in slot 6
+[2022-12-11 20:32:26] [SEVERE ] placing card 35 in slot 7
+[2022-12-11 20:32:26] [SEVERE ] placing card 80 in slot 8
+[2022-12-11 20:32:26] [SEVERE ] placing card 39 in slot 9
+[2022-12-11 20:32:26] [SEVERE ] placing card 20 in slot 10
+[2022-12-11 20:32:26] [SEVERE ] placing card 0 in slot 11
+[2022-12-11 20:32:29] [SEVERE ] removing card from slot 0
+[2022-12-11 20:32:30] [SEVERE ] removing card from slot 1
+[2022-12-11 20:32:30] [SEVERE ] removing card from slot 2
+[2022-12-11 20:32:30] [SEVERE ] removing card from slot 3
+[2022-12-11 20:32:30] [SEVERE ] removing card from slot 4
+[2022-12-11 20:32:30] [SEVERE ] removing card from slot 5
+[2022-12-11 20:32:30] [SEVERE ] removing card from slot 6
+[2022-12-11 20:32:30] [SEVERE ] removing card from slot 7
+[2022-12-11 20:32:30] [SEVERE ] removing card from slot 8
+[2022-12-11 20:32:30] [SEVERE ] removing card from slot 9
+[2022-12-11 20:32:31] [SEVERE ] removing card from slot 10
+[2022-12-11 20:32:31] [SEVERE ] removing card from slot 11
+[2022-12-11 20:32:31] [SEVERE ] placing card 23 in slot 0
+[2022-12-11 20:32:31] [SEVERE ] placing card 41 in slot 1
+[2022-12-11 20:32:31] [SEVERE ] placing card 49 in slot 2
+[2022-12-11 20:32:31] [SEVERE ] placing card 6 in slot 3
+[2022-12-11 20:32:31] [SEVERE ] placing card 68 in slot 4
+[2022-12-11 20:32:31] [SEVERE ] placing card 26 in slot 5
+[2022-12-11 20:32:31] [SEVERE ] placing card 64 in slot 6
+[2022-12-11 20:32:32] [SEVERE ] placing card 38 in slot 7
+[2022-12-11 20:32:32] [SEVERE ] placing card 12 in slot 8
+[2022-12-11 20:32:32] [SEVERE ] placing card 36 in slot 9
+[2022-12-11 20:32:32] [SEVERE ] placing card 43 in slot 10
+[2022-12-11 20:32:32] [SEVERE ] placing card 78 in slot 11
+[2022-12-11 20:32:35] [SEVERE ] removing card from slot 0
+[2022-12-11 20:32:35] [SEVERE ] removing card from slot 1
+[2022-12-11 20:32:35] [SEVERE ] removing card from slot 2
+[2022-12-11 20:32:35] [SEVERE ] removing card from slot 3
+[2022-12-11 20:32:36] [SEVERE ] removing card from slot 4
+[2022-12-11 20:32:36] [SEVERE ] removing card from slot 5
+[2022-12-11 20:32:36] [SEVERE ] removing card from slot 6
+[2022-12-11 20:32:36] [SEVERE ] removing card from slot 7
+[2022-12-11 20:32:36] [SEVERE ] removing card from slot 8
+[2022-12-11 20:32:36] [SEVERE ] removing card from slot 9
+[2022-12-11 20:32:36] [SEVERE ] removing card from slot 10
+[2022-12-11 20:32:36] [SEVERE ] removing card from slot 11
+[2022-12-11 20:32:36] [SEVERE ] placing card 10 in slot 0
+[2022-12-11 20:32:37] [SEVERE ] placing card 55 in slot 1
+[2022-12-11 20:32:37] [SEVERE ] placing card 46 in slot 2
+[2022-12-11 20:32:37] [SEVERE ] placing card 71 in slot 3
+[2022-12-11 20:32:37] [SEVERE ] placing card 42 in slot 4
+[2022-12-11 20:32:37] [SEVERE ] placing card 35 in slot 5
+[2022-12-11 20:32:37] [SEVERE ] placing card 60 in slot 6
+[2022-12-11 20:32:37] [SEVERE ] placing card 24 in slot 7
+[2022-12-11 20:32:37] [SEVERE ] placing card 36 in slot 8
+[2022-12-11 20:32:37] [SEVERE ] placing card 16 in slot 9
+[2022-12-11 20:32:37] [SEVERE ] placing card 57 in slot 10
+[2022-12-11 20:32:38] [SEVERE ] placing card 47 in slot 11
+[2022-12-11 20:32:41] [SEVERE ] removing card from slot 0
+[2022-12-11 20:32:41] [SEVERE ] removing card from slot 1
+[2022-12-11 20:32:41] [SEVERE ] removing card from slot 2
+[2022-12-11 20:32:41] [SEVERE ] removing card from slot 3
+[2022-12-11 20:32:41] [SEVERE ] removing card from slot 4
+[2022-12-11 20:32:41] [SEVERE ] removing card from slot 5
+[2022-12-11 20:32:41] [SEVERE ] removing card from slot 6
+[2022-12-11 20:32:41] [SEVERE ] removing card from slot 7
+[2022-12-11 20:32:42] [SEVERE ] removing card from slot 8
+[2022-12-11 20:32:42] [SEVERE ] removing card from slot 9
+[2022-12-11 20:32:42] [SEVERE ] removing card from slot 10
+[2022-12-11 20:32:42] [SEVERE ] removing card from slot 11
+[2022-12-11 20:32:42] [SEVERE ] placing card 42 in slot 0
+[2022-12-11 20:32:42] [SEVERE ] placing card 20 in slot 1
+[2022-12-11 20:32:42] [SEVERE ] placing card 10 in slot 2
+[2022-12-11 20:32:42] [SEVERE ] placing card 40 in slot 3
+[2022-12-11 20:32:42] [SEVERE ] placing card 37 in slot 4
+[2022-12-11 20:32:43] [SEVERE ] placing card 75 in slot 5
+[2022-12-11 20:32:43] [SEVERE ] placing card 36 in slot 6
+[2022-12-11 20:32:43] [SEVERE ] placing card 52 in slot 7
+[2022-12-11 20:32:43] [SEVERE ] placing card 46 in slot 8
+[2022-12-11 20:32:43] [SEVERE ] placing card 4 in slot 9
+[2022-12-11 20:32:43] [SEVERE ] placing card 6 in slot 10
+[2022-12-11 20:32:43] [SEVERE ] placing card 0 in slot 11
+[2022-12-11 20:32:46] [SEVERE ] removing card from slot 0
+[2022-12-11 20:32:46] [SEVERE ] removing card from slot 1
+[2022-12-11 20:32:46] [SEVERE ] removing card from slot 2
+[2022-12-11 20:32:47] [SEVERE ] removing card from slot 3
+[2022-12-11 20:32:47] [SEVERE ] removing card from slot 4
+[2022-12-11 20:32:47] [SEVERE ] removing card from slot 5
+[2022-12-11 20:32:47] [SEVERE ] removing card from slot 6
+[2022-12-11 20:32:47] [SEVERE ] removing card from slot 7
+[2022-12-11 20:32:47] [SEVERE ] removing card from slot 8
+[2022-12-11 20:32:47] [SEVERE ] removing card from slot 9
+[2022-12-11 20:32:47] [SEVERE ] removing card from slot 10
+[2022-12-11 20:32:47] [SEVERE ] removing card from slot 11
+[2022-12-11 20:32:48] [SEVERE ] placing card 57 in slot 0
+[2022-12-11 20:32:48] [SEVERE ] placing card 38 in slot 1
+[2022-12-11 20:32:48] [SEVERE ] placing card 76 in slot 2
+[2022-12-11 20:32:48] [SEVERE ] placing card 23 in slot 3
+[2022-12-11 20:32:48] [SEVERE ] placing card 25 in slot 4
+[2022-12-11 20:32:48] [SEVERE ] placing card 59 in slot 5
+[2022-12-11 20:32:48] [SEVERE ] placing card 33 in slot 6
+[2022-12-11 20:32:48] [SEVERE ] placing card 41 in slot 7
+[2022-12-11 20:32:48] [SEVERE ] placing card 40 in slot 8
+[2022-12-11 20:32:49] [SEVERE ] placing card 46 in slot 9
+[2022-12-11 20:32:49] [SEVERE ] placing card 37 in slot 10
+[2022-12-11 20:32:49] [SEVERE ] placing card 65 in slot 11
+[2022-12-11 20:32:52] [SEVERE ] removing card from slot 0
+[2022-12-11 20:32:52] [SEVERE ] removing card from slot 1
+[2022-12-11 20:32:52] [SEVERE ] removing card from slot 2
+[2022-12-11 20:32:52] [SEVERE ] removing card from slot 3
+[2022-12-11 20:32:52] [SEVERE ] removing card from slot 4
+[2022-12-11 20:32:52] [SEVERE ] removing card from slot 5
+[2022-12-11 20:32:53] [SEVERE ] removing card from slot 6
+[2022-12-11 20:32:53] [SEVERE ] removing card from slot 7
+[2022-12-11 20:32:53] [SEVERE ] removing card from slot 8
+[2022-12-11 20:32:53] [SEVERE ] removing card from slot 9
+[2022-12-11 20:32:53] [SEVERE ] removing card from slot 10
+[2022-12-11 20:32:53] [SEVERE ] removing card from slot 11
+[2022-12-11 20:32:53] [SEVERE ] placing card 22 in slot 0
+[2022-12-11 20:32:53] [SEVERE ] placing card 7 in slot 1
+[2022-12-11 20:32:53] [SEVERE ] placing card 41 in slot 2
+[2022-12-11 20:32:53] [SEVERE ] placing card 67 in slot 3
+[2022-12-11 20:32:54] [SEVERE ] placing card 4 in slot 4
+[2022-12-11 20:32:54] [SEVERE ] placing card 5 in slot 5
+[2022-12-11 20:32:54] [SEVERE ] placing card 25 in slot 6
+[2022-12-11 20:32:54] [SEVERE ] placing card 61 in slot 7
+[2022-12-11 20:32:54] [SEVERE ] placing card 35 in slot 8
+[2022-12-11 20:32:54] [SEVERE ] placing card 11 in slot 9
+[2022-12-11 20:32:54] [SEVERE ] placing card 46 in slot 10
+[2022-12-11 20:32:54] [SEVERE ] placing card 10 in slot 11
+[2022-12-11 20:32:57] [SEVERE ] removing card from slot 0
+[2022-12-11 20:32:58] [SEVERE ] removing card from slot 1
+[2022-12-11 20:32:58] [SEVERE ] removing card from slot 2
+[2022-12-11 20:32:58] [SEVERE ] removing card from slot 3
+[2022-12-11 20:32:58] [SEVERE ] removing card from slot 4
+[2022-12-11 20:32:58] [SEVERE ] removing card from slot 5
+[2022-12-11 20:32:58] [SEVERE ] removing card from slot 6
+[2022-12-11 20:32:58] [SEVERE ] removing card from slot 7
+[2022-12-11 20:32:58] [SEVERE ] removing card from slot 8
+[2022-12-11 20:32:58] [SEVERE ] removing card from slot 9
+[2022-12-11 20:32:59] [SEVERE ] removing card from slot 10
+[2022-12-11 20:32:59] [SEVERE ] removing card from slot 11
+[2022-12-11 20:32:59] [SEVERE ] placing card 46 in slot 0
+[2022-12-11 20:32:59] [SEVERE ] placing card 23 in slot 1
+[2022-12-11 20:32:59] [SEVERE ] placing card 68 in slot 2
+[2022-12-11 20:32:59] [SEVERE ] placing card 32 in slot 3
+[2022-12-11 20:32:59] [SEVERE ] placing card 51 in slot 4
+[2022-12-11 20:32:59] [SEVERE ] placing card 75 in slot 5
+[2022-12-11 20:32:59] [SEVERE ] placing card 42 in slot 6
+[2022-12-11 20:33:00] [SEVERE ] placing card 39 in slot 7
+[2022-12-11 20:33:00] [SEVERE ] placing card 80 in slot 8
+[2022-12-11 20:33:00] [SEVERE ] placing card 35 in slot 9
+[2022-12-11 20:33:00] [SEVERE ] placing card 11 in slot 10
+[2022-12-11 20:33:00] [SEVERE ] placing card 12 in slot 11
+[2022-12-11 20:33:03] [SEVERE ] removing card from slot 0
+[2022-12-11 20:33:03] [SEVERE ] removing card from slot 1
+[2022-12-11 20:33:03] [SEVERE ] removing card from slot 2
+[2022-12-11 20:33:03] [SEVERE ] removing card from slot 3
+[2022-12-11 20:33:03] [SEVERE ] removing card from slot 4
+[2022-12-11 20:33:04] [SEVERE ] removing card from slot 5
+[2022-12-11 20:33:04] [SEVERE ] removing card from slot 6
+[2022-12-11 20:33:04] [SEVERE ] removing card from slot 7
+[2022-12-11 20:33:04] [SEVERE ] removing card from slot 8
+[2022-12-11 20:33:04] [SEVERE ] removing card from slot 9
+[2022-12-11 20:33:04] [SEVERE ] removing card from slot 10
+[2022-12-11 20:33:04] [SEVERE ] removing card from slot 11
+[2022-12-11 20:33:04] [SEVERE ] placing card 80 in slot 0
+[2022-12-11 20:33:04] [SEVERE ] placing card 43 in slot 1
+[2022-12-11 20:33:05] [SEVERE ] placing card 51 in slot 2
+[2022-12-11 20:33:05] [SEVERE ] placing card 58 in slot 3
+[2022-12-11 20:33:05] [SEVERE ] placing card 67 in slot 4
+[2022-12-11 20:33:05] [SEVERE ] placing card 32 in slot 5
+[2022-12-11 20:33:05] [SEVERE ] placing card 20 in slot 6
+[2022-12-11 20:33:05] [SEVERE ] placing card 78 in slot 7
+[2022-12-11 20:33:05] [SEVERE ] placing card 41 in slot 8
+[2022-12-11 20:33:05] [SEVERE ] placing card 65 in slot 9
+[2022-12-11 20:33:05] [SEVERE ] placing card 57 in slot 10
+[2022-12-11 20:33:06] [SEVERE ] placing card 60 in slot 11
+[2022-12-11 20:33:09] [SEVERE ] removing card from slot 0
+[2022-12-11 20:33:09] [SEVERE ] removing card from slot 1
+[2022-12-11 20:33:09] [SEVERE ] removing card from slot 2
+[2022-12-11 20:33:09] [SEVERE ] removing card from slot 3
+[2022-12-11 20:33:09] [SEVERE ] removing card from slot 4
+[2022-12-11 20:33:09] [SEVERE ] removing card from slot 5
+[2022-12-11 20:33:09] [SEVERE ] removing card from slot 6
+[2022-12-11 20:33:09] [SEVERE ] removing card from slot 7
+[2022-12-11 20:33:09] [SEVERE ] removing card from slot 8
+[2022-12-11 20:33:10] [SEVERE ] removing card from slot 9
+[2022-12-11 20:33:10] [SEVERE ] removing card from slot 10
+[2022-12-11 20:33:10] [SEVERE ] removing card from slot 11
+[2022-12-11 20:33:10] [SEVERE ] placing card 64 in slot 0
+[2022-12-11 20:33:10] [SEVERE ] placing card 36 in slot 1
+[2022-12-11 20:33:10] [SEVERE ] placing card 17 in slot 2
+[2022-12-11 20:33:10] [SEVERE ] placing card 42 in slot 3
+[2022-12-11 20:33:10] [SEVERE ] placing card 18 in slot 4
+[2022-12-11 20:33:10] [SEVERE ] placing card 38 in slot 5
+[2022-12-11 20:33:11] [SEVERE ] placing card 40 in slot 6
+[2022-12-11 20:33:11] [SEVERE ] placing card 80 in slot 7
+[2022-12-11 20:33:11] [SEVERE ] placing card 61 in slot 8
+[2022-12-11 20:33:11] [SEVERE ] placing card 35 in slot 9
+[2022-12-11 20:33:11] [SEVERE ] placing card 76 in slot 10
+[2022-12-11 20:33:11] [SEVERE ] placing card 13 in slot 11
+[2022-12-11 20:33:14] [SEVERE ] removing card from slot 0
+[2022-12-11 20:33:14] [SEVERE ] removing card from slot 1
+[2022-12-11 20:33:14] [SEVERE ] removing card from slot 2
+[2022-12-11 20:33:15] [SEVERE ] removing card from slot 3
+[2022-12-11 20:33:15] [SEVERE ] removing card from slot 4
+[2022-12-11 20:33:15] [SEVERE ] removing card from slot 5
+[2022-12-11 20:33:15] [SEVERE ] removing card from slot 6
+[2022-12-11 20:33:15] [SEVERE ] removing card from slot 7
+[2022-12-11 20:33:15] [SEVERE ] removing card from slot 8
+[2022-12-11 20:33:15] [SEVERE ] removing card from slot 9
+[2022-12-11 20:33:15] [SEVERE ] removing card from slot 10
+[2022-12-11 20:33:15] [SEVERE ] removing card from slot 11
+[2022-12-11 20:33:16] [SEVERE ] placing card 38 in slot 0
+[2022-12-11 20:33:16] [SEVERE ] placing card 48 in slot 1
+[2022-12-11 20:33:16] [SEVERE ] placing card 45 in slot 2
+[2022-12-11 20:33:16] [SEVERE ] placing card 35 in slot 3
+[2022-12-11 20:33:16] [SEVERE ] placing card 7 in slot 4
+[2022-12-11 20:33:16] [SEVERE ] placing card 36 in slot 5
+[2022-12-11 20:33:16] [SEVERE ] placing card 47 in slot 6
+[2022-12-11 20:33:16] [SEVERE ] placing card 42 in slot 7
+[2022-12-11 20:33:16] [SEVERE ] placing card 70 in slot 8
+[2022-12-11 20:33:16] [SEVERE ] placing card 55 in slot 9
+[2022-12-11 20:33:17] [SEVERE ] placing card 78 in slot 10
+[2022-12-11 20:33:17] [SEVERE ] placing card 64 in slot 11
+[2022-12-11 20:33:20] [SEVERE ] removing card from slot 0
+[2022-12-11 20:33:20] [SEVERE ] removing card from slot 1
+[2022-12-11 20:33:20] [SEVERE ] removing card from slot 2
+[2022-12-11 20:33:20] [SEVERE ] removing card from slot 3
+[2022-12-11 20:33:20] [SEVERE ] removing card from slot 4
+[2022-12-11 20:33:20] [SEVERE ] removing card from slot 5
+[2022-12-11 20:33:20] [SEVERE ] removing card from slot 6
+[2022-12-11 20:33:21] [SEVERE ] removing card from slot 7
+[2022-12-11 20:33:21] [SEVERE ] removing card from slot 8
+[2022-12-11 20:33:21] [SEVERE ] removing card from slot 9
+[2022-12-11 20:33:21] [SEVERE ] removing card from slot 10
+[2022-12-11 20:33:21] [SEVERE ] removing card from slot 11
+[2022-12-11 20:33:21] [SEVERE ] placing card 20 in slot 0
+[2022-12-11 20:33:21] [SEVERE ] placing card 21 in slot 1
+[2022-12-11 20:33:21] [SEVERE ] placing card 12 in slot 2
+[2022-12-11 20:33:21] [SEVERE ] placing card 24 in slot 3
+[2022-12-11 20:33:22] [SEVERE ] placing card 67 in slot 4
+[2022-12-11 20:33:22] [SEVERE ] placing card 43 in slot 5
+[2022-12-11 20:33:22] [SEVERE ] placing card 26 in slot 6
+[2022-12-11 20:33:22] [SEVERE ] placing card 48 in slot 7
+[2022-12-11 20:33:22] [SEVERE ] placing card 13 in slot 8
+[2022-12-11 20:33:22] [SEVERE ] placing card 42 in slot 9
+[2022-12-11 20:33:22] [SEVERE ] placing card 23 in slot 10
+[2022-12-11 20:33:22] [SEVERE ] placing card 52 in slot 11
+[2022-12-11 20:33:25] [SEVERE ] removing card from slot 0
+[2022-12-11 20:33:25] [SEVERE ] removing card from slot 1
+[2022-12-11 20:33:26] [SEVERE ] removing card from slot 2
+[2022-12-11 20:33:26] [SEVERE ] removing card from slot 3
+[2022-12-11 20:33:26] [SEVERE ] removing card from slot 4
+[2022-12-11 20:33:26] [SEVERE ] removing card from slot 5
+[2022-12-11 20:33:26] [SEVERE ] removing card from slot 6
+[2022-12-11 20:33:26] [SEVERE ] removing card from slot 7
+[2022-12-11 20:33:26] [SEVERE ] removing card from slot 8
+[2022-12-11 20:33:26] [SEVERE ] removing card from slot 9
+[2022-12-11 20:33:26] [SEVERE ] removing card from slot 10
+[2022-12-11 20:33:27] [SEVERE ] removing card from slot 11
+[2022-12-11 20:33:27] [SEVERE ] placing card 4 in slot 0
+[2022-12-11 20:33:27] [SEVERE ] placing card 55 in slot 1
+[2022-12-11 20:33:27] [SEVERE ] placing card 33 in slot 2
+[2022-12-11 20:33:27] [SEVERE ] placing card 59 in slot 3
+[2022-12-11 20:33:27] [SEVERE ] placing card 49 in slot 4
+[2022-12-11 20:33:27] [SEVERE ] placing card 37 in slot 5
+[2022-12-11 20:33:27] [SEVERE ] placing card 17 in slot 6
+[2022-12-11 20:33:27] [SEVERE ] placing card 29 in slot 7
+[2022-12-11 20:33:28] [SEVERE ] placing card 71 in slot 8
+[2022-12-11 20:33:28] [SEVERE ] placing card 13 in slot 9
+[2022-12-11 20:33:28] [SEVERE ] placing card 15 in slot 10
+[2022-12-11 20:33:28] [SEVERE ] placing card 65 in slot 11
+[2022-12-11 20:33:31] [SEVERE ] removing card from slot 0
+[2022-12-11 20:33:31] [SEVERE ] removing card from slot 1
+[2022-12-11 20:33:31] [SEVERE ] removing card from slot 2
+[2022-12-11 20:33:31] [SEVERE ] removing card from slot 3
+[2022-12-11 20:33:31] [SEVERE ] removing card from slot 4
+[2022-12-11 20:33:32] [SEVERE ] removing card from slot 5
+[2022-12-11 20:33:32] [SEVERE ] removing card from slot 6
+[2022-12-11 20:33:32] [SEVERE ] removing card from slot 7
+[2022-12-11 20:33:32] [SEVERE ] removing card from slot 8
+[2022-12-11 20:33:32] [SEVERE ] removing card from slot 9
+[2022-12-11 20:33:32] [SEVERE ] removing card from slot 10
+[2022-12-11 20:33:32] [SEVERE ] removing card from slot 11
+[2022-12-11 20:33:32] [SEVERE ] placing card 26 in slot 0
+[2022-12-11 20:33:32] [SEVERE ] placing card 4 in slot 1
+[2022-12-11 20:33:32] [SEVERE ] placing card 58 in slot 2
+[2022-12-11 20:33:33] [SEVERE ] placing card 30 in slot 3
+[2022-12-11 20:33:33] [SEVERE ] placing card 7 in slot 4
+[2022-12-11 20:33:33] [SEVERE ] placing card 20 in slot 5
+[2022-12-11 20:33:33] [SEVERE ] placing card 44 in slot 6
+[2022-12-11 20:33:33] [SEVERE ] placing card 33 in slot 7
+[2022-12-11 20:33:33] [SEVERE ] placing card 56 in slot 8
+[2022-12-11 20:33:33] [SEVERE ] placing card 61 in slot 9
+[2022-12-11 20:33:33] [SEVERE ] placing card 5 in slot 10
+[2022-12-11 20:33:33] [SEVERE ] placing card 32 in slot 11
+[2022-12-11 20:33:37] [SEVERE ] removing card from slot 0
+[2022-12-11 20:33:37] [SEVERE ] removing card from slot 1
+[2022-12-11 20:33:37] [SEVERE ] removing card from slot 2
+[2022-12-11 20:33:37] [SEVERE ] removing card from slot 3
+[2022-12-11 20:33:37] [SEVERE ] removing card from slot 4
+[2022-12-11 20:33:37] [SEVERE ] removing card from slot 5
+[2022-12-11 20:33:37] [SEVERE ] removing card from slot 6
+[2022-12-11 20:33:37] [SEVERE ] removing card from slot 7
+[2022-12-11 20:33:37] [SEVERE ] removing card from slot 8
+[2022-12-11 20:33:38] [SEVERE ] removing card from slot 9
+[2022-12-11 20:33:38] [SEVERE ] removing card from slot 10
+[2022-12-11 20:33:38] [SEVERE ] removing card from slot 11
+[2022-12-11 20:33:38] [SEVERE ] placing card 21 in slot 0
+[2022-12-11 20:33:38] [SEVERE ] placing card 22 in slot 1
+[2022-12-11 20:33:38] [SEVERE ] placing card 72 in slot 2
+[2022-12-11 20:33:38] [SEVERE ] placing card 43 in slot 3
+[2022-12-11 20:33:38] [SEVERE ] placing card 40 in slot 4
+[2022-12-11 20:33:38] [SEVERE ] placing card 6 in slot 5
+[2022-12-11 20:33:39] [SEVERE ] placing card 16 in slot 6
+[2022-12-11 20:33:39] [SEVERE ] placing card 75 in slot 7
+[2022-12-11 20:33:39] [SEVERE ] placing card 23 in slot 8
+[2022-12-11 20:33:39] [SEVERE ] placing card 33 in slot 9
+[2022-12-11 20:33:39] [SEVERE ] placing card 26 in slot 10
+[2022-12-11 20:33:39] [SEVERE ] placing card 35 in slot 11
+[2022-12-11 20:33:42] [SEVERE ] removing card from slot 0
+[2022-12-11 20:33:42] [SEVERE ] removing card from slot 1
+[2022-12-11 20:33:42] [SEVERE ] removing card from slot 2
+[2022-12-11 20:33:42] [SEVERE ] removing card from slot 3
+[2022-12-11 20:33:43] [SEVERE ] removing card from slot 4
+[2022-12-11 20:33:43] [SEVERE ] removing card from slot 5
+[2022-12-11 20:33:43] [SEVERE ] removing card from slot 6
+[2022-12-11 20:33:43] [SEVERE ] removing card from slot 7
+[2022-12-11 20:33:43] [SEVERE ] removing card from slot 8
+[2022-12-11 20:33:43] [SEVERE ] removing card from slot 9
+[2022-12-11 20:33:43] [SEVERE ] removing card from slot 10
+[2022-12-11 20:33:43] [SEVERE ] removing card from slot 11
+[2022-12-11 20:33:43] [SEVERE ] placing card 33 in slot 0
+[2022-12-11 20:33:44] [SEVERE ] placing card 11 in slot 1
+[2022-12-11 20:33:44] [SEVERE ] placing card 0 in slot 2
+[2022-12-11 20:33:44] [SEVERE ] placing card 29 in slot 3
+[2022-12-11 20:33:44] [SEVERE ] placing card 55 in slot 4
+[2022-12-11 20:33:44] [SEVERE ] placing card 21 in slot 5
+[2022-12-11 20:33:44] [SEVERE ] placing card 49 in slot 6
+[2022-12-11 20:33:44] [SEVERE ] placing card 16 in slot 7
+[2022-12-11 20:33:44] [SEVERE ] placing card 48 in slot 8
+[2022-12-11 20:33:44] [SEVERE ] placing card 38 in slot 9
+[2022-12-11 20:33:45] [SEVERE ] placing card 75 in slot 10
+[2022-12-11 20:33:45] [SEVERE ] placing card 47 in slot 11
+[2022-12-11 20:33:48] [SEVERE ] removing card from slot 0
+[2022-12-11 20:33:48] [SEVERE ] removing card from slot 1
+[2022-12-11 20:33:48] [SEVERE ] removing card from slot 2
+[2022-12-11 20:33:48] [SEVERE ] removing card from slot 3
+[2022-12-11 20:33:48] [SEVERE ] removing card from slot 4
+[2022-12-11 20:33:48] [SEVERE ] removing card from slot 5
+[2022-12-11 20:33:48] [SEVERE ] removing card from slot 6
+[2022-12-11 20:33:49] [SEVERE ] removing card from slot 7
+[2022-12-11 20:33:49] [SEVERE ] removing card from slot 8
+[2022-12-11 20:33:49] [SEVERE ] removing card from slot 9
+[2022-12-11 20:33:49] [SEVERE ] removing card from slot 10
+[2022-12-11 20:33:49] [SEVERE ] removing card from slot 11
+[2022-12-11 20:33:49] [SEVERE ] placing card 28 in slot 0
+[2022-12-11 20:33:49] [SEVERE ] placing card 52 in slot 1
+[2022-12-11 20:33:49] [SEVERE ] placing card 26 in slot 2
+[2022-12-11 20:33:49] [SEVERE ] placing card 35 in slot 3
+[2022-12-11 20:33:49] [SEVERE ] placing card 51 in slot 4
+[2022-12-11 20:33:50] [SEVERE ] placing card 17 in slot 5
+[2022-12-11 20:33:50] [SEVERE ] placing card 40 in slot 6
+[2022-12-11 20:33:50] [SEVERE ] placing card 29 in slot 7
+[2022-12-11 20:33:50] [SEVERE ] placing card 71 in slot 8
+[2022-12-11 20:33:50] [SEVERE ] placing card 43 in slot 9
+[2022-12-11 20:33:50] [SEVERE ] placing card 7 in slot 10
+[2022-12-11 20:33:50] [SEVERE ] placing card 50 in slot 11
+[2022-12-11 20:33:53] [SEVERE ] removing card from slot 0
+[2022-12-11 20:33:53] [SEVERE ] removing card from slot 1
+[2022-12-11 20:33:54] [SEVERE ] removing card from slot 2
+[2022-12-11 20:33:54] [SEVERE ] removing card from slot 3
+[2022-12-11 20:33:54] [SEVERE ] removing card from slot 4
+[2022-12-11 20:33:54] [SEVERE ] removing card from slot 5
+[2022-12-11 20:33:54] [SEVERE ] removing card from slot 6
+[2022-12-11 20:33:54] [SEVERE ] removing card from slot 7
+[2022-12-11 20:33:54] [SEVERE ] removing card from slot 8
+[2022-12-11 20:33:54] [SEVERE ] removing card from slot 9
+[2022-12-11 20:33:54] [SEVERE ] removing card from slot 10
+[2022-12-11 20:33:55] [SEVERE ] removing card from slot 11
+[2022-12-11 20:33:55] [SEVERE ] placing card 76 in slot 0
+[2022-12-11 20:33:55] [SEVERE ] placing card 6 in slot 1
+[2022-12-11 20:33:55] [SEVERE ] placing card 38 in slot 2
+[2022-12-11 20:33:55] [SEVERE ] placing card 13 in slot 3
+[2022-12-11 20:33:55] [SEVERE ] placing card 17 in slot 4
+[2022-12-11 20:33:55] [SEVERE ] placing card 22 in slot 5
+[2022-12-11 20:33:55] [SEVERE ] placing card 77 in slot 6
+[2022-12-11 20:33:55] [SEVERE ] placing card 71 in slot 7
+[2022-12-11 20:33:56] [SEVERE ] placing card 63 in slot 8
+[2022-12-11 20:33:56] [SEVERE ] placing card 58 in slot 9
+[2022-12-11 20:33:56] [SEVERE ] placing card 49 in slot 10
+[2022-12-11 20:33:56] [SEVERE ] placing card 70 in slot 11
+[2022-12-11 20:33:59] [SEVERE ] removing card from slot 0
+[2022-12-11 20:33:59] [SEVERE ] removing card from slot 1
+[2022-12-11 20:33:59] [SEVERE ] removing card from slot 2
+[2022-12-11 20:33:59] [SEVERE ] removing card from slot 3
+[2022-12-11 20:33:59] [SEVERE ] removing card from slot 4
+[2022-12-11 20:34:00] [SEVERE ] removing card from slot 5
+[2022-12-11 20:34:00] [SEVERE ] removing card from slot 6
+[2022-12-11 20:34:00] [SEVERE ] removing card from slot 7
+[2022-12-11 20:34:00] [SEVERE ] removing card from slot 8
+[2022-12-11 20:34:00] [SEVERE ] removing card from slot 9
+[2022-12-11 20:34:00] [SEVERE ] removing card from slot 10
+[2022-12-11 20:34:00] [SEVERE ] removing card from slot 11
+[2022-12-11 20:34:00] [SEVERE ] placing card 26 in slot 0
+[2022-12-11 20:34:00] [SEVERE ] placing card 78 in slot 1
+[2022-12-11 20:34:01] [SEVERE ] placing card 6 in slot 2
+[2022-12-11 20:34:01] [SEVERE ] placing card 22 in slot 3
+[2022-12-11 20:34:01] [SEVERE ] placing card 80 in slot 4
+[2022-12-11 20:34:01] [SEVERE ] placing card 24 in slot 5
+[2022-12-11 20:34:01] [SEVERE ] placing card 46 in slot 6
+[2022-12-11 20:34:01] [SEVERE ] placing card 49 in slot 7
+[2022-12-11 20:34:01] [SEVERE ] placing card 7 in slot 8
+[2022-12-11 20:34:01] [SEVERE ] placing card 13 in slot 9
+[2022-12-11 20:34:01] [SEVERE ] placing card 29 in slot 10
+[2022-12-11 20:34:01] [SEVERE ] placing card 0 in slot 11
+[2022-12-11 20:34:05] [SEVERE ] removing card from slot 0
+[2022-12-11 20:34:05] [SEVERE ] removing card from slot 1
+[2022-12-11 20:34:05] [SEVERE ] removing card from slot 2
+[2022-12-11 20:34:05] [SEVERE ] removing card from slot 3
+[2022-12-11 20:34:05] [SEVERE ] removing card from slot 4
+[2022-12-11 20:34:05] [SEVERE ] removing card from slot 5
+[2022-12-11 20:34:05] [SEVERE ] removing card from slot 6
+[2022-12-11 20:34:05] [SEVERE ] removing card from slot 7
+[2022-12-11 20:34:05] [SEVERE ] removing card from slot 8
+[2022-12-11 20:34:06] [SEVERE ] removing card from slot 9
+[2022-12-11 20:34:06] [SEVERE ] removing card from slot 10
+[2022-12-11 20:34:06] [SEVERE ] removing card from slot 11
+[2022-12-11 20:34:06] [SEVERE ] placing card 43 in slot 0
+[2022-12-11 20:34:06] [SEVERE ] placing card 26 in slot 1
+[2022-12-11 20:34:06] [SEVERE ] placing card 45 in slot 2
+[2022-12-11 20:34:06] [SEVERE ] placing card 42 in slot 3
+[2022-12-11 20:34:06] [SEVERE ] placing card 57 in slot 4
+[2022-12-11 20:34:06] [SEVERE ] placing card 13 in slot 5
+[2022-12-11 20:34:07] [SEVERE ] placing card 49 in slot 6
+[2022-12-11 20:34:07] [SEVERE ] placing card 41 in slot 7
+[2022-12-11 20:34:07] [SEVERE ] placing card 30 in slot 8
+[2022-12-11 20:34:07] [SEVERE ] placing card 72 in slot 9
+[2022-12-11 20:34:07] [SEVERE ] placing card 20 in slot 10
+[2022-12-11 20:34:07] [SEVERE ] placing card 25 in slot 11
+[2022-12-11 20:34:10] [SEVERE ] removing card from slot 0
+[2022-12-11 20:34:10] [SEVERE ] removing card from slot 1
+[2022-12-11 20:34:10] [SEVERE ] removing card from slot 2
+[2022-12-11 20:34:11] [SEVERE ] removing card from slot 3
+[2022-12-11 20:34:11] [SEVERE ] removing card from slot 4
+[2022-12-11 20:34:11] [SEVERE ] removing card from slot 5
+[2022-12-11 20:34:11] [SEVERE ] removing card from slot 6
+[2022-12-11 20:34:11] [SEVERE ] removing card from slot 7
+[2022-12-11 20:34:11] [SEVERE ] removing card from slot 8
+[2022-12-11 20:34:11] [SEVERE ] removing card from slot 9
+[2022-12-11 20:34:11] [SEVERE ] removing card from slot 10
+[2022-12-11 20:34:11] [SEVERE ] removing card from slot 11
+[2022-12-11 20:34:12] [SEVERE ] placing card 26 in slot 0
+[2022-12-11 20:34:12] [SEVERE ] placing card 32 in slot 1
+[2022-12-11 20:34:12] [SEVERE ] placing card 68 in slot 2
+[2022-12-11 20:34:12] [SEVERE ] placing card 7 in slot 3
+[2022-12-11 20:34:12] [SEVERE ] placing card 37 in slot 4
+[2022-12-11 20:34:12] [SEVERE ] placing card 28 in slot 5
+[2022-12-11 20:34:12] [SEVERE ] placing card 80 in slot 6
+[2022-12-11 20:34:12] [SEVERE ] placing card 12 in slot 7
+[2022-12-11 20:34:12] [SEVERE ] placing card 18 in slot 8
+[2022-12-11 20:34:12] [SEVERE ] placing card 57 in slot 9
+[2022-12-11 20:34:13] [SEVERE ] placing card 10 in slot 10
+[2022-12-11 20:34:13] [SEVERE ] placing card 49 in slot 11
+[2022-12-11 20:34:16] [SEVERE ] removing card from slot 0
+[2022-12-11 20:34:16] [SEVERE ] removing card from slot 1
+[2022-12-11 20:34:16] [SEVERE ] removing card from slot 2
+[2022-12-11 20:34:16] [SEVERE ] removing card from slot 3
+[2022-12-11 20:34:16] [SEVERE ] removing card from slot 4
+[2022-12-11 20:34:16] [SEVERE ] removing card from slot 5
+[2022-12-11 20:34:16] [SEVERE ] removing card from slot 6
+[2022-12-11 20:34:17] [SEVERE ] removing card from slot 7
+[2022-12-11 20:34:17] [SEVERE ] removing card from slot 8
+[2022-12-11 20:34:17] [SEVERE ] removing card from slot 9
+[2022-12-11 20:34:17] [SEVERE ] removing card from slot 10
+[2022-12-11 20:34:17] [SEVERE ] removing card from slot 11
+[2022-12-11 20:34:17] [SEVERE ] placing card 43 in slot 0
+[2022-12-11 20:34:17] [SEVERE ] placing card 17 in slot 1
+[2022-12-11 20:34:17] [SEVERE ] placing card 5 in slot 2
+[2022-12-11 20:34:17] [SEVERE ] placing card 63 in slot 3
+[2022-12-11 20:34:18] [SEVERE ] placing card 46 in slot 4
+[2022-12-11 20:34:18] [SEVERE ] placing card 28 in slot 5
+[2022-12-11 20:34:18] [SEVERE ] placing card 42 in slot 6
+[2022-12-11 20:34:18] [SEVERE ] placing card 36 in slot 7
+[2022-12-11 20:34:18] [SEVERE ] placing card 70 in slot 8
+[2022-12-11 20:34:18] [SEVERE ] placing card 64 in slot 9
+[2022-12-11 20:34:18] [SEVERE ] placing card 29 in slot 10
+[2022-12-11 20:34:18] [SEVERE ] placing card 1 in slot 11
+[2022-12-11 20:34:21] [SEVERE ] removing card from slot 0
+[2022-12-11 20:34:22] [SEVERE ] removing card from slot 1
+[2022-12-11 20:34:22] [SEVERE ] removing card from slot 2
+[2022-12-11 20:34:22] [SEVERE ] removing card from slot 3
+[2022-12-11 20:34:22] [SEVERE ] removing card from slot 4
+[2022-12-11 20:34:22] [SEVERE ] removing card from slot 5
+[2022-12-11 20:34:22] [SEVERE ] removing card from slot 6
+[2022-12-11 20:34:22] [SEVERE ] removing card from slot 7
+[2022-12-11 20:34:22] [SEVERE ] removing card from slot 8
+[2022-12-11 20:34:22] [SEVERE ] removing card from slot 9
+[2022-12-11 20:34:23] [SEVERE ] removing card from slot 10
+[2022-12-11 20:34:23] [SEVERE ] removing card from slot 11
+[2022-12-11 20:34:23] [SEVERE ] placing card 76 in slot 0
+[2022-12-11 20:34:23] [SEVERE ] placing card 6 in slot 1
+[2022-12-11 20:34:23] [SEVERE ] placing card 67 in slot 2
+[2022-12-11 20:34:23] [SEVERE ] placing card 41 in slot 3
+[2022-12-11 20:34:23] [SEVERE ] placing card 4 in slot 4
+[2022-12-11 20:34:23] [SEVERE ] placing card 30 in slot 5
+[2022-12-11 20:34:23] [SEVERE ] placing card 27 in slot 6
+[2022-12-11 20:34:23] [SEVERE ] placing card 62 in slot 7
+[2022-12-11 20:34:24] [SEVERE ] placing card 17 in slot 8
+[2022-12-11 20:34:24] [SEVERE ] placing card 22 in slot 9
+[2022-12-11 20:34:24] [SEVERE ] placing card 33 in slot 10
+[2022-12-11 20:34:24] [SEVERE ] placing card 43 in slot 11
+[2022-12-11 20:34:27] [SEVERE ] removing card from slot 0
+[2022-12-11 20:34:27] [SEVERE ] removing card from slot 1
+[2022-12-11 20:34:27] [SEVERE ] removing card from slot 2
+[2022-12-11 20:34:27] [SEVERE ] removing card from slot 3
+[2022-12-11 20:34:27] [SEVERE ] removing card from slot 4
+[2022-12-11 20:34:28] [SEVERE ] removing card from slot 5
+[2022-12-11 20:34:28] [SEVERE ] removing card from slot 6
+[2022-12-11 20:34:28] [SEVERE ] removing card from slot 7
+[2022-12-11 20:34:28] [SEVERE ] removing card from slot 8
+[2022-12-11 20:34:28] [SEVERE ] removing card from slot 9
+[2022-12-11 20:34:28] [SEVERE ] removing card from slot 10
+[2022-12-11 20:34:28] [SEVERE ] removing card from slot 11
+[2022-12-11 20:34:28] [SEVERE ] placing card 61 in slot 0
+[2022-12-11 20:34:28] [SEVERE ] placing card 32 in slot 1
+[2022-12-11 20:34:29] [SEVERE ] placing card 17 in slot 2
+[2022-12-11 20:34:29] [SEVERE ] placing card 28 in slot 3
+[2022-12-11 20:34:29] [SEVERE ] placing card 15 in slot 4
+[2022-12-11 20:34:29] [SEVERE ] placing card 25 in slot 5
+[2022-12-11 20:34:29] [SEVERE ] placing card 70 in slot 6
+[2022-12-11 20:34:29] [SEVERE ] placing card 12 in slot 7
+[2022-12-11 20:34:29] [SEVERE ] placing card 4 in slot 8
+[2022-12-11 20:34:29] [SEVERE ] placing card 0 in slot 9
+[2022-12-11 20:34:29] [SEVERE ] placing card 40 in slot 10
+[2022-12-11 20:34:30] [SEVERE ] placing card 44 in slot 11
+[2022-12-11 20:34:33] [SEVERE ] removing card from slot 0
+[2022-12-11 20:34:33] [SEVERE ] removing card from slot 1
+[2022-12-11 20:34:33] [SEVERE ] removing card from slot 2
+[2022-12-11 20:34:33] [SEVERE ] removing card from slot 3
+[2022-12-11 20:34:33] [SEVERE ] removing card from slot 4
+[2022-12-11 20:34:33] [SEVERE ] removing card from slot 5
+[2022-12-11 20:34:33] [SEVERE ] removing card from slot 6
+[2022-12-11 20:34:33] [SEVERE ] removing card from slot 7
+[2022-12-11 20:34:34] [SEVERE ] removing card from slot 8
+[2022-12-11 20:34:34] [SEVERE ] removing card from slot 9
+[2022-12-11 20:34:34] [SEVERE ] removing card from slot 10
+[2022-12-11 20:34:34] [SEVERE ] removing card from slot 11
+[2022-12-11 20:34:34] [SEVERE ] placing card 59 in slot 0
+[2022-12-11 20:34:34] [SEVERE ] placing card 70 in slot 1
+[2022-12-11 20:34:34] [SEVERE ] placing card 12 in slot 2
+[2022-12-11 20:34:34] [SEVERE ] placing card 23 in slot 3
+[2022-12-11 20:34:34] [SEVERE ] placing card 68 in slot 4
+[2022-12-11 20:34:35] [SEVERE ] placing card 39 in slot 5
+[2022-12-11 20:34:35] [SEVERE ] placing card 56 in slot 6
+[2022-12-11 20:34:35] [SEVERE ] placing card 65 in slot 7
+[2022-12-11 20:34:35] [SEVERE ] placing card 42 in slot 8
+[2022-12-11 20:34:35] [SEVERE ] placing card 18 in slot 9
+[2022-12-11 20:34:35] [SEVERE ] placing card 47 in slot 10
+[2022-12-11 20:34:35] [SEVERE ] placing card 11 in slot 11
+[2022-12-11 20:34:38] [SEVERE ] removing card from slot 0
+[2022-12-11 20:34:38] [SEVERE ] removing card from slot 1
+[2022-12-11 20:34:38] [SEVERE ] removing card from slot 2
+[2022-12-11 20:34:39] [SEVERE ] removing card from slot 3
+[2022-12-11 20:34:39] [SEVERE ] removing card from slot 4
+[2022-12-11 20:34:39] [SEVERE ] removing card from slot 5
+[2022-12-11 20:34:39] [SEVERE ] removing card from slot 6
+[2022-12-11 20:34:39] [SEVERE ] removing card from slot 7
+[2022-12-11 20:34:39] [SEVERE ] removing card from slot 8
+[2022-12-11 20:34:39] [SEVERE ] removing card from slot 9
+[2022-12-11 20:34:39] [SEVERE ] removing card from slot 10
+[2022-12-11 20:34:39] [SEVERE ] removing card from slot 11
+[2022-12-11 20:34:40] [SEVERE ] placing card 57 in slot 0
+[2022-12-11 20:34:40] [SEVERE ] placing card 64 in slot 1
+[2022-12-11 20:34:40] [SEVERE ] placing card 67 in slot 2
+[2022-12-11 20:34:40] [SEVERE ] placing card 1 in slot 3
+[2022-12-11 20:34:40] [SEVERE ] placing card 21 in slot 4
+[2022-12-11 20:34:40] [SEVERE ] placing card 13 in slot 5
+[2022-12-11 20:34:40] [SEVERE ] placing card 52 in slot 6
+[2022-12-11 20:34:40] [SEVERE ] placing card 26 in slot 7
+[2022-12-11 20:34:40] [SEVERE ] placing card 60 in slot 8
+[2022-12-11 20:34:41] [SEVERE ] placing card 77 in slot 9
+[2022-12-11 20:34:41] [SEVERE ] placing card 43 in slot 10
+[2022-12-11 20:34:41] [SEVERE ] placing card 58 in slot 11
+[2022-12-11 20:34:44] [SEVERE ] removing card from slot 0
+[2022-12-11 20:34:44] [SEVERE ] removing card from slot 1
+[2022-12-11 20:34:44] [SEVERE ] removing card from slot 2
+[2022-12-11 20:34:44] [SEVERE ] removing card from slot 3
+[2022-12-11 20:34:44] [SEVERE ] removing card from slot 4
+[2022-12-11 20:34:44] [SEVERE ] removing card from slot 5
+[2022-12-11 20:34:44] [SEVERE ] removing card from slot 6
+[2022-12-11 20:34:45] [SEVERE ] removing card from slot 7
+[2022-12-11 20:34:45] [SEVERE ] removing card from slot 8
+[2022-12-11 20:34:45] [SEVERE ] removing card from slot 9
+[2022-12-11 20:34:45] [SEVERE ] removing card from slot 10
+[2022-12-11 20:34:45] [SEVERE ] removing card from slot 11
+[2022-12-11 20:34:45] [SEVERE ] placing card 6 in slot 0
+[2022-12-11 20:34:45] [SEVERE ] placing card 59 in slot 1
+[2022-12-11 20:34:45] [SEVERE ] placing card 1 in slot 2
+[2022-12-11 20:34:45] [SEVERE ] placing card 23 in slot 3
+[2022-12-11 20:34:46] [SEVERE ] placing card 53 in slot 4
+[2022-12-11 20:34:46] [SEVERE ] placing card 48 in slot 5
+[2022-12-11 20:34:46] [SEVERE ] placing card 47 in slot 6
+[2022-12-11 20:34:46] [SEVERE ] placing card 49 in slot 7
+[2022-12-11 20:34:46] [SEVERE ] placing card 70 in slot 8
+[2022-12-11 20:34:46] [SEVERE ] placing card 51 in slot 9
+[2022-12-11 20:34:46] [SEVERE ] placing card 27 in slot 10
+[2022-12-11 20:34:46] [SEVERE ] placing card 62 in slot 11
+[2022-12-11 20:34:49] [SEVERE ] removing card from slot 0
+[2022-12-11 20:34:50] [SEVERE ] removing card from slot 1
+[2022-12-11 20:34:50] [SEVERE ] removing card from slot 2
+[2022-12-11 20:34:50] [SEVERE ] removing card from slot 3
+[2022-12-11 20:34:50] [SEVERE ] removing card from slot 4
+[2022-12-11 20:34:50] [SEVERE ] removing card from slot 5
+[2022-12-11 20:34:50] [SEVERE ] removing card from slot 6
+[2022-12-11 20:34:50] [SEVERE ] removing card from slot 7
+[2022-12-11 20:34:50] [SEVERE ] removing card from slot 8
+[2022-12-11 20:34:50] [SEVERE ] removing card from slot 9
+[2022-12-11 20:34:51] [SEVERE ] removing card from slot 10
+[2022-12-11 20:34:51] [SEVERE ] removing card from slot 11
+[2022-12-11 20:34:51] [SEVERE ] placing card 61 in slot 0
+[2022-12-11 20:34:51] [SEVERE ] placing card 48 in slot 1
+[2022-12-11 20:34:51] [SEVERE ] placing card 5 in slot 2
+[2022-12-11 20:34:51] [SEVERE ] placing card 50 in slot 3
+[2022-12-11 20:34:51] [SEVERE ] placing card 58 in slot 4
+[2022-12-11 20:34:51] [SEVERE ] placing card 37 in slot 5
+[2022-12-11 20:34:51] [SEVERE ] placing card 10 in slot 6
+[2022-12-11 20:34:51] [SEVERE ] placing card 4 in slot 7
+[2022-12-11 20:34:52] [SEVERE ] placing card 18 in slot 8
+[2022-12-11 20:34:52] [SEVERE ] placing card 66 in slot 9
+[2022-12-11 20:34:52] [SEVERE ] placing card 49 in slot 10
+[2022-12-11 20:34:52] [SEVERE ] placing card 55 in slot 11
+[2022-12-11 20:34:55] [SEVERE ] removing card from slot 0
+[2022-12-11 20:34:55] [SEVERE ] removing card from slot 1
+[2022-12-11 20:34:55] [SEVERE ] removing card from slot 2
+[2022-12-11 20:34:55] [SEVERE ] removing card from slot 3
+[2022-12-11 20:34:55] [SEVERE ] removing card from slot 4
+[2022-12-11 20:34:56] [SEVERE ] removing card from slot 5
+[2022-12-11 20:34:56] [SEVERE ] removing card from slot 6
+[2022-12-11 20:34:56] [SEVERE ] removing card from slot 7
+[2022-12-11 20:34:56] [SEVERE ] removing card from slot 8
+[2022-12-11 20:34:56] [SEVERE ] removing card from slot 9
+[2022-12-11 20:34:56] [SEVERE ] removing card from slot 10
+[2022-12-11 20:34:56] [SEVERE ] removing card from slot 11
+[2022-12-11 20:34:56] [SEVERE ] placing card 49 in slot 0
+[2022-12-11 20:34:56] [SEVERE ] placing card 0 in slot 1
+[2022-12-11 20:34:57] [SEVERE ] placing card 33 in slot 2
+[2022-12-11 20:34:57] [SEVERE ] placing card 65 in slot 3
+[2022-12-11 20:34:57] [SEVERE ] placing card 24 in slot 4
+[2022-12-11 20:34:57] [SEVERE ] placing card 45 in slot 5
+[2022-12-11 20:34:57] [SEVERE ] placing card 44 in slot 6
+[2022-12-11 20:34:57] [SEVERE ] placing card 62 in slot 7
+[2022-12-11 20:34:57] [SEVERE ] placing card 63 in slot 8
+[2022-12-11 20:34:57] [SEVERE ] placing card 21 in slot 9
+[2022-12-11 20:34:57] [SEVERE ] placing card 18 in slot 10
+[2022-12-11 20:34:58] [SEVERE ] placing card 68 in slot 11
+[2022-12-11 20:35:01] [SEVERE ] removing card from slot 0
+[2022-12-11 20:35:01] [SEVERE ] removing card from slot 1
+[2022-12-11 20:35:01] [SEVERE ] removing card from slot 2
+[2022-12-11 20:35:01] [SEVERE ] removing card from slot 3
+[2022-12-11 20:35:01] [SEVERE ] removing card from slot 4
+[2022-12-11 20:35:01] [SEVERE ] removing card from slot 5
+[2022-12-11 20:35:01] [SEVERE ] removing card from slot 6
+[2022-12-11 20:35:01] [SEVERE ] removing card from slot 7
+[2022-12-11 20:35:02] [SEVERE ] removing card from slot 8
+[2022-12-11 20:35:02] [SEVERE ] removing card from slot 9
+[2022-12-11 20:35:02] [SEVERE ] removing card from slot 10
+[2022-12-11 20:35:02] [SEVERE ] removing card from slot 11
+[2022-12-11 20:35:02] [SEVERE ] placing card 12 in slot 0
+[2022-12-11 20:35:02] [SEVERE ] placing card 36 in slot 1
+[2022-12-11 20:35:02] [SEVERE ] placing card 20 in slot 2
+[2022-12-11 20:35:02] [SEVERE ] placing card 18 in slot 3
+[2022-12-11 20:35:02] [SEVERE ] placing card 64 in slot 4
+[2022-12-11 20:35:02] [SEVERE ] placing card 33 in slot 5
+[2022-12-11 20:35:03] [SEVERE ] placing card 46 in slot 6
+[2022-12-11 20:35:03] [SEVERE ] placing card 50 in slot 7
+[2022-12-11 20:35:03] [SEVERE ] placing card 19 in slot 8
+[2022-12-11 20:35:03] [SEVERE ] placing card 39 in slot 9
+[2022-12-11 20:35:03] [SEVERE ] placing card 66 in slot 10
+[2022-12-11 20:35:03] [SEVERE ] placing card 80 in slot 11
+[2022-12-11 20:35:06] [SEVERE ] removing card from slot 0
+[2022-12-11 20:35:06] [SEVERE ] removing card from slot 1
+[2022-12-11 20:35:06] [SEVERE ] removing card from slot 2
+[2022-12-11 20:35:07] [SEVERE ] removing card from slot 3
+[2022-12-11 20:35:07] [SEVERE ] removing card from slot 4
+[2022-12-11 20:35:07] [SEVERE ] removing card from slot 5
+[2022-12-11 20:35:07] [SEVERE ] removing card from slot 6
+[2022-12-11 20:35:07] [SEVERE ] removing card from slot 7
+[2022-12-11 20:35:07] [SEVERE ] removing card from slot 8
+[2022-12-11 20:35:07] [SEVERE ] removing card from slot 9
+[2022-12-11 20:35:07] [SEVERE ] removing card from slot 10
+[2022-12-11 20:35:07] [SEVERE ] removing card from slot 11
+[2022-12-11 20:35:08] [SEVERE ] placing card 13 in slot 0
+[2022-12-11 20:35:08] [SEVERE ] placing card 64 in slot 1
+[2022-12-11 20:35:08] [SEVERE ] placing card 66 in slot 2
+[2022-12-11 20:35:08] [SEVERE ] placing card 23 in slot 3
+[2022-12-11 20:35:08] [SEVERE ] placing card 32 in slot 4
+[2022-12-11 20:35:08] [SEVERE ] placing card 72 in slot 5
+[2022-12-11 20:35:08] [SEVERE ] placing card 65 in slot 6
+[2022-12-11 20:35:08] [SEVERE ] placing card 61 in slot 7
+[2022-12-11 20:35:08] [SEVERE ] placing card 28 in slot 8
+[2022-12-11 20:35:09] [SEVERE ] placing card 21 in slot 9
+[2022-12-11 20:35:09] [SEVERE ] placing card 44 in slot 10
+[2022-12-11 20:35:09] [SEVERE ] placing card 24 in slot 11
+[2022-12-11 20:35:12] [SEVERE ] removing card from slot 0
+[2022-12-11 20:35:12] [SEVERE ] removing card from slot 1
+[2022-12-11 20:35:12] [SEVERE ] removing card from slot 2
+[2022-12-11 20:35:12] [SEVERE ] removing card from slot 3
+[2022-12-11 20:35:12] [SEVERE ] removing card from slot 4
+[2022-12-11 20:35:12] [SEVERE ] removing card from slot 5
+[2022-12-11 20:35:13] [SEVERE ] removing card from slot 6
+[2022-12-11 20:35:13] [SEVERE ] removing card from slot 7
+[2022-12-11 20:35:13] [SEVERE ] removing card from slot 8
+[2022-12-11 20:35:13] [SEVERE ] removing card from slot 9
+[2022-12-11 20:35:13] [SEVERE ] removing card from slot 10
+[2022-12-11 20:35:13] [SEVERE ] removing card from slot 11
+[2022-12-11 20:35:13] [SEVERE ] placing card 64 in slot 0
+[2022-12-11 20:35:13] [SEVERE ] placing card 18 in slot 1
+[2022-12-11 20:35:13] [SEVERE ] placing card 67 in slot 2
+[2022-12-11 20:35:13] [SEVERE ] placing card 16 in slot 3
+[2022-12-11 20:35:14] [SEVERE ] placing card 6 in slot 4
+[2022-12-11 20:35:14] [SEVERE ] placing card 66 in slot 5
+[2022-12-11 20:35:14] [SEVERE ] placing card 32 in slot 6
+[2022-12-11 20:35:14] [SEVERE ] placing card 75 in slot 7
+[2022-12-11 20:35:14] [SEVERE ] placing card 46 in slot 8
+[2022-12-11 20:35:14] [SEVERE ] placing card 51 in slot 9
+[2022-12-11 20:35:14] [SEVERE ] placing card 20 in slot 10
+[2022-12-11 20:35:14] [SEVERE ] placing card 25 in slot 11
+[2022-12-11 20:35:17] [SEVERE ] removing card from slot 0
+[2022-12-11 20:35:18] [SEVERE ] removing card from slot 1
+[2022-12-11 20:35:18] [SEVERE ] removing card from slot 2
+[2022-12-11 20:35:18] [SEVERE ] removing card from slot 3
+[2022-12-11 20:35:18] [SEVERE ] removing card from slot 4
+[2022-12-11 20:35:18] [SEVERE ] removing card from slot 5
+[2022-12-11 20:35:18] [SEVERE ] removing card from slot 6
+[2022-12-11 20:35:18] [SEVERE ] removing card from slot 7
+[2022-12-11 20:35:18] [SEVERE ] removing card from slot 8
+[2022-12-11 20:35:18] [SEVERE ] removing card from slot 9
+[2022-12-11 20:35:19] [SEVERE ] removing card from slot 10
+[2022-12-11 20:35:19] [SEVERE ] removing card from slot 11
+[2022-12-11 20:35:19] [SEVERE ] placing card 52 in slot 0
+[2022-12-11 20:35:19] [SEVERE ] placing card 17 in slot 1
+[2022-12-11 20:35:19] [SEVERE ] placing card 49 in slot 2
+[2022-12-11 20:35:19] [SEVERE ] placing card 59 in slot 3
+[2022-12-11 20:35:19] [SEVERE ] placing card 1 in slot 4
+[2022-12-11 20:35:19] [SEVERE ] placing card 10 in slot 5
+[2022-12-11 20:35:19] [SEVERE ] placing card 37 in slot 6
+[2022-12-11 20:35:20] [SEVERE ] placing card 61 in slot 7
+[2022-12-11 20:35:20] [SEVERE ] placing card 11 in slot 8
+[2022-12-11 20:35:20] [SEVERE ] placing card 5 in slot 9
+[2022-12-11 20:35:20] [SEVERE ] placing card 45 in slot 10
+[2022-12-11 20:35:20] [SEVERE ] placing card 40 in slot 11
+[2022-12-11 20:35:23] [SEVERE ] removing card from slot 0
+[2022-12-11 20:35:23] [SEVERE ] removing card from slot 1
+[2022-12-11 20:35:23] [SEVERE ] removing card from slot 2
+[2022-12-11 20:35:23] [SEVERE ] removing card from slot 3
+[2022-12-11 20:35:24] [SEVERE ] removing card from slot 4
+[2022-12-11 20:35:24] [SEVERE ] removing card from slot 5
+[2022-12-11 20:35:24] [SEVERE ] removing card from slot 6
+[2022-12-11 20:35:24] [SEVERE ] removing card from slot 7
+[2022-12-11 20:35:24] [SEVERE ] removing card from slot 8
+[2022-12-11 20:35:24] [SEVERE ] removing card from slot 9
+[2022-12-11 20:35:24] [SEVERE ] removing card from slot 10
+[2022-12-11 20:35:24] [SEVERE ] removing card from slot 11
+[2022-12-11 20:35:24] [SEVERE ] placing card 66 in slot 0
+[2022-12-11 20:35:24] [SEVERE ] placing card 76 in slot 1
+[2022-12-11 20:35:25] [SEVERE ] placing card 50 in slot 2
+[2022-12-11 20:35:25] [SEVERE ] placing card 78 in slot 3
+[2022-12-11 20:35:25] [SEVERE ] placing card 59 in slot 4
+[2022-12-11 20:35:25] [SEVERE ] placing card 17 in slot 5
+[2022-12-11 20:35:25] [SEVERE ] placing card 61 in slot 6
+[2022-12-11 20:35:25] [SEVERE ] placing card 60 in slot 7
+[2022-12-11 20:35:25] [SEVERE ] placing card 53 in slot 8
+[2022-12-11 20:35:25] [SEVERE ] placing card 23 in slot 9
+[2022-12-11 20:35:25] [SEVERE ] placing card 33 in slot 10
+[2022-12-11 20:35:26] [SEVERE ] placing card 28 in slot 11
+[2022-12-11 20:35:29] [SEVERE ] removing card from slot 0
+[2022-12-11 20:35:29] [SEVERE ] removing card from slot 1
+[2022-12-11 20:35:29] [SEVERE ] removing card from slot 2
+[2022-12-11 20:35:29] [SEVERE ] removing card from slot 3
+[2022-12-11 20:35:29] [SEVERE ] removing card from slot 4
+[2022-12-11 20:35:29] [SEVERE ] removing card from slot 5
+[2022-12-11 20:35:29] [SEVERE ] removing card from slot 6
+[2022-12-11 20:35:29] [SEVERE ] removing card from slot 7
+[2022-12-11 20:35:30] [SEVERE ] removing card from slot 8
+[2022-12-11 20:35:30] [SEVERE ] removing card from slot 9
+[2022-12-11 20:35:30] [SEVERE ] removing card from slot 10
+[2022-12-11 20:35:30] [SEVERE ] removing card from slot 11
+[2022-12-11 20:35:30] [SEVERE ] placing card 53 in slot 0
+[2022-12-11 20:35:30] [SEVERE ] placing card 10 in slot 1
+[2022-12-11 20:35:30] [SEVERE ] placing card 58 in slot 2
+[2022-12-11 20:35:30] [SEVERE ] placing card 49 in slot 3
+[2022-12-11 20:35:30] [SEVERE ] placing card 27 in slot 4
+[2022-12-11 20:35:31] [SEVERE ] placing card 66 in slot 5
+[2022-12-11 20:35:31] [SEVERE ] placing card 37 in slot 6
+[2022-12-11 20:35:31] [SEVERE ] placing card 47 in slot 7
+[2022-12-11 20:35:31] [SEVERE ] placing card 29 in slot 8
+[2022-12-11 20:35:31] [SEVERE ] placing card 26 in slot 9
+[2022-12-11 20:35:31] [SEVERE ] placing card 12 in slot 10
+[2022-12-11 20:35:31] [SEVERE ] placing card 22 in slot 11
+[2022-12-11 20:35:34] [SEVERE ] removing card from slot 0
+[2022-12-11 20:35:34] [SEVERE ] removing card from slot 1
+[2022-12-11 20:35:35] [SEVERE ] removing card from slot 2
+[2022-12-11 20:35:35] [SEVERE ] removing card from slot 3
+[2022-12-11 20:35:35] [SEVERE ] removing card from slot 4
+[2022-12-11 20:35:35] [SEVERE ] removing card from slot 5
+[2022-12-11 20:35:35] [SEVERE ] removing card from slot 6
+[2022-12-11 20:35:35] [SEVERE ] removing card from slot 7
+[2022-12-11 20:35:35] [SEVERE ] removing card from slot 8
+[2022-12-11 20:35:35] [SEVERE ] removing card from slot 9
+[2022-12-11 20:35:35] [SEVERE ] removing card from slot 10
+[2022-12-11 20:35:35] [SEVERE ] removing card from slot 11
+[2022-12-11 20:35:36] [SEVERE ] placing card 21 in slot 0
+[2022-12-11 20:35:36] [SEVERE ] placing card 65 in slot 1
+[2022-12-11 20:35:36] [SEVERE ] placing card 1 in slot 2
+[2022-12-11 20:35:36] [SEVERE ] placing card 13 in slot 3
+[2022-12-11 20:35:36] [SEVERE ] placing card 72 in slot 4
+[2022-12-11 20:35:36] [SEVERE ] placing card 67 in slot 5
+[2022-12-11 20:35:36] [SEVERE ] placing card 7 in slot 6
+[2022-12-11 20:35:36] [SEVERE ] placing card 78 in slot 7
+[2022-12-11 20:35:36] [SEVERE ] placing card 24 in slot 8
+[2022-12-11 20:35:37] [SEVERE ] placing card 59 in slot 9
+[2022-12-11 20:35:37] [SEVERE ] placing card 45 in slot 10
+[2022-12-11 20:35:37] [SEVERE ] placing card 0 in slot 11
+[2022-12-11 20:35:40] [SEVERE ] removing card from slot 0
+[2022-12-11 20:35:40] [SEVERE ] removing card from slot 1
+[2022-12-11 20:35:40] [SEVERE ] removing card from slot 2
+[2022-12-11 20:35:40] [SEVERE ] removing card from slot 3
+[2022-12-11 20:35:40] [SEVERE ] removing card from slot 4
+[2022-12-11 20:35:40] [SEVERE ] removing card from slot 5
+[2022-12-11 20:35:41] [SEVERE ] removing card from slot 6
+[2022-12-11 20:35:41] [SEVERE ] removing card from slot 7
+[2022-12-11 20:35:41] [SEVERE ] removing card from slot 8
+[2022-12-11 20:35:41] [SEVERE ] removing card from slot 9
+[2022-12-11 20:35:41] [SEVERE ] removing card from slot 10
+[2022-12-11 20:35:41] [SEVERE ] removing card from slot 11
+[2022-12-11 20:35:41] [SEVERE ] placing card 36 in slot 0
+[2022-12-11 20:35:41] [SEVERE ] placing card 43 in slot 1
+[2022-12-11 20:35:41] [SEVERE ] placing card 71 in slot 2
+[2022-12-11 20:35:42] [SEVERE ] placing card 59 in slot 3
+[2022-12-11 20:35:42] [SEVERE ] placing card 56 in slot 4
+[2022-12-11 20:35:42] [SEVERE ] placing card 57 in slot 5
+[2022-12-11 20:35:42] [SEVERE ] placing card 49 in slot 6
+[2022-12-11 20:35:42] [SEVERE ] placing card 62 in slot 7
+[2022-12-11 20:35:42] [SEVERE ] placing card 41 in slot 8
+[2022-12-11 20:35:42] [SEVERE ] placing card 21 in slot 9
+[2022-12-11 20:35:42] [SEVERE ] placing card 25 in slot 10
+[2022-12-11 20:35:42] [SEVERE ] placing card 66 in slot 11
+[2022-12-11 20:35:45] [SEVERE ] removing card from slot 0
+[2022-12-11 20:35:46] [SEVERE ] removing card from slot 1
+[2022-12-11 20:35:46] [SEVERE ] removing card from slot 2
+[2022-12-11 20:35:46] [SEVERE ] removing card from slot 3
+[2022-12-11 20:35:46] [SEVERE ] removing card from slot 4
+[2022-12-11 20:35:46] [SEVERE ] removing card from slot 5
+[2022-12-11 20:35:46] [SEVERE ] removing card from slot 6
+[2022-12-11 20:35:46] [SEVERE ] removing card from slot 7
+[2022-12-11 20:35:46] [SEVERE ] removing card from slot 8
+[2022-12-11 20:35:46] [SEVERE ] removing card from slot 9
+[2022-12-11 20:35:47] [SEVERE ] removing card from slot 10
+[2022-12-11 20:35:47] [SEVERE ] removing card from slot 11
+[2022-12-11 20:35:47] [SEVERE ] placing card 75 in slot 0
+[2022-12-11 20:35:47] [SEVERE ] placing card 16 in slot 1
+[2022-12-11 20:35:47] [SEVERE ] placing card 6 in slot 2
+[2022-12-11 20:35:47] [SEVERE ] placing card 45 in slot 3
+[2022-12-11 20:35:47] [SEVERE ] placing card 21 in slot 4
+[2022-12-11 20:35:47] [SEVERE ] placing card 44 in slot 5
+[2022-12-11 20:35:47] [SEVERE ] placing card 22 in slot 6
+[2022-12-11 20:35:48] [SEVERE ] placing card 7 in slot 7
+[2022-12-11 20:35:48] [SEVERE ] placing card 20 in slot 8
+[2022-12-11 20:35:48] [SEVERE ] placing card 27 in slot 9
+[2022-12-11 20:35:48] [SEVERE ] placing card 0 in slot 10
+[2022-12-11 20:35:48] [SEVERE ] placing card 29 in slot 11
+[2022-12-11 20:35:51] [SEVERE ] removing card from slot 0
+[2022-12-11 20:35:51] [SEVERE ] removing card from slot 1
+[2022-12-11 20:35:51] [SEVERE ] removing card from slot 2
+[2022-12-11 20:35:51] [SEVERE ] removing card from slot 3
+[2022-12-11 20:35:52] [SEVERE ] removing card from slot 4
+[2022-12-11 20:35:52] [SEVERE ] removing card from slot 5
+[2022-12-11 20:35:52] [SEVERE ] removing card from slot 6
+[2022-12-11 20:35:52] [SEVERE ] removing card from slot 7
+[2022-12-11 20:35:52] [SEVERE ] removing card from slot 8
+[2022-12-11 20:35:52] [SEVERE ] removing card from slot 9
+[2022-12-11 20:35:52] [SEVERE ] removing card from slot 10
+[2022-12-11 20:35:52] [SEVERE ] removing card from slot 11
+[2022-12-11 20:35:52] [SEVERE ] placing card 33 in slot 0
+[2022-12-11 20:35:53] [SEVERE ] placing card 27 in slot 1
+[2022-12-11 20:35:53] [SEVERE ] placing card 63 in slot 2
+[2022-12-11 20:35:53] [SEVERE ] placing card 20 in slot 3
+[2022-12-11 20:35:53] [SEVERE ] placing card 72 in slot 4
+[2022-12-11 20:35:53] [SEVERE ] placing card 53 in slot 5
+[2022-12-11 20:35:53] [SEVERE ] placing card 70 in slot 6
+[2022-12-11 20:35:53] [SEVERE ] placing card 23 in slot 7
+[2022-12-11 20:35:53] [SEVERE ] placing card 15 in slot 8
+[2022-12-11 20:35:53] [SEVERE ] placing card 75 in slot 9
+[2022-12-11 20:35:53] [SEVERE ] placing card 44 in slot 10
+[2022-12-11 20:35:54] [SEVERE ] placing card 61 in slot 11
+[2022-12-11 20:35:57] [SEVERE ] removing card from slot 0
+[2022-12-11 20:35:57] [SEVERE ] removing card from slot 1
+[2022-12-11 20:35:57] [SEVERE ] removing card from slot 2
+[2022-12-11 20:35:57] [SEVERE ] removing card from slot 3
+[2022-12-11 20:35:57] [SEVERE ] removing card from slot 4
+[2022-12-11 20:35:57] [SEVERE ] removing card from slot 5
+[2022-12-11 20:35:57] [SEVERE ] removing card from slot 6
+[2022-12-11 20:35:57] [SEVERE ] removing card from slot 7
+[2022-12-11 20:35:58] [SEVERE ] removing card from slot 8
+[2022-12-11 20:35:58] [SEVERE ] removing card from slot 9
+[2022-12-11 20:35:58] [SEVERE ] removing card from slot 10
+[2022-12-11 20:35:58] [SEVERE ] removing card from slot 11
+[2022-12-11 20:35:58] [SEVERE ] placing card 4 in slot 0
+[2022-12-11 20:35:58] [SEVERE ] placing card 43 in slot 1
+[2022-12-11 20:35:58] [SEVERE ] placing card 13 in slot 2
+[2022-12-11 20:35:58] [SEVERE ] placing card 63 in slot 3
+[2022-12-11 20:35:58] [SEVERE ] placing card 80 in slot 4
+[2022-12-11 20:35:59] [SEVERE ] placing card 38 in slot 5
+[2022-12-11 20:35:59] [SEVERE ] placing card 6 in slot 6
+[2022-12-11 20:35:59] [SEVERE ] placing card 37 in slot 7
+[2022-12-11 20:35:59] [SEVERE ] placing card 28 in slot 8
+[2022-12-11 20:35:59] [SEVERE ] placing card 62 in slot 9
+[2022-12-11 20:35:59] [SEVERE ] placing card 77 in slot 10
+[2022-12-11 20:35:59] [SEVERE ] placing card 7 in slot 11
+[2022-12-11 20:36:02] [SEVERE ] removing card from slot 0
+[2022-12-11 20:36:02] [SEVERE ] removing card from slot 1
+[2022-12-11 20:36:03] [SEVERE ] removing card from slot 2
+[2022-12-11 20:36:03] [SEVERE ] removing card from slot 3
+[2022-12-11 20:36:03] [SEVERE ] removing card from slot 4
+[2022-12-11 20:36:03] [SEVERE ] removing card from slot 5
+[2022-12-11 20:36:03] [SEVERE ] removing card from slot 6
+[2022-12-11 20:36:03] [SEVERE ] removing card from slot 7
+[2022-12-11 20:36:03] [SEVERE ] removing card from slot 8
+[2022-12-11 20:36:03] [SEVERE ] removing card from slot 9
+[2022-12-11 20:36:03] [SEVERE ] removing card from slot 10
+[2022-12-11 20:36:04] [SEVERE ] removing card from slot 11
+[2022-12-11 20:36:04] [SEVERE ] placing card 77 in slot 0
+[2022-12-11 20:36:04] [SEVERE ] placing card 50 in slot 1
+[2022-12-11 20:36:04] [SEVERE ] placing card 43 in slot 2
+[2022-12-11 20:36:04] [SEVERE ] placing card 37 in slot 3
+[2022-12-11 20:36:04] [SEVERE ] placing card 65 in slot 4
+[2022-12-11 20:36:04] [SEVERE ] placing card 36 in slot 5
+[2022-12-11 20:36:04] [SEVERE ] placing card 16 in slot 6
+[2022-12-11 20:36:04] [SEVERE ] placing card 52 in slot 7
+[2022-12-11 20:36:05] [SEVERE ] placing card 11 in slot 8
+[2022-12-11 20:36:05] [SEVERE ] placing card 60 in slot 9
+[2022-12-11 20:36:05] [SEVERE ] placing card 27 in slot 10
+[2022-12-11 20:36:05] [SEVERE ] placing card 57 in slot 11
+[2022-12-11 20:36:08] [SEVERE ] removing card from slot 0
+[2022-12-11 20:36:08] [SEVERE ] removing card from slot 1
+[2022-12-11 20:36:08] [SEVERE ] removing card from slot 2
+[2022-12-11 20:36:08] [SEVERE ] removing card from slot 3
+[2022-12-11 20:36:08] [SEVERE ] removing card from slot 4
+[2022-12-11 20:36:08] [SEVERE ] removing card from slot 5
+[2022-12-11 20:36:09] [SEVERE ] removing card from slot 6
+[2022-12-11 20:36:09] [SEVERE ] removing card from slot 7
+[2022-12-11 20:36:09] [SEVERE ] removing card from slot 8
+[2022-12-11 20:36:09] [SEVERE ] removing card from slot 9
+[2022-12-11 20:36:09] [SEVERE ] removing card from slot 10
+[2022-12-11 20:36:09] [SEVERE ] removing card from slot 11
+[2022-12-11 20:36:09] [SEVERE ] placing card 23 in slot 0
+[2022-12-11 20:36:09] [SEVERE ] placing card 49 in slot 1
+[2022-12-11 20:36:09] [SEVERE ] placing card 35 in slot 2
+[2022-12-11 20:36:10] [SEVERE ] placing card 22 in slot 3
+[2022-12-11 20:36:10] [SEVERE ] placing card 70 in slot 4
+[2022-12-11 20:36:10] [SEVERE ] placing card 1 in slot 5
+[2022-12-11 20:36:10] [SEVERE ] placing card 10 in slot 6
+[2022-12-11 20:36:10] [SEVERE ] placing card 5 in slot 7
+[2022-12-11 20:36:10] [SEVERE ] placing card 76 in slot 8
+[2022-12-11 20:36:10] [SEVERE ] placing card 18 in slot 9
+[2022-12-11 20:36:10] [SEVERE ] placing card 19 in slot 10
+[2022-12-11 20:36:10] [SEVERE ] placing card 51 in slot 11
+[2022-12-11 20:36:14] [SEVERE ] removing card from slot 0
+[2022-12-11 20:36:14] [SEVERE ] removing card from slot 1
+[2022-12-11 20:36:14] [SEVERE ] removing card from slot 2
+[2022-12-11 20:36:14] [SEVERE ] removing card from slot 3
+[2022-12-11 20:36:14] [SEVERE ] removing card from slot 4
+[2022-12-11 20:36:14] [SEVERE ] removing card from slot 5
+[2022-12-11 20:36:14] [SEVERE ] removing card from slot 6
+[2022-12-11 20:36:14] [SEVERE ] removing card from slot 7
+[2022-12-11 20:36:14] [SEVERE ] removing card from slot 8
+[2022-12-11 20:36:15] [SEVERE ] removing card from slot 9
+[2022-12-11 20:36:15] [SEVERE ] removing card from slot 10
+[2022-12-11 20:36:15] [SEVERE ] removing card from slot 11
+[2022-12-11 20:36:15] [SEVERE ] placing card 64 in slot 0
+[2022-12-11 20:36:15] [SEVERE ] placing card 76 in slot 1
+[2022-12-11 20:36:15] [SEVERE ] placing card 12 in slot 2
+[2022-12-11 20:36:15] [SEVERE ] placing card 65 in slot 3
+[2022-12-11 20:36:15] [SEVERE ] placing card 16 in slot 4
+[2022-12-11 20:36:15] [SEVERE ] placing card 38 in slot 5
+[2022-12-11 20:36:15] [SEVERE ] placing card 63 in slot 6
+[2022-12-11 20:36:16] [SEVERE ] placing card 28 in slot 7
+[2022-12-11 20:36:16] [SEVERE ] placing card 43 in slot 8
+[2022-12-11 20:36:16] [SEVERE ] placing card 33 in slot 9
+[2022-12-11 20:36:16] [SEVERE ] placing card 42 in slot 10
+[2022-12-11 20:36:16] [SEVERE ] placing card 18 in slot 11
+[2022-12-11 20:36:19] [SEVERE ] removing card from slot 0
+[2022-12-11 20:36:19] [SEVERE ] removing card from slot 1
+[2022-12-11 20:36:19] [SEVERE ] removing card from slot 2
+[2022-12-11 20:36:19] [SEVERE ] removing card from slot 3
+[2022-12-11 20:36:20] [SEVERE ] removing card from slot 4
+[2022-12-11 20:36:20] [SEVERE ] removing card from slot 5
+[2022-12-11 20:36:20] [SEVERE ] removing card from slot 6
+[2022-12-11 20:36:20] [SEVERE ] removing card from slot 7
+[2022-12-11 20:36:20] [SEVERE ] removing card from slot 8
+[2022-12-11 20:36:20] [SEVERE ] removing card from slot 9
+[2022-12-11 20:36:20] [SEVERE ] removing card from slot 10
+[2022-12-11 20:36:20] [SEVERE ] removing card from slot 11
+[2022-12-11 20:36:20] [SEVERE ] placing card 4 in slot 0
+[2022-12-11 20:36:21] [SEVERE ] placing card 56 in slot 1
+[2022-12-11 20:36:21] [SEVERE ] placing card 7 in slot 2
+[2022-12-11 20:36:21] [SEVERE ] placing card 63 in slot 3
+[2022-12-11 20:36:21] [SEVERE ] placing card 0 in slot 4
+[2022-12-11 20:36:21] [SEVERE ] placing card 5 in slot 5
+[2022-12-11 20:36:21] [SEVERE ] placing card 65 in slot 6
+[2022-12-11 20:36:21] [SEVERE ] placing card 39 in slot 7
+[2022-12-11 20:36:21] [SEVERE ] placing card 70 in slot 8
+[2022-12-11 20:36:21] [SEVERE ] placing card 45 in slot 9
+[2022-12-11 20:36:22] [SEVERE ] placing card 52 in slot 10
+[2022-12-11 20:36:22] [SEVERE ] placing card 66 in slot 11
+[2022-12-11 20:36:25] [SEVERE ] removing card from slot 0
+[2022-12-11 20:36:25] [SEVERE ] removing card from slot 1
+[2022-12-11 20:36:25] [SEVERE ] removing card from slot 2
+[2022-12-11 20:36:25] [SEVERE ] removing card from slot 3
+[2022-12-11 20:36:25] [SEVERE ] removing card from slot 4
+[2022-12-11 20:36:25] [SEVERE ] removing card from slot 5
+[2022-12-11 20:36:25] [SEVERE ] removing card from slot 6
+[2022-12-11 20:36:26] [SEVERE ] removing card from slot 7
+[2022-12-11 20:36:26] [SEVERE ] removing card from slot 8
+[2022-12-11 20:36:26] [SEVERE ] removing card from slot 9
+[2022-12-11 20:36:26] [SEVERE ] removing card from slot 10
+[2022-12-11 20:36:26] [SEVERE ] removing card from slot 11
+[2022-12-11 20:36:26] [SEVERE ] placing card 16 in slot 0
+[2022-12-11 20:36:26] [SEVERE ] placing card 75 in slot 1
+[2022-12-11 20:36:26] [SEVERE ] placing card 20 in slot 2
+[2022-12-11 20:36:26] [SEVERE ] placing card 80 in slot 3
+[2022-12-11 20:36:26] [SEVERE ] placing card 43 in slot 4
+[2022-12-11 20:36:27] [SEVERE ] placing card 4 in slot 5
+[2022-12-11 20:36:27] [SEVERE ] placing card 72 in slot 6
+[2022-12-11 20:36:27] [SEVERE ] placing card 21 in slot 7
+[2022-12-11 20:36:27] [SEVERE ] placing card 71 in slot 8
+[2022-12-11 20:36:27] [SEVERE ] placing card 19 in slot 9
+[2022-12-11 20:36:27] [SEVERE ] placing card 18 in slot 10
+[2022-12-11 20:36:27] [SEVERE ] placing card 64 in slot 11
+[2022-12-11 20:36:30] [SEVERE ] removing card from slot 0
+[2022-12-11 20:36:30] [SEVERE ] removing card from slot 1
+[2022-12-11 20:36:31] [SEVERE ] removing card from slot 2
+[2022-12-11 20:36:31] [SEVERE ] removing card from slot 3
+[2022-12-11 20:36:31] [SEVERE ] removing card from slot 4
+[2022-12-11 20:36:31] [SEVERE ] removing card from slot 5
+[2022-12-11 20:36:31] [SEVERE ] removing card from slot 6
+[2022-12-11 20:36:31] [SEVERE ] removing card from slot 7
+[2022-12-11 20:36:31] [SEVERE ] removing card from slot 8
+[2022-12-11 20:36:31] [SEVERE ] removing card from slot 9
+[2022-12-11 20:36:31] [SEVERE ] removing card from slot 10
+[2022-12-11 20:36:32] [SEVERE ] removing card from slot 11
+[2022-12-11 20:36:32] [SEVERE ] placing card 27 in slot 0
+[2022-12-11 20:36:32] [SEVERE ] placing card 72 in slot 1
+[2022-12-11 20:36:32] [SEVERE ] placing card 70 in slot 2
+[2022-12-11 20:36:32] [SEVERE ] placing card 16 in slot 3
+[2022-12-11 20:36:32] [SEVERE ] placing card 48 in slot 4
+[2022-12-11 20:36:32] [SEVERE ] placing card 55 in slot 5
+[2022-12-11 20:36:32] [SEVERE ] placing card 28 in slot 6
+[2022-12-11 20:36:32] [SEVERE ] placing card 65 in slot 7
+[2022-12-11 20:36:33] [SEVERE ] placing card 17 in slot 8
+[2022-12-11 20:36:33] [SEVERE ] placing card 57 in slot 9
+[2022-12-11 20:36:33] [SEVERE ] placing card 30 in slot 10
+[2022-12-11 20:36:33] [SEVERE ] placing card 78 in slot 11
+[2022-12-11 20:36:36] [SEVERE ] removing card from slot 0
+[2022-12-11 20:36:36] [SEVERE ] removing card from slot 1
+[2022-12-11 20:36:36] [SEVERE ] removing card from slot 2
+[2022-12-11 20:36:36] [SEVERE ] removing card from slot 3
+[2022-12-11 20:36:36] [SEVERE ] removing card from slot 4
+[2022-12-11 20:36:36] [SEVERE ] removing card from slot 5
+[2022-12-11 20:36:37] [SEVERE ] removing card from slot 6
+[2022-12-11 20:36:37] [SEVERE ] removing card from slot 7
+[2022-12-11 20:36:37] [SEVERE ] removing card from slot 8
+[2022-12-11 20:36:37] [SEVERE ] removing card from slot 9
+[2022-12-11 20:36:37] [SEVERE ] removing card from slot 10
+[2022-12-11 20:36:37] [SEVERE ] removing card from slot 11
+[2022-12-11 20:36:37] [SEVERE ] placing card 62 in slot 0
+[2022-12-11 20:36:37] [SEVERE ] placing card 44 in slot 1
+[2022-12-11 20:36:37] [SEVERE ] placing card 12 in slot 2
+[2022-12-11 20:36:38] [SEVERE ] placing card 52 in slot 3
+[2022-12-11 20:36:38] [SEVERE ] placing card 51 in slot 4
+[2022-12-11 20:36:38] [SEVERE ] placing card 36 in slot 5
+[2022-12-11 20:36:38] [SEVERE ] placing card 4 in slot 6
+[2022-12-11 20:36:38] [SEVERE ] placing card 17 in slot 7
+[2022-12-11 20:36:38] [SEVERE ] placing card 25 in slot 8
+[2022-12-11 20:36:38] [SEVERE ] placing card 46 in slot 9
+[2022-12-11 20:36:38] [SEVERE ] placing card 30 in slot 10
+[2022-12-11 20:36:38] [SEVERE ] placing card 6 in slot 11
+[2022-12-11 20:36:42] [SEVERE ] removing card from slot 0
+[2022-12-11 20:36:42] [SEVERE ] removing card from slot 1
+[2022-12-11 20:36:42] [SEVERE ] removing card from slot 2
+[2022-12-11 20:36:42] [SEVERE ] removing card from slot 3
+[2022-12-11 20:36:42] [SEVERE ] removing card from slot 4
+[2022-12-11 20:36:42] [SEVERE ] removing card from slot 5
+[2022-12-11 20:36:42] [SEVERE ] removing card from slot 6
+[2022-12-11 20:36:42] [SEVERE ] removing card from slot 7
+[2022-12-11 20:36:42] [SEVERE ] removing card from slot 8
+[2022-12-11 20:36:43] [SEVERE ] removing card from slot 9
+[2022-12-11 20:36:43] [SEVERE ] removing card from slot 10
+[2022-12-11 20:36:43] [SEVERE ] removing card from slot 11
+[2022-12-11 20:36:43] [SEVERE ] placing card 72 in slot 0
+[2022-12-11 20:36:43] [SEVERE ] placing card 55 in slot 1
+[2022-12-11 20:36:43] [SEVERE ] placing card 33 in slot 2
+[2022-12-11 20:36:43] [SEVERE ] placing card 45 in slot 3
+[2022-12-11 20:36:43] [SEVERE ] placing card 18 in slot 4
+[2022-12-11 20:36:43] [SEVERE ] placing card 22 in slot 5
+[2022-12-11 20:36:44] [SEVERE ] placing card 23 in slot 6
+[2022-12-11 20:36:44] [SEVERE ] placing card 20 in slot 7
+[2022-12-11 20:36:44] [SEVERE ] placing card 50 in slot 8
+[2022-12-11 20:36:44] [SEVERE ] placing card 16 in slot 9
+[2022-12-11 20:36:44] [SEVERE ] placing card 40 in slot 10
+[2022-12-11 20:36:44] [SEVERE ] placing card 67 in slot 11
+[2022-12-11 20:36:47] [SEVERE ] removing card from slot 0
+[2022-12-11 20:36:47] [SEVERE ] removing card from slot 1
+[2022-12-11 20:36:47] [SEVERE ] removing card from slot 2
+[2022-12-11 20:36:48] [SEVERE ] removing card from slot 3
+[2022-12-11 20:36:48] [SEVERE ] removing card from slot 4
+[2022-12-11 20:36:48] [SEVERE ] removing card from slot 5
+[2022-12-11 20:36:48] [SEVERE ] removing card from slot 6
+[2022-12-11 20:36:48] [SEVERE ] removing card from slot 7
+[2022-12-11 20:36:48] [SEVERE ] removing card from slot 8
+[2022-12-11 20:36:48] [SEVERE ] removing card from slot 9
+[2022-12-11 20:36:48] [SEVERE ] removing card from slot 10
+[2022-12-11 20:36:48] [SEVERE ] removing card from slot 11
+[2022-12-11 20:36:48] [SEVERE ] placing card 60 in slot 0
+[2022-12-11 20:36:49] [SEVERE ] placing card 25 in slot 1
+[2022-12-11 20:36:49] [SEVERE ] placing card 43 in slot 2
+[2022-12-11 20:36:49] [SEVERE ] placing card 56 in slot 3
+[2022-12-11 20:36:49] [SEVERE ] placing card 80 in slot 4
+[2022-12-11 20:36:49] [SEVERE ] placing card 32 in slot 5
+[2022-12-11 20:36:49] [SEVERE ] placing card 75 in slot 6
+[2022-12-11 20:36:49] [SEVERE ] placing card 63 in slot 7
+[2022-12-11 20:36:49] [SEVERE ] placing card 24 in slot 8
+[2022-12-11 20:36:49] [SEVERE ] placing card 27 in slot 9
+[2022-12-11 20:36:50] [SEVERE ] placing card 39 in slot 10
+[2022-12-11 20:36:50] [SEVERE ] placing card 30 in slot 11
