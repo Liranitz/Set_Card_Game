@@ -61,15 +61,14 @@ public class Dealer implements Runnable {
     public void run() {
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
         Thread [] playersThreads = new Thread[this.players.length];
-        for (int i=0; i<this.players.length; i++)
+        for (int i=0; i<this.players.length; i++) {
             playersThreads[i] = new Thread(this.players[i]);
+            playersThreads[i].start();
+        }
         while (!shouldFinish()) {
             placeCardsOnTable();
             reshuffleTime = System.currentTimeMillis() + 60000;
             //making thread to each player and stary them
-            for (int i=0; i<this.players.length; i++)
-                playersThreads[i].start();
-
             timerLoop();
             updateTimerDisplay(false);
             removeAllCardsFromTable();
@@ -112,7 +111,6 @@ public class Dealer implements Runnable {
      */
     private void removeCardsFromTable() {
         // TODO implement
-
         if (!this.CuncurrentSets.isEmpty()){
             List<Integer> OptionalSet = CuncurrentSets.poll();
             int curId = OptionalSet.remove(0);
@@ -180,15 +178,28 @@ public class Dealer implements Runnable {
     /**
      * Sleep for a fixed amount of time or until the thread is awakened for some purpose.
      */
+
+    public synchronized void wakeUp(){
+        notifyAll();
+    }
+
     private void sleepUntilWokenOrTimeout() {
         // TODO implement
+        try {
+            synchronized (this) {
+                this.wait(900);
+            }
+        }
+        catch(InterruptedException e){
+            }
 
-        //env.ui.setCountdown(reshuffleTime, false);
-        //env.ui.
-        //players[1].run();
+            //env.ui.setCountdown(reshuffleTime, false);
+            //env.ui.
+            //players[1].run();
         /*if(players[0].getPickedSlots().size() == 3)
             removeCardsFromTable();*/
-    }
+        }
+
 
     /**
      * Reset and/or update the countdown and the countdown display.
@@ -232,7 +243,8 @@ public class Dealer implements Runnable {
         env.ui.announceWinner(playerIntWon);
     }
 
-    public void putInSet(ArrayList<Integer> set){
-            this.CuncurrentSets.add(set);
+    public void  putInSet(ArrayList<Integer> set){
+        this.CuncurrentSets.add(set);
+        notifyAll();
     }
 }
