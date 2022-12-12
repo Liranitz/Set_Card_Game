@@ -2,6 +2,8 @@ package bguspl.set.ex;
 import java.util.*;
 
 import bguspl.set.Env;
+
+import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.logging.Level;
 /**
  * This class manages the players' threads and data
@@ -54,6 +56,14 @@ public class Player implements Runnable {
     private Dealer dealer;
 
     /**
+     * The penalty that the player need to get.
+     */
+    private int penalty;
+
+    private Thread dealerThread;
+
+    private Queue<Integer> curSlots;
+    /**
      * The current score of the player.
      */
     private ArrayList<Integer> pickedSlots;
@@ -73,6 +83,8 @@ public class Player implements Runnable {
         this.human = human;
         this.pickedSlots = new ArrayList<>();
         this.dealer = dealer;
+        this.curSlots = new ConcurrentLinkedDeque<>();
+        this.penalty = 0;
     }
 
     public  ArrayList<Integer> getPickedSlots(){
@@ -87,26 +99,56 @@ public class Player implements Runnable {
         playerThread = Thread.currentThread();
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + "starting.");
         if (!human) createArtificialIntelligence();
-
         //need to check !!
-
         while (!terminate) {
-            int i=0;
+            int i = 0;
             // TODO implement main player loop
-            try {
+            updateTokens();
+            penalty();
+
+
+/*            try {
                 playerThread.join();
                 synchronized (this) { wait(); }
-            } catch (InterruptedException ignored) {}
-
+            } catch (InterruptedException ignored) {}*/
             //table.countCards()
             //dealer.reshuffleTime = System.currentTimeMillis() + 60000;
         }
-        if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
+        if (!human) try {
+            aiThread.join();
+        } catch (InterruptedException ignored) {
+        }
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
+
+    }
+
+    public synchronized void updateTokens(){
+        if (!curSlots.isEmpty()) {
+            Integer slot = curSlots.element();
+            curSlots.remove(slot);
+            if (table.slotToCard[slot] != null) {
+                int temp = -1;
+                for (int j = 0; j < pickedSlots.size(); j++) {
+                    if (pickedSlots.get(j) == slot)
+                        temp = j;
+                }
+                if (temp != -1) {
+                    table.removeToken(id, slot);
+                    pickedSlots.remove(temp);
+                } else if (pickedSlots.size() < 3) {
+                    table.placeToken(this.id, slot);
+                    pickedSlots.add(slot);
+                    if (pickedSlots.size() == 3) {
+                        this.pickedSlots.add(0, id);
+                        dealer.putInSet(pickedSlots);
+                    }
+                }
+            }
+        }
     }
 
     public void resetSlots(){
-        this.pickedSlots = new ArrayList<>();
+        this.pickedSlots.clear();
     }
 
     public void deleteSlots(List<Integer> set){
@@ -164,38 +206,20 @@ public class Player implements Runnable {
      */
     public void keyPressed(int slot) {
         // TODO implement
-
-        if (table.slotToCard[slot] != null){
-            int temp = -1;
-            for (int i=0; i<pickedSlots.size(); i++)
-                if (pickedSlots.get(i) == slot)
-                    temp = i;
-            if (temp != -1){
-                table.removeToken(id, slot);
-                pickedSlots.remove(temp);
-            }
-
-            else if (pickedSlots.size() < 3) {
-                table.placeToken(this.id, slot);
-                pickedSlots.add(slot);
-                if(pickedSlots.size()==3) {
-                    this.pickedSlots.add(0 , id);
-                    try {
+        if (penalty == 0)
+            curSlots.add(slot);
+    }
+/*                    try {
                         synchronized (this) {
                             dealer.putInSet(this.pickedSlots);
                         }
                     }
                     catch (Exception e) {};
-                }
+                }*/
                 /*if(pickedSlots.size() == 3){
                     //this.playerThread.interrupt();
                     this.playerThread.notifyAll();
                 }*/
-            }
-        }
-
-
-    }
 
     /**
      * Award a point to a player and perform other related actions.
@@ -211,25 +235,44 @@ public class Player implements Runnable {
     }
 
     /**
+     * set the penalty
+     */
+    public void setPenalty(int n) {
+        this.penalty = n;
+    }
+    /**
      * Penalize a player and perform other related actions.
      */
     public void penalty() {
         // TODO implement
-        //sleep for 1 second.
-        try {
-            synchronized (this) {
-                terminate = false;
+        //sleep for 1 second after legal set
+        if(penalty == 1){
+            try {
                 long freeze = env.config.pointFreezeMillis + System.currentTimeMillis();
-                env.ui.setFreeze(this.id, env.config.pointFreezeMillis);
-                Thread.sleep(env.config.pointFreezeMillis);
-                while (System.currentTimeMillis() <= freeze) {
-
+                while (freeze - System.currentTimeMillis() > 500){
+                    env.ui.setFreeze(this.id, freeze - System.currentTimeMillis());
+                    Thread.sleep(980);
                 }
+                Thread.sleep(freeze - System.currentTimeMillis());
                 env.ui.setFreeze(this.id, 0);
-                terminate = true;
-            }
+                penalty = 0;
+            } catch (InterruptedException ignored) {}
         }
-        catch (Exception e) {}
+
+        //sleep for 3 second after illegal set
+        if(penalty == 2){
+            try {
+                long freeze = env.config.penaltyFreezeMillis + System.currentTimeMillis();
+                while (freeze - System.currentTimeMillis() > 500){
+                    env.ui.setFreeze(this.id, freeze - System.currentTimeMillis());
+                    Thread.sleep(980);
+                }
+                Thread.sleep(freeze - System.currentTimeMillis());
+                env.ui.setFreeze(this.id, 0);
+                penalty = 0;
+            } catch (InterruptedException ignored) {}
+        }
+
     }
 
     public int getScore() {

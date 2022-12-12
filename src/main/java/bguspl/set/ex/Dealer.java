@@ -41,6 +41,11 @@ public class Dealer implements Runnable {
      */
     private long reshuffleTime = Long.MAX_VALUE;
 
+
+
+
+
+
     private Queue<ArrayList<Integer>> CuncurrentSets;
 
     private Thread dealerThread;
@@ -53,18 +58,20 @@ public class Dealer implements Runnable {
         dealerThread = Thread.currentThread();
         CuncurrentSets = new LinkedList<>();
     }
-
     /**
      * The dealer thread starts here (main loop for the dealer thread).
      */
     @Override
-    public void run() {
-        env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
+    public void run() {env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
         //making thread to each player and stary them
+       /* for (int i=0; i<players.length; i++){
+            playersThreads[i] = new Thread();
+            playersThreads[i].start();
+        }*/
         for(Player p : players){
             Thread playerThread = new Thread(p);
             playerThread.start();
-        }
+   }
         while (!shouldFinish()) {
             placeCardsOnTable();
             reshuffleTime = System.currentTimeMillis() + 60000;
@@ -135,21 +142,15 @@ public class Dealer implements Runnable {
                 table.removeCard(table.cardToSlot[set[0]]);
                 table.removeCard(table.cardToSlot[set[1]]);
                 table.removeCard(table.cardToSlot[set[2]]);
-                /*try{
-                    synchronized (players[curId]) {
-                        players[curId].penalty();
-                    }
-                }
-                catch (Exception e ) {} ;*/
-                players[curId].penalty();
+                players[curId].setPenalty(1);
                 players[curId].point();
                 reshuffleTime = System.currentTimeMillis() + 60000;
             }
             else {
                 try {
-                    //players[curId].wait(6000);
+                    players[curId].setPenalty(2);
                     players[curId].penalty();
-                    this.notifyAll();
+                    this.notifyAll(); // nessecary?
                 }
                 catch (Exception e){}
             }
@@ -173,6 +174,16 @@ public class Dealer implements Runnable {
                 deck.remove(randomCard);
             }
         }
+    }
+
+    public void setPenaltyOnTable(int playerId){
+        long freeze = 5000 + System.currentTimeMillis();
+
+      //  Thread.sleep(5 * env.config.pointFreezeMillis);
+        while (System.currentTimeMillis() <= freeze) {
+            env.ui.setFreeze(playerId, freeze - System.currentTimeMillis());
+        }
+        env.ui.setFreeze(playerId, 0);
     }
 
     /**
