@@ -60,16 +60,14 @@ public class Dealer implements Runnable {
     @Override
     public void run() {
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
-        Thread [] playersThreads = new Thread[this.players.length];
-        for (int i=0; i<this.players.length; i++)
-            playersThreads[i] = new Thread(this.players[i]);
+        //making thread to each player and stary them
+        for(Player p : players){
+            Thread playerThread = new Thread(p);
+            playerThread.start();
+        }
         while (!shouldFinish()) {
             placeCardsOnTable();
             reshuffleTime = System.currentTimeMillis() + 60000;
-            //making thread to each player and stary them
-            for (int i=0; i<this.players.length; i++)
-                playersThreads[i].start();
-
             timerLoop();
             updateTimerDisplay(false);
             removeAllCardsFromTable();
