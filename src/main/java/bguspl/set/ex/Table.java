@@ -103,7 +103,7 @@ public class Table {
      * Removes a card from a grid slot on the table.
      * @param slot - the slot from which to remove the card.
      */
-    public void removeCard(int slot) {
+    public void removeCard(int slot) {//tableSlot, not cardslot
         try {
             Thread.sleep(env.config.tableDelayMillis);
         } catch (InterruptedException ignored) {}
@@ -129,10 +129,10 @@ public class Table {
      * @param slot   - the slot from which to remove the token.
      * @return       - true iff a token was successfully removed.
      */
-    public boolean removeToken(int player, int slot) {
+    public synchronized boolean removeToken(int player, int slot) {//is synchronized?
         // TODO implement
         env.ui.removeToken(player,slot);
-        // לברר למה זה צריך להיות בוליאני?
+        // לברר למה זה צריך להיות בוליאני???????????
         return false;
     }
 }

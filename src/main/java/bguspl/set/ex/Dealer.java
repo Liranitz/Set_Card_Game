@@ -4,6 +4,7 @@ import bguspl.set.Env;
 import bguspl.set.UtilImpl;
 
 import java.util.*;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -41,15 +42,11 @@ public class Dealer implements Runnable {
      */
     private long reshuffleTime = Long.MAX_VALUE;
 
-
-
-
-
-
     private Queue<ArrayList<Integer>> CuncurrentSets;
 
     private Thread dealerThread;
 
+    private boolean wait;
     public Dealer(Env env, Table table, Player[] players) {
         this.env = env;
         this.table = table;
@@ -57,24 +54,25 @@ public class Dealer implements Runnable {
         deck = IntStream.range(0, env.config.deckSize).boxed().collect(Collectors.toList());
         dealerThread = Thread.currentThread();
         CuncurrentSets = new LinkedList<>();
+        wait = false;
     }
     /**
      * The dealer thread starts here (main loop for the dealer thread).
      */
     @Override
     public void run() {env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
-        //making thread to each player and stary them
+        //making thread to each player and start them
        /* for (int i=0; i<players.length; i++){
             playersThreads[i] = new Thread();
             playersThreads[i].start();
         }*/
-        for(Player p : players){
+        for(Player p : players) {
             Thread playerThread = new Thread(p);
             playerThread.start();
-   }
+        }
         while (!shouldFinish()) {
             placeCardsOnTable();
-            reshuffleTime = System.currentTimeMillis() + 60000;
+            reshuffleTime = System.currentTimeMillis() + env.config.turnTimeoutMillis;
             timerLoop();
             updateTimerDisplay(false);
             removeAllCardsFromTable();
@@ -100,7 +98,8 @@ public class Dealer implements Runnable {
      */
     public void terminate() {
         // TODO implement
-        Thread.currentThread().interrupt();
+        //notifyAll();
+        Thread.currentThread().interrupt(); // need to figure out what is the difference
     }
 
     /**
@@ -110,50 +109,55 @@ public class Dealer implements Runnable {
      */
     private boolean shouldFinish() {
         return terminate || env.util.findSets(deck, 1).size() == 0;
-    }
+    }//need to check the cards on the table or on the deck??????????????
 
     /**
      * Checks cards should be removed from the table and removes them.
      */
     private void removeCardsFromTable() {
         // TODO implement
-
-        if (!this.CuncurrentSets.isEmpty()){
-            List<Integer> OptionalSet = CuncurrentSets.poll();
-            int curId = OptionalSet.remove(0);
-            //find the set where the player clicked , check if it is legal and remove it
-            int[] set = new int[3];
-            set[0] = table.slotToCard[OptionalSet.get(0)];
-            set[1] = table.slotToCard[OptionalSet.get(1)];
-            set[2] = table.slotToCard[OptionalSet.get(2)];
-            //if(env.util.testSet(set))
-            if(true)
-            {
-                env.ui.removeTokens(OptionalSet.get(0));
-                env.ui.removeTokens(OptionalSet.get(1));
-                env.ui.removeTokens(OptionalSet.get(2));
-                for(Player p : players) {
-                    try{
-                        p.deleteSlots(OptionalSet);
-                }
-                    catch (Exception e){};
-                }
-                players[curId].resetSlots();
-                table.removeCard(table.cardToSlot[set[0]]);
-                table.removeCard(table.cardToSlot[set[1]]);
-                table.removeCard(table.cardToSlot[set[2]]);
-                players[curId].setPenalty(1);
-                players[curId].point();
-                reshuffleTime = System.currentTimeMillis() + 60000;
-            }
-            else {
-                try {
+        ReentrantLock curLocker = new ReentrantLock();
+        curLocker.lock();
+        try {
+            if (!this.CuncurrentSets.isEmpty()) {
+                List<Integer> OptionalSet = CuncurrentSets.poll();
+                int curId = OptionalSet.remove(3);
+                //find the set where the player clicked , check if it is legal and remove it
+                int[] set = new int[3];
+                set[0] = OptionalSet.get(0);
+                set[1] = OptionalSet.get(1);
+                set[2] = OptionalSet.get(2);
+                //if(env.util.testSet(set)){
+                if (true) {
+                    //delete the all token from the places were there is a set
+                    players[curId].resetTokensSlots(set);
+                    players[curId].resetSlots();//reset the player pickedSlots
+                    for (Player p : players) {//update the other player pickeslots
+                        if (p.id != curId){
+                            try {
+                                p.updateSlots(set);
+                            } catch (Exception e) {}
+                        }
+                    }
+                    //remove the card of the set from the table
+                    table.removeCard(table.cardToSlot[set[0]]);
+                    table.removeCard(table.cardToSlot[set[1]]);
+                    table.removeCard(table.cardToSlot[set[2]]);
+                    players[curId].setPenalty(1);
+                    players[curId].point();
+                    reshuffleTime = System.currentTimeMillis() + env.config.turnTimeoutMillis;
+                } else {//not a legal set
+                    //try {
                     players[curId].setPenalty(2);
-                    players[curId].penalty();
-                    this.notifyAll(); // nessecary?
+                        //this.notifyAll(); // nessecary?
+                    /*} catch (Exception e) {
+                    }*/
                 }
-                catch (Exception e){}
             }
+        }
+        catch (Exception e){}
+        finally {
+            curLocker.unlock();
         }
 
     }
@@ -163,40 +167,47 @@ public class Dealer implements Runnable {
      */
     private void placeCardsOnTable() {
         // TODO implement
+        for (Player p : players) {//dont play while i am updating the table
+            p.needToWait(true);
+        }
         Random random = new Random();
         for (int j = 0; j < 12; j++) {
-            if(table.slotToCard[j] == null && deck.size() > 0) { // check if removed , need to check if player clicked it
+            if (table.slotToCard[j] == null && deck.size() > 0) { // check if removed , need to check if player clicked it
                 int randomCard = 0;
-                if(deck.size() != 1) {
+                if (deck.size() != 1) {
                     randomCard = random.nextInt(deck.size() - 1); // check if size - 1 or size
                 }
                 table.placeCard(deck.get(randomCard), j);
                 deck.remove(randomCard);
             }
         }
-    }
-
-    public void setPenaltyOnTable(int playerId){
-        long freeze = 5000 + System.currentTimeMillis();
-
-      //  Thread.sleep(5 * env.config.pointFreezeMillis);
-        while (System.currentTimeMillis() <= freeze) {
-            env.ui.setFreeze(playerId, freeze - System.currentTimeMillis());
+       for (Player p : players) {
+            p.needToWait(false);
         }
-        env.ui.setFreeze(playerId, 0);
+/*
+       this.notifyAll();
+*/
     }
+
+
+
+
+
+
+
 
     /**
      * Sleep for a fixed amount of time or until the thread is awakened for some purpose.
      */
     private void sleepUntilWokenOrTimeout() {
         // TODO implement
-
-        //env.ui.setCountdown(reshuffleTime, false);
-        //env.ui.
-        //players[1].run();
-        /*if(players[0].getPickedSlots().size() == 3)
-            removeCardsFromTable();*/
+        if(wait){
+            try{
+                synchronized (this){//ned to  synchronized?????????
+                    wait();// need to wait by time or until a wake????????
+                }
+            } catch (InterruptedException e) {}
+        }
     }
 
     /**
@@ -213,8 +224,10 @@ public class Dealer implements Runnable {
     private void removeAllCardsFromTable() {
         // TODO implement
         for(Integer card : table.slotToCard){
-            deck.add(card);
-            table.removeCard(table.cardToSlot[card]);
+            if(card != null) {
+                deck.add(card);
+                table.removeCard(table.cardToSlot[card]);
+            }
         }
     }
 
@@ -242,6 +255,7 @@ public class Dealer implements Runnable {
     }
 
     public void putInSet(ArrayList<Integer> set){
+        // pun in the optional set with a lock
             this.CuncurrentSets.add(set);
     }
 }
