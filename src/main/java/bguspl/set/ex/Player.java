@@ -132,36 +132,37 @@ public class Player implements Runnable {
     public boolean  isHuman(){
         return human;
     }
+    
     public synchronized void resetTokensSlots(int[] set) {//need to be synchronized?????????????
         env.ui.removeTokens(table.cardToSlot[set[0]]);
         env.ui.removeTokens(table.cardToSlot[set[1]]);
         env.ui.removeTokens(table.cardToSlot[set[2]]);
     }
 
-    public synchronized void updateTokens() {
-        ReentrantLock curLocker = new ReentrantLock();
-        synchronized (this) {
-            //this.notifyAll();
-            curLocker.lock();
-            try {
-                while (!curSlots.isEmpty()) {
-                    Integer cardSlot = curSlots.poll();
-                    if (table.cardToSlot[cardSlot] != null) {//the slot still exsist on the table
-                        int temp = -1;
-                        for (int j = 0; j < pickedSlots.size(); j++) {
-                            if (pickedSlots.get(j) == cardSlot)
-                                temp = j;
-                        }
-                        if (temp != -1) {//the player want ro remove the pick of the card
-                            table.removeToken(id, table.cardToSlot[cardSlot]);
-                            pickedSlots.remove(temp);
+        public synchronized void updateTokens() {
+            ReentrantLock curLocker = new ReentrantLock();
+            synchronized (this) {
+                //this.notifyAll();
+                curLocker.lock();
+                try {
+                    while (!curSlots.isEmpty()) {
+                        Integer cardSlot = curSlots.poll();
+                        if (table.cardToSlot[cardSlot] != null) {//the slot still exsist on the table
+                            int temp = -1;
+                            for (int j = 0; j < pickedSlots.size(); j++) {
+                                if (pickedSlots.get(j) == cardSlot)
+                                    temp = j;
                             }
-                        else if (pickedSlots.size() < 3) {//not exist in player pickedSlots, so add it.
-                            table.placeToken(this.id, table.cardToSlot[cardSlot]);
-                            pickedSlots.add(cardSlot);
-                            if (pickedSlots.size() == 3) {//an optional set that need to be checked
-                                this.pickedSlots.add(id);//to recognize which player the set belongs
-                                dealer.putInSet(pickedSlots);
+                            if (temp != -1) {//the player want ro remove the pick of the card
+                                table.removeToken(id, table.cardToSlot[cardSlot]);
+                                pickedSlots.remove(temp);
+                            }
+                            else if (pickedSlots.size() < 3) {//not exist in player pickedSlots, so add it.
+                                table.placeToken(this.id, table.cardToSlot[cardSlot]);
+                                pickedSlots.add(cardSlot);
+                                if (pickedSlots.size() == 3) {//an optional set that need to be checked
+                                    this.pickedSlots.add(id);//to recognize which player the set belongs
+                                    dealer.putInSet(pickedSlots);
                                 /*synchronized (dealer) {
                                     //dealer.notifyAll();
                                     curLocker.lock();
@@ -171,17 +172,18 @@ public class Player implements Runnable {
                                         curLocker.unlock();
                                     }
                                 }*/
+                                }
                             }
                         }
                     }
                 }
-            }
-            catch (Exception e){}
-            finally {
-                curLocker.unlock();
+                catch (Exception e){}
+                finally {
+                    curLocker.unlock();
+                }
             }
         }
-    }
+    
 
 
     public void resetSlots(){
