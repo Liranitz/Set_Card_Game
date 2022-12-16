@@ -61,8 +61,6 @@ public class Player implements Runnable {
      */
     private int penalty;
 
-    private Thread dealerThread;
-
     private boolean wait;
 
     //the cardId
@@ -90,10 +88,6 @@ public class Player implements Runnable {
         this.curSlots = new ConcurrentLinkedDeque<>();
         this.penalty = 0;
         this.wait = true;
-    }
-
-    public  ArrayList<Integer> getPickedSlots(){
-        return  pickedSlots;
     }
 
     /**
