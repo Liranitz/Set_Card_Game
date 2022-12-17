@@ -4,6 +4,7 @@ import java.util.*;
 import bguspl.set.Env;
 
 import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -70,6 +71,8 @@ public class Player implements Runnable {
     /**
      * The current score of the player.
      */
+
+    private ReentrantLock curLocker;
     private CopyOnWriteArrayList<Integer> pickedSlots;
     /**
      * The class constructor.
@@ -87,7 +90,7 @@ public class Player implements Runnable {
         this.human = human;
         this.pickedSlots = new CopyOnWriteArrayList<Integer>();
         this.dealer = dealer;
-        this.curSlots = new ConcurrentLinkedDeque<>();
+        this.curSlots = new ConcurrentLinkedQueue<>();
         this.penalty = 0;
         this.wait = true;
     }
@@ -120,6 +123,16 @@ public class Player implements Runnable {
             }
         }
         wait = con;
+
+        /*synchronized (curLocker) {
+            while (con) {
+                try {
+                    curLocker.wait();
+                } catch (InterruptedException interruptedException) {
+                }
+            }
+        }
+        curLocker.notifyAll();*/
     }
 
     public boolean  isHuman(){
