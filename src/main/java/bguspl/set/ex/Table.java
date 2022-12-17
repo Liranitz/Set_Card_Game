@@ -103,11 +103,12 @@ public class Table {
      * Removes a card from a grid slot on the table.
      * @param slot - the slot from which to remove the card.
      */
-    public void removeCard(int slot) {//tableSlot, not cardslot
+    public void removeCard(int slot) {
         try {
             Thread.sleep(env.config.tableDelayMillis);
         } catch (InterruptedException ignored) {}
         // TODO implement
+        env.ui.removeTokens(slot);
         env.ui.removeCard(slot);
         cardToSlot[slotToCard[slot]] = null;
         slotToCard[slot] = null;

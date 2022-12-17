@@ -6,6 +6,8 @@ import bguspl.set.Env;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
+import java.util.concurrent.CopyOnWriteArrayList;
+
 /**
  * This class manages the players' threads and data
  *
@@ -68,7 +70,7 @@ public class Player implements Runnable {
     /**
      * The current score of the player.
      */
-    private ArrayList<Integer> pickedSlots;
+    private CopyOnWriteArrayList<Integer> pickedSlots;
     /**
      * The class constructor.
      *
@@ -83,7 +85,7 @@ public class Player implements Runnable {
         this.table = table;
         this.id = id;
         this.human = human;
-        this.pickedSlots = new ArrayList<>();
+        this.pickedSlots = new CopyOnWriteArrayList<Integer>();
         this.dealer = dealer;
         this.curSlots = new ConcurrentLinkedDeque<>();
         this.penalty = 0;
@@ -124,7 +126,7 @@ public class Player implements Runnable {
         return human;
     }
     
-    public void resetTokensSlots(int[] set) {//need to be synchronized?????????????
+    public void resetTokensSlots(int[] set) {
         env.ui.removeTokens(set[0]);
         env.ui.removeTokens(set[1]);
         env.ui.removeTokens(set[2]);
@@ -133,53 +135,46 @@ public class Player implements Runnable {
         public void updateTokens() {
             ReentrantLock curLocker = new ReentrantLock();
             ///dealer.needToWait(true);
-            //synchronized (this) {
+            //synchronized (table) { // stay the table the way it is ?
                 curLocker.lock();
                 try {
                     while (!curSlots.isEmpty()) {
-                        Integer cardSlot = curSlots.poll();
-                        if (table.slotToCard[cardSlot] != null) {//the slot still exsist on the table
+                        Integer cardSlot = curSlots.poll(); // gets the CARD ID
+                        if (table.cardToSlot[cardSlot] != null) {//the card still exist on the table
                             int temp = -1;
                             for (int j = 0; j < pickedSlots.size(); j++) {
-                                if (pickedSlots.get(j) == cardSlot)
+                                if (pickedSlots.get(j) == cardSlot) // checked if the player clicked on that CARD
                                     temp = j;
                             }
                             if (temp != -1) {//the player want ro remove the pick of the card
-                                //table.removeToken(id, table.cardToSlot[cardSlot]);
-                                table.removeToken(id, cardSlot);
+                                table.removeToken(id, table.cardToSlot[cardSlot]);
+                                //.removeToken(id, cardSlot);
                                 pickedSlots.remove(temp);
-                            }
-                            else if (pickedSlots.size() < 3) {//not exist in player pickedSlots, so add it.
-                                //table.placeToken(this.id, table.cardToSlot[cardSlot]);
-                                table.placeToken(this.id, cardSlot);
+                            } else if (pickedSlots.size() < 3) {//not exist in player pickedSlots, so add it.
+                                table.placeToken(this.id, table.cardToSlot[cardSlot]);
+                                //table.placeToken(this.id, cardSlot);
                                 pickedSlots.add(cardSlot);
                                 //pickedSlots.add(table.slotToCard[cardSlot]);
                                 if (pickedSlots.size() == 3) {//an optional SlotSet that need to be checked
-                                    this.pickedSlots.add(id);//to recognize which player the set belongs
                                     dealer.needToWait(false);
-                                    dealer.putInSet(pickedSlots);
-                                    //dealer.needToWait(true);
+                                    dealer.putInSet(pickedSlots, id);//to recognize which player the set belongs
                                 }
                             }
                         }
                     }
-                }
-                finally {
+                } finally {
                     curLocker.unlock();
                 }
-            }
-        //}
-    
+            //}
+        }
+
 
 
     public void resetSlots(){
-        for (Integer i : pickedSlots)
-            if (table.cardToSlot[i] != null)
-                env.ui.removeToken(id, table.cardToSlot[i]);
         this.pickedSlots.clear();
     }
 
-    public void updateSlots(int[] set) {
+    public void updateSlots(List<Integer> set) {
         for (int i : set) {
             for (int j = 0; j < pickedSlots.size(); j++) {
                 if (i == pickedSlots.get(j))
@@ -200,7 +195,8 @@ public class Player implements Runnable {
                 // TODO implement player key press simulator
                 // use choose random and send keyPressed
 
-                if (!wait && pickedSlots.size() < 3) {
+                if (!wait) {
+                    //if (!wait && pickedSlots.size() < 3) {
                     chooseRandomAi();
                 }
                 try {
@@ -213,19 +209,26 @@ public class Player implements Runnable {
     }
 
     private void chooseRandomAi(){
+        boolean filter = true;
+        if(pickedSlots.size() == 3){
+            filter = false;
+        }
         if(table.countCards() > 0) {
-            int[] optionalSlots = new int[table.countCards()];
             ArrayList<Integer> optionalSlots1 = new ArrayList<>();
-            int j = 0;
             //  checks if there are already someone that inside my slot[]
             for (Integer i : table.slotToCard) {
-                if(i != null && !pickedSlots.contains(table.cardToSlot[i])) {
-                    //optionalSlots[j] = i;
-                    optionalSlots1.add(i);
-                    //j++;
+                if (i != null) {
+                    if (filter) {
+                        if (!pickedSlots.contains(i)) {
+                            optionalSlots1.add(i);
+                        }
+                    }
+                    else {
+                        optionalSlots1.add(i);
+                    }
                 }
             }
-            if(optionalSlots.length > 0){
+            if(optionalSlots1.size() > 0){
                 Random rand = new Random();
                 int chosenRandom = rand.nextInt(optionalSlots1.size());
                 keyPressed(table.cardToSlot[optionalSlots1.get(chosenRandom)]);
@@ -233,15 +236,12 @@ public class Player implements Runnable {
         }
     }
 
-    private ArrayList<Integer> aiPickedSlots(){
-        return pickedSlots;
-    }
-
     /**
      * Called when the game should be terminated due to an external event.
      */
     public void terminate() {
         // TODO implement
+
     }
 
     /**
@@ -251,15 +251,14 @@ public class Player implements Runnable {
      */
     public void keyPressed(int slot) {
         // TODO implement
-        if (penalty == 0 && pickedSlots.size() < 3){
-            curSlots.add(slot);
+        //if (penalty == 0 && pickedSlots.size() < 3){
+            if (penalty == 0){
+            curSlots.add(table.slotToCard[slot]);
             try {
                 Thread.sleep(env.config.tableDelayMillis);
             } catch (InterruptedException ignored) {
             }
-
         }
-
     }
 
     /**
@@ -315,7 +314,7 @@ public class Player implements Runnable {
                     Thread.sleep(freeze - System.currentTimeMillis());
                 env.ui.setFreeze(this.id, 0);
                 if(!human){
-                    deleteRandomSlot();
+                    //deleteRandomSlot();
                 }
                 penalty = 0;
             } catch (InterruptedException ignored) {}
@@ -323,14 +322,6 @@ public class Player implements Runnable {
 
     }
 
-    private void deleteRandomSlot(){
-        Random ran = new Random();
-        if(pickedSlots.size() == 3) {
-            int x = ran.nextInt(3);
-            Integer remove = pickedSlots.remove(x);
-            table.removeToken(id, remove);
-        }
-    }
 
     public int getScore() {
         return score;
