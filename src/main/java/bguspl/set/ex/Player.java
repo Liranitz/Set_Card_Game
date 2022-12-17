@@ -343,12 +343,12 @@ public class Player implements Runnable {
             try {
                 env.ui.setFreeze(this.id,  env.config.penaltyFreezeMillis);
                 long freeze = env.config.penaltyFreezeMillis + System.currentTimeMillis();
-                while (freeze - System.currentTimeMillis() > 1){
+                while (freeze - System.currentTimeMillis() > env.config.penaltyFreezeMillis / 6){
                     env.ui.setFreeze(this.id, freeze - System.currentTimeMillis());
-                    Thread.sleep(env.config.penaltyFreezeMillis / 2);
+                    Thread.sleep((long) (env.config.penaltyFreezeMillis / 3 * 0.98));
                 }
                 if (freeze - System.currentTimeMillis()>0)
-                Thread.sleep(freeze - System.currentTimeMillis());
+                    Thread.sleep(freeze - System.currentTimeMillis());
                 env.ui.setFreeze(this.id, 0);
                 /*if (!isHuman()){//nee to change the non human cards
                     resetSlots();

@@ -127,42 +127,36 @@ public class Dealer implements Runnable {
                 set[0] = OptionalSet.get(0);
                 set[1] = OptionalSet.get(1);
                 set[2] = OptionalSet.get(2);
-                if(env.util.testSet(set)){
-                //if (true) {
+                if (env.util.testSet(set)) {
+                    //if (true) {
                     //delete the all token from the places were there is a set
                     players[curId].resetTokensSlots(set);
                     players[curId].resetSlots();//reset the player pickedSlots
                     for (Player p : players) {//update the other player pickeslots
-                        if (p.id != curId){
-                            try {
-                                p.updateSlots(set);
-                            } catch (Exception e) {}
+                        if (p.id != curId) {
+                            p.updateSlots(set);
                         }
+                        //remove the card of the set from the table
+                        table.removeCard(set[0]);
+                        table.removeCard(set[1]);
+                        table.removeCard(set[2]);
+                        players[curId].setPenalty(1);
+                        players[curId].point();
+                        reshuffleTime = System.currentTimeMillis() + env.config.turnTimeoutMillis;
                     }
-                    //remove the card of the set from the table
-/*                    table.removeCard(table.cardToSlot[set[0]]);
-                    table.removeCard(table.cardToSlot[set[1]]);
-                    table.removeCard(table.cardToSlot[set[2]]);*/
-                    table.removeCard(set[0]);
-                    table.removeCard(set[1]);
-                    table.removeCard(set[2]);
-                    players[curId].setPenalty(1);
-                    players[curId].point();
-                    reshuffleTime = System.currentTimeMillis() + env.config.turnTimeoutMillis;
-                } else {//not a legal set
-                    //try {
-                    players[curId].setPenalty(2);
+                }
+                else{//not a legal set
+                        //try {
+                        players[curId].setPenalty(2);
                         //this.notifyAll(); // nessecary?
                     /*} catch (Exception e) {
                     }*/
+                    }
                 }
-            }
         }
-        catch (Exception e){}
         finally {
             curLocker.unlock();
         }
-
     }
 
     /**
