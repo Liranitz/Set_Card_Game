@@ -93,6 +93,7 @@ public class Player implements Runnable {
         this.curSlots = new ConcurrentLinkedQueue<>();
         this.penalty = 0;
         this.wait = true;
+        curLocker = new ReentrantLock();
     }
 
     /**
@@ -116,23 +117,23 @@ public class Player implements Runnable {
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
     }
 
-    public void needToWait(boolean con){
-        if(con) {
+    public void needToWait(boolean con) {
+        /*if(con) {
             synchronized (this) {
                 notifyAll();
             }
         }
-        wait = con;
-
-        /*synchronized (curLocker) {
-            while (con) {
-                try {
-                    curLocker.wait();
-                } catch (InterruptedException interruptedException) {
-                }
+        wait = con;*/
+        synchronized (this) {
+            if (con) {
+                wait = con;
+                curLocker.lock();
+            } else {
+                wait = con;
+                curLocker.unlock();
+                notifyAll();
             }
         }
-        curLocker.notifyAll();*/
     }
 
     public boolean  isHuman(){
