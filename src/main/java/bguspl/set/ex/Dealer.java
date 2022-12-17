@@ -121,14 +121,14 @@ public class Dealer implements Runnable {
         try {
             if (!this.CuncurrentSets.isEmpty()) {
                 List<Integer> OptionalSet = CuncurrentSets.poll();
-                int curId = OptionalSet.remove(3);
+                int curId = OptionalSet.remove(3); //gets the playerId
                 //find the set where the player clicked , check if it is legal and remove it
                 int[] set = new int[3];
                 set[0] = OptionalSet.get(0);
                 set[1] = OptionalSet.get(1);
                 set[2] = OptionalSet.get(2);
-                //if(env.util.testSet(set)){
-                if (true) {
+                if(env.util.testSet(set)){
+                //if (true) {
                     //delete the all token from the places were there is a set
                     players[curId].resetTokensSlots(set);
                     players[curId].resetSlots();//reset the player pickedSlots
@@ -140,9 +140,12 @@ public class Dealer implements Runnable {
                         }
                     }
                     //remove the card of the set from the table
-                    table.removeCard(table.cardToSlot[set[0]]);
+/*                    table.removeCard(table.cardToSlot[set[0]]);
                     table.removeCard(table.cardToSlot[set[1]]);
-                    table.removeCard(table.cardToSlot[set[2]]);
+                    table.removeCard(table.cardToSlot[set[2]]);*/
+                    table.removeCard(set[0]);
+                    table.removeCard(set[1]);
+                    table.removeCard(set[2]);
                     players[curId].setPenalty(1);
                     players[curId].point();
                     reshuffleTime = System.currentTimeMillis() + env.config.turnTimeoutMillis;
@@ -254,8 +257,12 @@ public class Dealer implements Runnable {
         env.ui.announceWinner(playerIntWon);
     }
 
-    public void putInSet(ArrayList<Integer> set){
+    public void putInSet(ArrayList<Integer> setSlot){
         // pun in the optional set with a lock
-            this.CuncurrentSets.add(set);
+        ArrayList<Integer> cardSlot = new ArrayList<>();
+        for(int i = 0 ; i < 3 ; i++)
+            cardSlot.add(table.slotToCard[setSlot.get(i)]);
+        cardSlot.add(setSlot.get(3));
+        this.CuncurrentSets.add(setSlot);
     }
 }
