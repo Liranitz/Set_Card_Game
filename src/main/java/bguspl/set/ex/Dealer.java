@@ -33,6 +33,12 @@ public class Dealer implements Runnable {
      */
     private final List<Integer> deck;
 
+    private ReentrantLock curLocker;
+
+    private long CurElapsed;
+
+    private long timeSinceLastAction;
+
     /**
      * True iff game should be terminated due to an external event.
      */
@@ -41,13 +47,16 @@ public class Dealer implements Runnable {
     /**
      * The time when the dealer needs to reshuffle the deck due to turn timeout.
      */
-    private long reshuffleTime = Long.MAX_VALUE;
+    public volatile long reshuffleTime = Long.MAX_VALUE;
 
+    int setSize;
+
+    public volatile boolean timeIsRun;
     private Queue<CopyOnWriteArrayList<Integer>> CuncurrentSets;
 
     private Thread dealerThread;
 
-    private boolean wait;
+    public volatile boolean wait;
 
     public Dealer(Env env, Table table, Player[] players) {
         this.env = env;
@@ -57,6 +66,10 @@ public class Dealer implements Runnable {
         dealerThread = Thread.currentThread();
         CuncurrentSets = new ConcurrentLinkedQueue<>();
         wait = false;
+        curLocker = new ReentrantLock();
+        CurElapsed = 0;
+        timeIsRun = false;
+        setSize = 3;
     }
 
     /**
@@ -71,8 +84,20 @@ public class Dealer implements Runnable {
             playerThread.start();
         }
         while (!shouldFinish()) {
+            /*for(Player p : players) // sleep all the players until dealer finish put on cards
+                synchronized (p) {
+                    p.wait = true;
+                }*/
             placeCardsOnTable();
-            reshuffleTime = System.currentTimeMillis() + env.config.turnTimeoutMillis;
+            for(Player p : players) // wake them up
+                synchronized (p) {
+                    p.wait = false;
+                    p.notifyAll();
+                }
+            if (env.config.turnTimeoutMillis>0)
+                reshuffleTime = System.currentTimeMillis() + env.config.turnTimeoutMillis;
+            else
+                timeSinceLastAction = System.currentTimeMillis();
             timerLoop();
             updateTimerDisplay(false);
             removeAllCardsFromTable();
@@ -85,36 +110,37 @@ public class Dealer implements Runnable {
      * The inner loop of the dealer thread that runs as long as the countdown did not time out.
      */
     private void timerLoop() {
-        while (!terminate && System.currentTimeMillis() < reshuffleTime) {
+        while (!terminate && System.currentTimeMillis() < reshuffleTime && env.util.findSets(deck, 1).size() > 0) {
+            timeIsRun = true;
             sleepUntilWokenOrTimeout();
             updateTimerDisplay(false);
-            for (Player p : players) {//dont play while i am updating the table
-                p.needToWait(true);
-            }
             removeCardsFromTable();
             placeCardsOnTable();
-            for (Player p : players) {
-                p.needToWait(false);
-            }
         }
+        timeIsRun = false;
     }
 
-    public void needToWait(boolean con) {
+/*    public void needToWait(boolean con) {
         if (!con) {
             synchronized (this) {
                 notifyAll();
             }
         }
         wait = con;
-    }
+    }*/
 
     /**
      * Called when the game should be terminated due to an external event.
      */
     public void terminate() {
         // TODO implement
-        //notifyAll();
-        Thread.currentThread().interrupt(); // need to figure out what is the difference
+
+        for(Player p : players)
+            synchronized (p) {
+                p.terminate();
+            }
+       terminate = true;
+        //Thread.currentThread().interrupt();
     }
 
     /**
@@ -126,25 +152,26 @@ public class Dealer implements Runnable {
         return terminate || env.util.findSets(deck, 1).size() == 0;
     }//need to check the cards on the table or on the deck??????????????
 
+
     /**
      * Checks cards should be removed from the table and removes them.
      */
     private void removeCardsFromTable() {
         // TODO implement
-        ReentrantLock curLocker = new ReentrantLock();
         curLocker.lock();
         try {
             if (!this.CuncurrentSets.isEmpty()) {
                 CopyOnWriteArrayList<Integer> OptionalSet = CuncurrentSets.poll();
+                System.out.println(OptionalSet);
                 int curId = OptionalSet.remove(3); //gets the playerId
                 if (checkIfStillExist(OptionalSet)) { // check if the set is exist on the table
                     //find the set where the player clicked , check if it is legal and remove it
-                    int[] set = new int[3];
+                    int[] set = new int[setSize];
                     set[0] = OptionalSet.get(0);
                     set[1] = OptionalSet.get(1);
                     set[2] = OptionalSet.get(2);
-                     if (env.util.testSet(set)) {
-                    //if (true) {
+                    if (env.util.testSet(set)) {
+                   // if (true) {
                         //delete the all token from the places were there is a set
                         set[0] = table.cardToSlot[set[0]];
                         set[1] = table.cardToSlot[set[1]];
@@ -164,16 +191,24 @@ public class Dealer implements Runnable {
                         table.removeCard(set[2]);
                         players[curId].setPenalty(1);
                         players[curId].point();
-                        reshuffleTime = System.currentTimeMillis() + env.config.turnTimeoutMillis;
+                        if (env.config.turnTimeoutMillis > 0)
+                            reshuffleTime = System.currentTimeMillis() + env.config.turnTimeoutMillis;
+                        else if (env.config.turnTimeoutMillis == 0)
+                            timeSinceLastAction = System.currentTimeMillis();
+                        // add a deck check
                     } else { //not a legal set
                         players[curId].setPenalty(2);
                     }
                 } else { // update the player's set with the cards that deleted from table
                     players[curId].updateSlots(OptionalSet);
                 }
+                synchronized (players[curId]) {
+                    players[curId].wait = false;
+                    players[curId].notifyAll();
+                }
             }
-
-        } finally {
+        }
+         finally {
             curLocker.unlock();
         }
     }
@@ -194,9 +229,9 @@ public class Dealer implements Runnable {
      */
     private void placeCardsOnTable() {
         // TODO implement
-        for (Player p : players) {//dont play while i am updating the table
-            p.needToWait(true);
-        }
+        /*for (Player p : players) {//dont play while i am updating the table
+            p.wait = true;
+        }*/
         Random random = new Random();
         for (int j = 0; j < 12; j++) {
             if (table.slotToCard[j] == null && deck.size() > 0) { // check if removed , need to check if player clicked it
@@ -208,16 +243,25 @@ public class Dealer implements Runnable {
                 deck.remove(randomCard);
             }
         }
-       for (Player p : players) {
-            p.needToWait(false);
+        if (env.config.turnTimeoutMillis == 0){ //need to check there is a legal set in the table
+            List<Integer> tableCardList = new ArrayList<>();
+            for (int i=0; i<table.slotToCard.length; i++)
+                tableCardList.add(i);
+            List<int[]> sets = env.util.findSets(tableCardList, 1);
+            if (sets.size() == 0){
+                removeAllCardsFromTable();
+                placeCardsOnTable();
+            }
+
         }
+
+       /*for (Player p : players) {
+           synchronized (p) {
+               p.wait = false;
+               p.notifyAll();
+           }
+        }*/
     }
-
-
-
-
-
-
 
 
     /**
@@ -225,21 +269,29 @@ public class Dealer implements Runnable {
      */
     private void sleepUntilWokenOrTimeout() {
         // TODO implement
-        if(wait){
-            try{
-                synchronized (this){
-                    wait();
-                }
-            } catch (InterruptedException e) {}
-        }
+        try{
+            if(CurElapsed > 0) {
+                Thread.sleep(env.config.tableDelayMillis); //
+            }
+        } catch (InterruptedException interruptedException) {}
     }
-
     /**
      * Reset and/or update the countdown and the countdown display.
      */
     private void updateTimerDisplay(boolean reset) {
         // TODO implement
-        env.ui.setElapsed(reshuffleTime - System.currentTimeMillis());
+        if (env.config.turnTimeoutMillis>0){
+            CurElapsed = System.currentTimeMillis();
+            //env.ui.setElapsed(reshuffleTime - CurElapsed);
+            env.ui.setCountdown(reshuffleTime - CurElapsed, reset);
+        }
+
+        if (env.config.turnTimeoutMillis == 0){
+            CurElapsed = System.currentTimeMillis();
+            //env.ui.setElapsed(reshuffleTime - CurElapsed);
+            env.ui.setCountdown(  CurElapsed - timeSinceLastAction , reset);
+        }
+
     }
 
     /**
@@ -247,8 +299,13 @@ public class Dealer implements Runnable {
      */
     private void removeAllCardsFromTable() {
         // TODO implement
+        CuncurrentSets.clear();
         for(Player p : players){
-            p.resetSlots();
+            synchronized (p) {
+                p.resetSlots();
+                p.wait = true;
+                p.setPenalty(0);
+            }
         }
         for(Integer card : table.slotToCard){
             if(card != null) {
@@ -283,11 +340,10 @@ public class Dealer implements Runnable {
 
     public void putInSet(CopyOnWriteArrayList<Integer> setSlot , Integer Id){
         // pun in the optional set with a lock
-/*        ArrayList<Integer> cardSlot = new ArrayList<>();
-        for(int i = 0 ; i < 3 ; i++)
-            cardSlot.add(setSlot.get(i));
-        cardSlot.add(setSlot.get(3));*/
-        setSlot.add(Id);
-        this.CuncurrentSets.add(setSlot);
+/*        synchronized (players[Id]) {
+            players[Id].wait = true;*/
+            setSlot.add(Id);
+            this.CuncurrentSets.add(setSlot);
+        //}
     }
 }

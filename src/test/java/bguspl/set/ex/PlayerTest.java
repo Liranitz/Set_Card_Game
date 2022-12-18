@@ -70,4 +70,15 @@ class PlayerTest {
         // check that ui.setScore was called with the player's id and the correct score
         verify(ui).setScore(eq(player.id), eq(expectedScore));
     }
+
+    @Test
+    void resetSlots() {
+
+        // call the method we are testing
+        player.resetSlots();
+
+        // check that the score was increased correctly
+        assertEquals(player.getPickedSlots().size(), 0);
+
+    }
 }
