@@ -64,15 +64,18 @@ public class Player implements Runnable {
      */
     private int penalty;
 
-    private boolean wait;
+    public volatile boolean wait;
 
     //the cardId
-    private Queue<Integer> curSlots;
+    private ConcurrentLinkedQueue<Integer> curSlots;
     /**
      * The current score of the player.
      */
 
     private ReentrantLock curLocker;
+    private ReentrantLock curLocker2;
+    private ReentrantLock curLocker3;
+
     private CopyOnWriteArrayList<Integer> pickedSlots;
     /**
      * The class constructor.
@@ -94,6 +97,8 @@ public class Player implements Runnable {
         this.penalty = 0;
         this.wait = true;
         curLocker = new ReentrantLock();
+        curLocker2 = new ReentrantLock();
+        curLocker3 = new ReentrantLock();
     }
 
     /**
@@ -106,9 +111,16 @@ public class Player implements Runnable {
         if (!human) createArtificialIntelligence();
         while (!terminate) {
             // TODO implement main player loop
-            if(!wait){
-                updateTokens();
-                penalty();
+            synchronized (this) {
+                try {
+                    if (!wait) {
+                        updateTokens();
+                        penalty();
+                    } else {
+                        this.wait();
+                    }
+                }
+                catch (InterruptedException ignored){}
             }
         }
         if (!human) try {
@@ -118,22 +130,17 @@ public class Player implements Runnable {
     }
 
     public void needToWait(boolean con) {
-        /*if(con) {
-            synchronized (this) {
-                notifyAll();
-            }
-        }
-        wait = con;*/
-        synchronized (this) {
+        wait = con;
+/*        synchronized (this) {
             if (con) {
                 wait = con;
                 curLocker.lock();
             } else {
                 wait = con;
                 curLocker.unlock();
-                notifyAll();
+                //tifyAll();
             }
-        }
+        }*/
     }
 
     public boolean  isHuman(){
@@ -146,11 +153,8 @@ public class Player implements Runnable {
         env.ui.removeTokens(set[2]);
     }
 
-        public void updateTokens() {
-            ReentrantLock curLocker = new ReentrantLock();
-            ///dealer.needToWait(true);
-            //synchronized (table) { // stay the table the way it is ?
-                curLocker.lock();
+        public synchronized void updateTokens() {
+        curLocker.lock();
                 try {
                     while (!curSlots.isEmpty()) {
                         Integer cardSlot = curSlots.poll(); // gets the CARD ID
@@ -162,24 +166,27 @@ public class Player implements Runnable {
                             }
                             if (temp != -1) {//the player want ro remove the pick of the card
                                 table.removeToken(id, table.cardToSlot[cardSlot]);
-                                //.removeToken(id, cardSlot);
                                 pickedSlots.remove(temp);
                             } else if (pickedSlots.size() < 3) {//not exist in player pickedSlots, so add it.
                                 table.placeToken(this.id, table.cardToSlot[cardSlot]);
-                                //table.placeToken(this.id, cardSlot);
                                 pickedSlots.add(cardSlot);
-                                //pickedSlots.add(table.slotToCard[cardSlot]);
                                 if (pickedSlots.size() == 3) {//an optional SlotSet that need to be checked
-                                    dealer.needToWait(false);
-                                    dealer.putInSet(pickedSlots, id);//to recognize which player the set belongs
+                                    CopyOnWriteArrayList<Integer> slotToSend = new CopyOnWriteArrayList<>();
+                                    for (Integer i : pickedSlots) {
+                                        slotToSend.add(i);
+                                    }
+                                    dealer.putInSet(slotToSend, id);//id - recognize which player the set belongs
+                                    wait = true;
+                                    dealer.wait = false; // calls the dealer to wake up
                                 }
+                                // here the set.size can be 2 instead of 3 (the player removed one)_
                             }
                         }
                     }
                 } finally {
                     curLocker.unlock();
                 }
-            //}
+
         }
 
 
@@ -188,7 +195,7 @@ public class Player implements Runnable {
         this.pickedSlots.clear();
     }
 
-    public void updateSlots(List<Integer> set) {
+    public void updateSlots(CopyOnWriteArrayList<Integer> set) {
         for (int i : set) {
             for (int j = 0; j < pickedSlots.size(); j++) {
                 if (i == pickedSlots.get(j))
@@ -208,14 +215,16 @@ public class Player implements Runnable {
             while (!terminate) {
                 // TODO implement player key press simulator
                 // use choose random and send keyPressed
-
                 if (!wait) {
-                    //if (!wait && pickedSlots.size() < 3) {
                     chooseRandomAi();
+                } else {
+                    try {
+                        synchronized (this) {
+                            wait();
+                        }
+                    } catch (InterruptedException ignored) {
+                    }
                 }
-                try {
-                    synchronized (this) { wait(); }
-                } catch (InterruptedException ignored) {}
             }
             env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
         } , "computer-" + id);
@@ -255,7 +264,8 @@ public class Player implements Runnable {
      */
     public void terminate() {
         // TODO implement
-
+        terminate = true;
+        //Thread.currentThread().interrupt();
     }
 
     /**
@@ -266,7 +276,7 @@ public class Player implements Runnable {
     public void keyPressed(int slot) {
         // TODO implement
         //if (penalty == 0 && pickedSlots.size() < 3){
-            if (penalty == 0){
+            if (penalty == 0 && table.slotToCard[slot] != null){
             curSlots.add(table.slotToCard[slot]);
             try {
                 Thread.sleep(env.config.tableDelayMillis);
@@ -303,11 +313,11 @@ public class Player implements Runnable {
             if (penalty == 1) {
                 try {
                     long freeze = env.config.pointFreezeMillis + System.currentTimeMillis();
-                    while (freeze - System.currentTimeMillis() > env.config.pointFreezeMillis / 2) {
+                    while (dealer.timeIsRun && freeze - System.currentTimeMillis() > env.config.pointFreezeMillis / 2) {
                         env.ui.setFreeze(this.id, freeze - System.currentTimeMillis());
                         Thread.sleep((long) (env.config.pointFreezeMillis / 3 * 0.98));
                     }
-                    if (freeze - System.currentTimeMillis()>0)
+                    if (dealer.timeIsRun && freeze - System.currentTimeMillis()>0)
                         Thread.sleep(freeze - System.currentTimeMillis());
                     env.ui.setFreeze(this.id, 0);
                     penalty = 0;
@@ -320,11 +330,11 @@ public class Player implements Runnable {
             try {
                 env.ui.setFreeze(this.id,  env.config.penaltyFreezeMillis);
                 long freeze = env.config.penaltyFreezeMillis + System.currentTimeMillis();
-                while (freeze - System.currentTimeMillis() > env.config.penaltyFreezeMillis / 6){
+                while (dealer.timeIsRun && (freeze - System.currentTimeMillis()) > env.config.penaltyFreezeMillis / 6){
                     env.ui.setFreeze(this.id, freeze - System.currentTimeMillis());
-                    Thread.sleep((long) (env.config.penaltyFreezeMillis / 3 * 0.98));
+                    Thread.sleep((long) (env.config.penaltyFreezeMillis / 10 * 0.98));
                 }
-                if (freeze - System.currentTimeMillis()>0)
+                if (dealer.timeIsRun && freeze - System.currentTimeMillis()>0)
                     Thread.sleep(freeze - System.currentTimeMillis());
                 env.ui.setFreeze(this.id, 0);
                 if(!human){
