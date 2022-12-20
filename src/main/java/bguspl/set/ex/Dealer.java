@@ -189,11 +189,14 @@ public class Dealer implements Runnable {
                         if (checkIfStillExist(CurOptionalArray)) { // check if the set is exist on the table
                             //find the set where the player clicked , check if it is legal and remove it
                             int[] set = new int[LEGAL_SET_LENGTH];
+                            int notLegalSet = 0;
                             for (int i = 0; i < LEGAL_SET_LENGTH; i++) {
-                                if (CurOptionalArray[i] != null)
+                                if (CurOptionalArray[i] != null) {
                                     set[i] = CurOptionalArray[i];
+                                    notLegalSet++;
+                                }
                             }
-                            if (env.util.testSet(set)) {
+                            if (notLegalSet == LEGAL_SET_LENGTH && env.util.testSet(set)) {
                                 //if (true) {
                                 //delete the all token from the places were there is a set
                                 for (int i = 0; i < LEGAL_SET_LENGTH; i++) {
