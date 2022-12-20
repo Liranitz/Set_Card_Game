@@ -143,10 +143,7 @@ public class Player implements Runnable {
         }*/
     }
 
-    public void resetTokensSlots(int[] set) {
-        for(int i = 0 ; i < LEGAL_SET_LENGTH ; i++)
-            env.ui.removeTokens(set[i]);
-    }
+
 
         public void updateTokens() {
         //curLocker.lock();
@@ -197,8 +194,10 @@ public class Player implements Runnable {
         for (int i = 0; i < set.length ; i++) {
             if(set[i] != null) {
                 //for (int j = 0; j < pickedSlots.size(); j++) {
-                    if (pickedSlots.contains(set[i]))
+                    if (pickedSlots.contains(set[i])) {
                         pickedSlots.remove(set[i]);
+                    }
+
                 //}
             }
         }

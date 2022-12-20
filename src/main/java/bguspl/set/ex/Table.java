@@ -124,6 +124,11 @@ public class Table {
         env.ui.placeToken(player, slot);
     }
 
+    public void resetTokensSlots(int[] set) {
+        for(int i = 0 ; i < 3 ; i++)
+            env.ui.removeTokens(set[i]);
+    }
+
     /**
      * Removes a token of a player from a grid slot.
      * @param player - the player the token belongs to.

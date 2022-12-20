@@ -197,14 +197,18 @@ public class Dealer implements Runnable {
                             //delete the all token from the places were there is a set
                             for (int i = 0; i < LEGAL_SET_LENGTH; i++) {
                                 System.out.print("   " + set[i] + " from " + curId+ " , ");
-                                set[i] = table.cardToSlot[set[i]]; //******************************************
+                                if(table.cardToSlot[set[i]] != null) {
+                                    set[i] = table.cardToSlot[set[i]]; //******************************************
+                                    table.removeCard(set[i]);
+                                }
                             }
                             System.out.println("");
-                            players[curId].resetTokensSlots(set);
+                            players[curId].pickedSlots.clear();
+                            table.resetTokensSlots(set);
                         /*for(int i = 0 ; i < LEGAL_SET_LENGTH ; i++) // already happens
                             env.ui.removeTokens(set[i]);
                         */
-                            players[curId].resetSlots();//reset the player pickedSlots
+                            //players[curId].resetSlots();//reset the player pickedSlots
                             for (Player p : players) {//update the other player pickeslots
                                 synchronized (p) {
                                     if (p.id != curId)
@@ -213,7 +217,7 @@ public class Dealer implements Runnable {
                             }
                             //remove the card of the set from the table
                             for (int i = 0; i < LEGAL_SET_LENGTH; i++) // already happens
-                                table.removeCard(set[i]);
+                                //table.removeCard(set[i]);
                             players[curId].penalty = players[curId].FREEZE_POINT;
                             reshuffleTime = (long) (System.currentTimeMillis() + env.config.turnTimeoutMillis * 1.01);
                             // add a deck check
@@ -238,6 +242,8 @@ public class Dealer implements Runnable {
 
     public boolean checkIfStillExist(Integer[] OptionalSet) {
         boolean con = true;
+        if(OptionalSet.length != 3)
+            return false;
         for (int i = 0; i < OptionalSet.length-1; i++) {
             if (OptionalSet[i] != null) {
                 if (table.cardToSlot[OptionalSet[i]].equals(null)) {
@@ -312,11 +318,13 @@ public class Dealer implements Runnable {
     private void removeAllCardsFromTable() {
         // TODO implement
         CuncurrentSets.clear();
+        CuncurrentSets2.clear();
         for(Player p : players){
             synchronized (p) {
-                p.resetSlots();
+                p.pickedSlots.clear();
+                //p.resetSlots();
                 p.wait = true;
-                p.setPenalty(0);
+                p.penalty = p.NO_NEED_TO_FREEZE;
             }
         }
         for(Integer card : table.slotToCard){
