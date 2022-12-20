@@ -146,42 +146,41 @@ public class Player implements Runnable {
 
 
         public void updateTokens() {
-        //curLocker.lock();
-                //try {
-            synchronized (table) {
-                if (curSlots.size() != 0 && pickedSlots.size() <= LEGAL_SET_LENGTH) {
-                    Integer cardSlot = curSlots.poll(); // gets the CARD ID
-                    if (table.cardToSlot[cardSlot] != null) {//the card still exist on the table
-                        boolean Exist = false;
-                        if (pickedSlots.contains(cardSlot)) // checked if the player clicked on that CARD
-                            Exist = true;
-                        if (Exist) {//the player want ro remove the pick of the card
-                            table.removeToken(id, table.cardToSlot[cardSlot]);
-                            pickedSlots.remove(cardSlot);
-                        } else if (pickedSlots.size() < LEGAL_SET_LENGTH) {//not exist in player pickedSlots, so add it.
-                            table.placeToken(this.id, table.cardToSlot[cardSlot]);
-                            pickedSlots.add(cardSlot);
-                            if (pickedSlots.size() == LEGAL_SET_LENGTH) {//an optional SlotSet that need to be checked
-                                //pickedSlots.add(1000 + id);
-                                wait = true;
-                                // calls the dealer to wake up
-                                synchronized (dealer) {
-                                    //dealer.CuncurrentSets.add(pickedSlots);//id - recognize which player the set belong
-                                    dealer.CuncurrentSets2.add(id);//id - recognize which player the set belong
-                                    dealer.wait = false; //
-                                    dealer.notifyAll();
+        curLocker.lock();
+                try {
+                    synchronized (table) {
+                        if (curSlots.size() != 0 && pickedSlots.size() <= LEGAL_SET_LENGTH) {
+                            Integer cardSlot = curSlots.poll(); // gets the CARD ID
+                            if (table.cardToSlot[cardSlot] != null) {//the card still exist on the table
+                                boolean Exist = false;
+                                if (pickedSlots.contains(cardSlot)) // checked if the player clicked on that CARD
+                                    Exist = true;
+                                if (Exist) {//the player want ro remove the pick of the card
+                                    table.removeToken(id, table.cardToSlot[cardSlot]);
+                                    pickedSlots.remove(cardSlot);
+                                } else if (pickedSlots.size() < LEGAL_SET_LENGTH) {//not exist in player pickedSlots, so add it.
+                                    table.placeToken(this.id, table.cardToSlot[cardSlot]);
+                                    pickedSlots.add(cardSlot);
+                                    if (pickedSlots.size() == LEGAL_SET_LENGTH) {//an optional SlotSet that need to be checked
+                                        wait = true;
+                                        // calls the dealer to wake up
+                                        synchronized (dealer) {
+                                            dealer.CuncurrentSets2.add(id);//id - recognize which player the set belong
+                                            dealer.wait = false; //
+                                            dealer.notifyAll();
+                                        }
+                                        curSlots.clear();
+                                    }
+                                    // here the set.size can be 2 instead of 3 (the player removed one)_
                                 }
                             }
-                            // here the set.size can be 2 instead of 3 (the player removed one)_
                         }
+
                     }
                 }
-/*
-                } finally {
+                finally {
                     curLocker.unlock();
                 }
-*/
-            }
         }
 
 
@@ -214,17 +213,39 @@ public class Player implements Runnable {
             while (!terminate) {
                 // TODO implement player key press simulator
                 // use choose random and send keyPressed
-                if (!wait) {
-                    chooseRandomAi();
-                } else {
-                    try {
-                        synchronized (this) {
-                            wait();
+                //synchronized (this) {
+                    /*try {
+                        if (!wait) {
+                            if(penalty > 0)
+                                penalty();
+                            else {
+                                chooseRandomAi();
+                                updateTokens();
+                            }
+                        } else {
+                            this.wait();
                         }
-                    } catch (InterruptedException ignored) {
                     }
+                    catch (InterruptedException ignored){
+                    }*/
+
+                    if (wait) {
+                        synchronized (this) {
+                            try {
+                                this.wait();
+                            } catch (InterruptedException ignored) {
+                            }
+                        }
+                    }
+                else{
+                    Random ran = new Random();
+                    int slot = ran.nextInt(12);
+                    keyPressed(slot);
+                    //chooseRandomAi();
                 }
-            }
+            //}
+        }
+
             env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
         } , "computer-" + id);
         aiThread.start();
@@ -239,15 +260,16 @@ public class Player implements Runnable {
             if (table.countCards() > 0) {
                 ArrayList<Integer> optionalSlots1 = new ArrayList<>();
                 //  checks if there are already someone that inside my slot[]
+
                 for (Integer i : table.slotToCard) {
                     if (i != null) {
-                        if (filter) {
-                            if (!pickedSlots.contains(i)) {
-                                optionalSlots1.add(i);
-                            }
-                        } else {
+                       // if (filter) {
+                            //if (!pickedSlots.contains(i)) {
+                                //optionalSlots1.add(i);
+                            //}
+                        //} else {
                             optionalSlots1.add(i);
-                        }
+                        //}
                     }
                 }
                 if (optionalSlots1.size() > 0) {
@@ -255,10 +277,16 @@ public class Player implements Runnable {
                     int chosenRandom = rand.nextInt(optionalSlots1.size());
                     keyPressed(table.cardToSlot[optionalSlots1.get(chosenRandom)]);
                 }
+/*                Random rand = new Random();
+                int chosenRandom = rand.nextInt(12);
+                if(table.slotToCard[chosenRandom] != null){
+                keyPressed(chosenRandom);*/
+                    env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " player picked is now " + pickedSlots.toString());
+                }
                 //}
             }
         }
-    }
+
 
     /**
      * Called when the game should be terminated due to an external event.
@@ -276,13 +304,20 @@ public class Player implements Runnable {
      */
     public void keyPressed(int slot) {
         // TODO implement
-        //if (penalty == 0 && pickedSlots.size() < 3){
-            if (penalty == 0 && table.slotToCard[slot] != null){
-            curSlots.add(table.slotToCard[slot]);
-            try {
-                Thread.sleep(env.config.tableDelayMillis);
-            } catch (InterruptedException ignored) {
+        if (penalty == 0 && pickedSlots.size() <= 3) {
+            env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " player trying to lock table.");
+            synchronized (table) {
+                env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " player lock table");
+                if (penalty == 0 && table.slotToCard[slot] != null) {
+                    curSlots.add(table.slotToCard[slot]);
+                    try {
+                        Thread.sleep(env.config.tableDelayMillis);
+                    } catch (InterruptedException ignored) {
+                    }
+                }
             }
+            env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " player release table");
+
         }
     }
 
@@ -339,9 +374,7 @@ public class Player implements Runnable {
                 if (dealer.timeIsRun && freeze - System.currentTimeMillis()>0)
                     Thread.sleep(freeze - System.currentTimeMillis());
                 env.ui.setFreeze(this.id, 0);
-                if(!human){
-                    //deleteRandomSlot();
-                }
+
                 penalty = NO_NEED_TO_FREEZE;
             } catch (InterruptedException ignored) {}
         }

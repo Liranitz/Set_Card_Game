@@ -73,10 +73,8 @@ class PlayerTest {
 
     @Test
     void resetSlots() {
-
         // call the method we are testing
         player.resetSlots();
-
         // check that the score was increased correctly
         //assertEquals(player.getPickedSlots().size(), 0);
 
