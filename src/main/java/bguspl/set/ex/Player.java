@@ -3,11 +3,9 @@ import java.util.*;
 
 import bguspl.set.Env;
 
-import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.*;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * This class manages the players' threads and data
@@ -62,21 +60,23 @@ public class Player implements Runnable {
     /**
      * The penalty that the player need to get.
      */
-    private int penalty;
-
+    public volatile int penalty;
+    public final int FREEZE_PENALTY = 2;
+    public final int FREEZE_POINT = 1;
+    public final int NO_NEED_TO_FREEZE = 0;
+    private final int LEGAL_SET_LENGTH = 3;
     public volatile boolean wait;
 
-    //the cardId
-    private ConcurrentLinkedQueue<Integer> curSlots;
+    //the
+    //private BlockingQueue<Integer> curSlots2; ***************
+    //private ConcurrentLinkedQueue curSlots;
+    private BlockingQueue<Integer> curSlots;
     /**
      * The current score of the player.
      */
 
     private ReentrantLock curLocker;
-    private ReentrantLock curLocker2;
-    private ReentrantLock curLocker3;
-
-    private CopyOnWriteArrayList<Integer> pickedSlots;
+    public Set<Integer> pickedSlots;
     /**
      * The class constructor.
      *
@@ -91,14 +91,12 @@ public class Player implements Runnable {
         this.table = table;
         this.id = id;
         this.human = human;
-        this.pickedSlots = new CopyOnWriteArrayList<Integer>();
+        this.pickedSlots = Collections.synchronizedSet(new HashSet<>());
         this.dealer = dealer;
-        this.curSlots = new ConcurrentLinkedQueue<>();
+        this.curSlots = new LinkedBlockingQueue<>();
         this.penalty = 0;
         this.wait = true;
         curLocker = new ReentrantLock();
-        curLocker2 = new ReentrantLock();
-        curLocker3 = new ReentrantLock();
     }
 
     /**
@@ -114,13 +112,15 @@ public class Player implements Runnable {
             synchronized (this) {
                 try {
                     if (!wait) {
+                        if(penalty > 0)
+                            penalty();
                         updateTokens();
-                        penalty();
                     } else {
                         this.wait();
                     }
                 }
-                catch (InterruptedException ignored){}
+                catch (InterruptedException ignored){
+                }
             }
         }
         if (!human) try {
@@ -143,50 +143,48 @@ public class Player implements Runnable {
         }*/
     }
 
-    public boolean  isHuman(){
-        return human;
-    }
-    
     public void resetTokensSlots(int[] set) {
-        env.ui.removeTokens(set[0]);
-        env.ui.removeTokens(set[1]);
-        env.ui.removeTokens(set[2]);
+        for(int i = 0 ; i < LEGAL_SET_LENGTH ; i++)
+            env.ui.removeTokens(set[i]);
     }
 
-        public synchronized void updateTokens() {
-        curLocker.lock();
-                try {
-                    while (!curSlots.isEmpty()) {
-                        Integer cardSlot = curSlots.poll(); // gets the CARD ID
-                        if (table.cardToSlot[cardSlot] != null) {//the card still exist on the table
-                            int temp = -1;
-                            for (int j = 0; j < pickedSlots.size(); j++) {
-                                if (pickedSlots.get(j) == cardSlot) // checked if the player clicked on that CARD
-                                    temp = j;
-                            }
-                            if (temp != -1) {//the player want ro remove the pick of the card
-                                table.removeToken(id, table.cardToSlot[cardSlot]);
-                                pickedSlots.remove(temp);
-                            } else if (pickedSlots.size() < 3) {//not exist in player pickedSlots, so add it.
-                                table.placeToken(this.id, table.cardToSlot[cardSlot]);
-                                pickedSlots.add(cardSlot);
-                                if (pickedSlots.size() == 3) {//an optional SlotSet that need to be checked
-                                    CopyOnWriteArrayList<Integer> slotToSend = new CopyOnWriteArrayList<>();
-                                    for (Integer i : pickedSlots) {
-                                        slotToSend.add(i);
-                                    }
-                                    dealer.putInSet(slotToSend, id);//id - recognize which player the set belongs
-                                    wait = true;
-                                    dealer.wait = false; // calls the dealer to wake up
+        public void updateTokens() {
+        //curLocker.lock();
+                //try {
+            synchronized (table) {
+                if (curSlots.size() != 0 && pickedSlots.size() <= LEGAL_SET_LENGTH) {
+                    Integer cardSlot = curSlots.poll(); // gets the CARD ID
+                    if (table.cardToSlot[cardSlot] != null) {//the card still exist on the table
+                        boolean Exist = false;
+                        if (pickedSlots.contains(cardSlot)) // checked if the player clicked on that CARD
+                            Exist = true;
+                        if (Exist) {//the player want ro remove the pick of the card
+                            table.removeToken(id, table.cardToSlot[cardSlot]);
+                            pickedSlots.remove(cardSlot);
+                        } else if (pickedSlots.size() < LEGAL_SET_LENGTH) {//not exist in player pickedSlots, so add it.
+                            table.placeToken(this.id, table.cardToSlot[cardSlot]);
+                            pickedSlots.add(cardSlot);
+                            if (pickedSlots.size() == LEGAL_SET_LENGTH) {//an optional SlotSet that need to be checked
+                                //pickedSlots.add(1000 + id);
+                                wait = true;
+                                // calls the dealer to wake up
+                                synchronized (dealer) {
+                                    //dealer.CuncurrentSets.add(pickedSlots);//id - recognize which player the set belong
+                                    dealer.CuncurrentSets2.add(id);//id - recognize which player the set belong
+                                    dealer.wait = false; //
+                                    dealer.notifyAll();
                                 }
-                                // here the set.size can be 2 instead of 3 (the player removed one)_
                             }
+                            // here the set.size can be 2 instead of 3 (the player removed one)_
                         }
                     }
+                }
+/*
                 } finally {
                     curLocker.unlock();
                 }
-
+*/
+            }
         }
 
 
@@ -194,15 +192,14 @@ public class Player implements Runnable {
     public void resetSlots(){
         this.pickedSlots.clear();
     }
-    public CopyOnWriteArrayList<Integer> getPickedSlots(){return pickedSlots;}
 
-
-
-    public void updateSlots(CopyOnWriteArrayList<Integer> set) {
-        for (int i : set) {
-            for (int j = 0; j < pickedSlots.size(); j++) {
-                if (i == pickedSlots.get(j))
-                    pickedSlots.remove(j);
+    public void updateSlots(Integer[] set) {
+        for (int i = 0; i < set.length ; i++) {
+            if(set[i] != null) {
+                //for (int j = 0; j < pickedSlots.size(); j++) {
+                    if (pickedSlots.contains(set[i]))
+                        pickedSlots.remove(set[i]);
+                //}
             }
         }
     }
@@ -236,28 +233,30 @@ public class Player implements Runnable {
 
     private void chooseRandomAi(){
         boolean filter = true;
-        if(pickedSlots.size() == 3){
+        if(pickedSlots.size() == LEGAL_SET_LENGTH){
             filter = false;
         }
-        if(table.countCards() > 0) {
-            ArrayList<Integer> optionalSlots1 = new ArrayList<>();
-            //  checks if there are already someone that inside my slot[]
-            for (Integer i : table.slotToCard) {
-                if (i != null) {
-                    if (filter) {
-                        if (!pickedSlots.contains(i)) {
+        synchronized (table) {
+            if (table.countCards() > 0) {
+                ArrayList<Integer> optionalSlots1 = new ArrayList<>();
+                //  checks if there are already someone that inside my slot[]
+                for (Integer i : table.slotToCard) {
+                    if (i != null) {
+                        if (filter) {
+                            if (!pickedSlots.contains(i)) {
+                                optionalSlots1.add(i);
+                            }
+                        } else {
                             optionalSlots1.add(i);
                         }
                     }
-                    else {
-                        optionalSlots1.add(i);
-                    }
                 }
-            }
-            if(optionalSlots1.size() > 0){
-                Random rand = new Random();
-                int chosenRandom = rand.nextInt(optionalSlots1.size());
-                keyPressed(table.cardToSlot[optionalSlots1.get(chosenRandom)]);
+                if (optionalSlots1.size() > 0) {
+                    Random rand = new Random();
+                    int chosenRandom = rand.nextInt(optionalSlots1.size());
+                    keyPressed(table.cardToSlot[optionalSlots1.get(chosenRandom)]);
+                }
+                //}
             }
         }
     }
@@ -280,13 +279,13 @@ public class Player implements Runnable {
         // TODO implement
         //if (penalty == 0 && pickedSlots.size() < 3){
             if (penalty == 0 && table.slotToCard[slot] != null){
-                curSlots.add(table.slotToCard[slot]);
-                try {
-                    Thread.sleep(env.config.tableDelayMillis);
-                    } catch (InterruptedException ignored) {
-                    }
-                }
+            curSlots.add(table.slotToCard[slot]);
+            try {
+                Thread.sleep(env.config.tableDelayMillis);
+            } catch (InterruptedException ignored) {
             }
+        }
+    }
 
     /**
      * Award a point to a player and perform other related actions.
@@ -313,8 +312,9 @@ public class Player implements Runnable {
     public void penalty() {
         // TODO implement
         //sleep after legal set
-            if (penalty == 1) {
+            if (penalty == FREEZE_POINT) {
                 try {
+                    this.point();
                     long freeze = env.config.pointFreezeMillis + System.currentTimeMillis();
                     while (dealer.timeIsRun && freeze - System.currentTimeMillis() > env.config.pointFreezeMillis / 2) {
                         env.ui.setFreeze(this.id, freeze - System.currentTimeMillis());
@@ -323,13 +323,13 @@ public class Player implements Runnable {
                     if (dealer.timeIsRun && freeze - System.currentTimeMillis()>0)
                         Thread.sleep(freeze - System.currentTimeMillis());
                     env.ui.setFreeze(this.id, 0);
-                    penalty = 0;
+                    penalty = NO_NEED_TO_FREEZE;
                 } catch (InterruptedException ignored) {
                 }
             }
 
         //sleep after illegal set
-        if(penalty == 2){
+        if(penalty == FREEZE_PENALTY){
             try {
                 env.ui.setFreeze(this.id,  env.config.penaltyFreezeMillis);
                 long freeze = env.config.penaltyFreezeMillis + System.currentTimeMillis();
@@ -343,7 +343,7 @@ public class Player implements Runnable {
                 if(!human){
                     //deleteRandomSlot();
                 }
-                penalty = 0;
+                penalty = NO_NEED_TO_FREEZE;
             } catch (InterruptedException ignored) {}
         }
 
