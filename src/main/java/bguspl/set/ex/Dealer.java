@@ -50,10 +50,10 @@ public class Dealer implements Runnable {
     public volatile long reshuffleTime = Long.MAX_VALUE;
 
     public volatile boolean timeIsRun;
-    public volatile ConcurrentLinkedQueue<Set<Integer>> CuncurrentSets;
+
     public volatile ConcurrentLinkedQueue<Integer> CuncurrentSets2;
+    private Thread[] playerThreads;
     private Thread dealerThread;
-    private Object o;
     public volatile boolean wait;
 
     public Dealer(Env env, Table table, Player[] players) {
@@ -62,13 +62,12 @@ public class Dealer implements Runnable {
         this.players = players;
         deck = IntStream.range(0, env.config.deckSize).boxed().collect(Collectors.toList());
         dealerThread = Thread.currentThread();
-        CuncurrentSets = new ConcurrentLinkedQueue<>();
         CuncurrentSets2 = new ConcurrentLinkedQueue<>();
         wait = false;
         curLocker = new ReentrantLock();
         CurElapsed = 0;
         timeIsRun = false;
-        o=new Object();
+        playerThreads = new Thread[players.length];
     }
 
     /**
@@ -78,10 +77,13 @@ public class Dealer implements Runnable {
     public void run() {
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
         //making thread to each player and start them
-        for (Player p : players) {
-            Thread playerThread = new Thread(p);
-            playerThread.start();
+        for (int i = 0 ; i < players.length ; i++){
+            synchronized (players[i]) {
+                playerThreads[i] = new Thread(players[i]);
+                playerThreads[i].start();
+            }
         }
+
         //check if need to join them??
         try {
             while (!shouldFinish()) {
@@ -105,6 +107,7 @@ public class Dealer implements Runnable {
             }
         } catch (InterruptedException ignored) {}
         announceWinners();
+        terminate();
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
     }
 
@@ -113,7 +116,6 @@ public class Dealer implements Runnable {
      */
     private void timerLoop() throws InterruptedException {
         while (!terminate && System.currentTimeMillis() < reshuffleTime) {
-
             timeIsRun = true;
             sleepUntilWokenOrTimeout();
             updateTimerDisplay(false);
@@ -137,13 +139,17 @@ public class Dealer implements Runnable {
      */
     public void terminate() {
         // TODO implement
-        for(Player p : players)
-            synchronized (p) {
-                p.terminate();
+        for (int i = players.length - 1; i >= 0; i--) {
+            //synchronized (players[i]) {
+                players[i].terminate();
+/*                    try {
+                        playerThreads[i].join();
+                    }
+                    catch (InterruptedException ignored){}*/
             }
-       terminate = true;
-        //Thread.currentThread().interrupt();
-    }
+            terminate = true;
+            //Thread.currentThread().interrupt();
+        }
 
     /**
      * Check if the game should be terminated or the game end conditions are met.
@@ -160,14 +166,14 @@ public class Dealer implements Runnable {
      */
     private void removeCardsFromTable() {
         // TODO implement
-        curLocker.lock();
-        try {
+        //curLocker.lock();
+        //try {
             synchronized (table) {
                 if (!this.CuncurrentSets2.isEmpty()) {
                     Integer curId = CuncurrentSets2.poll();
-                    synchronized (players[curId]) {
+                    //synchronized (players[curId]) {
                         players[curId].wait = true;
-
+                    //}
                 /*if (!this.CuncurrentSets.isEmpty()) {
                     Set<Integer> OptionalSet = CuncurrentSets.poll();*/
                         Set<Integer> OptionalSet = players[curId].pickedSlots;
@@ -196,8 +202,8 @@ public class Dealer implements Runnable {
                                     notLegalSet++;
                                 }
                             }
-                            if (notLegalSet == LEGAL_SET_LENGTH && env.util.testSet(set)) {
-                                //if (true) {
+                             if (notLegalSet == LEGAL_SET_LENGTH && env.util.testSet(set)) {
+                            //   if (notLegalSet == LEGAL_SET_LENGTH) {
                                 //delete the all token from the places were there is a set
                                 for (int i = 0; i < LEGAL_SET_LENGTH; i++) {
                                     System.out.print("   " + set[i] + " from " + curId + " , ");
@@ -206,7 +212,7 @@ public class Dealer implements Runnable {
                                         table.removeCard(set[i]);
                                     }
                                 }
-                                System.out.println("");
+                                players[curId].curSlots.clear();
                                 players[curId].pickedSlots.clear();
                                 //table.resetTokensSlots(set);
                         /*for(int i = 0 ; i < LEGAL_SET_LENGTH ; i++) // already happens
@@ -215,15 +221,16 @@ public class Dealer implements Runnable {
                                 //players[curId].resetSlots();//reset the player pickedSlots
                                 for (Player p : players) {//update the other player pickeslots
                                     if (p.id != curId) {
-                                        //synchronized (p) {
+                                        synchronized (p) {
                                             p.updateSlots(CurOptionalArray);
-                                        //}
+                                        }
                                     }
                                 }
                                 //remove the card of the set from the table
-                                for (int i = 0; i < LEGAL_SET_LENGTH; i++) // already happens
-                                    //table.removeCard(set[i]);
-                                    players[curId].penalty = players[curId].FREEZE_POINT;
+                              /*  for (int i = 0; i < LEGAL_SET_LENGTH; i++) // already happens
+                                    table.removeCard(set[i]);
+                                */
+                                players[curId].penalty = players[curId].FREEZE_POINT;
                                 reshuffleTime = (long) (System.currentTimeMillis() + env.config.turnTimeoutMillis * 1.01);
                                 // add a deck check
                             } else { //not a legal set
@@ -233,7 +240,7 @@ public class Dealer implements Runnable {
                             //synchronized (players[curId]) {
                             players[curId].updateSlots(CurOptionalArray);
                         }
-                    }
+
                     synchronized (players[curId]) {
                         players[curId].wait = false;
                         players[curId].notifyAll();
@@ -241,10 +248,10 @@ public class Dealer implements Runnable {
                 }
             }
         }
-         finally {
-            curLocker.unlock();
-        }
-    }
+        // finally {
+        //    curLocker.unlock();
+        //}
+    //}
 
     public boolean checkIfStillExist(Integer[] OptionalSet) {
         boolean con = true;
@@ -254,8 +261,8 @@ public class Dealer implements Runnable {
             if (OptionalSet[i] != null) {
                 if (table.cardToSlot[OptionalSet[i]] == null) {
                     OptionalSet[i] = null;
-                    return false;
-                    //con = false;
+                    //return false;
+                    con = false;
                 }
             }
         }
@@ -308,8 +315,6 @@ public class Dealer implements Runnable {
                 this.wait(env.config.turnTimeoutMillis / 600); // is that ok?
                 //Thread.wait(100); //
             }
-
-
     }
     /**
      * Reset and/or update the countdown and the countdown display.
@@ -326,20 +331,21 @@ public class Dealer implements Runnable {
      */
     private void removeAllCardsFromTable() {
         // TODO implement
-        CuncurrentSets.clear();
-        CuncurrentSets2.clear();
-        for(Player p : players){
-            synchronized (p) {
-                p.pickedSlots.clear();
-                //p.resetSlots();
+        synchronized (table) {
+            CuncurrentSets2.clear();
+            for (Player p : players) {
+                //synchronized (p) {
                 p.wait = true;
+                p.pickedSlots.clear();
+                    //p.resetSlots();
                 p.penalty = p.NO_NEED_TO_FREEZE;
+                //}
             }
-        }
-        for(Integer card : table.slotToCard){
-            if(card != null) {
-                deck.add(card);
-                table.removeCard(table.cardToSlot[card]);
+            for (Integer card : table.slotToCard) {
+                if (card != null) {
+                    deck.add(card);
+                    table.removeCard(table.cardToSlot[card]);
+                }
             }
         }
     }
