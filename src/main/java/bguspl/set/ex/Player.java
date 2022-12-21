@@ -48,7 +48,7 @@ public class Player implements Runnable {
     /**
      * True iff game should be terminated due to an external event.
      */
-    private volatile boolean terminate;
+    public volatile boolean terminate;
 
     /**
      * The current score of the player.
@@ -104,7 +104,7 @@ public class Player implements Runnable {
      */
     @Override
     public void run() {
-        playerThread = Thread.currentThread();
+        //playerThread = Thread.currentThread();
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + "starting.");
         if (!human) createArtificialIntelligence();
         while (!terminate) {
@@ -125,10 +125,11 @@ public class Player implements Runnable {
                 }
             }
         }
+
         if (!human) try {
+            aiThread.interrupt();
             aiThread.join();
         } catch (InterruptedException ignored) {}
-
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
     }
 
@@ -197,23 +198,7 @@ public class Player implements Runnable {
             while (!terminate) {
                 // TODO implement player key press simulator
                 // use choose random and send keyPressed
-                //synchronized (this) {
-                    /*try {
-                        if (!wait) {
-                            if(penalty > 0)
-                                penalty();
-                            else {
-                                chooseRandomAi();
-                                updateTokens();
-                            }
-                        } else {
-                            this.wait();
-                        }
-                    }
-                    catch (InterruptedException ignored){
-                    }*/
                 if (wait) {
-
                     synchronized (this) {
                         try {
                             this.wait();
@@ -222,13 +207,10 @@ public class Player implements Runnable {
                     }
                 }
                 else {
-                        Random ran = new Random();
-                        int slot = ran.nextInt(12);
-                        keyPressed(slot);
-                        //chooseRandomAi();
-                    }
-
-            //}
+                    Random ran = new Random();
+                    int slot = ran.nextInt(12);
+                    keyPressed(slot);
+                }
         }
 
             env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
@@ -236,54 +218,12 @@ public class Player implements Runnable {
         aiThread.start();
     }
 
-    private void chooseRandomAi(){
-        boolean filter = true;
-        if(pickedSlots.size() == LEGAL_SET_LENGTH){
-            filter = false;
-        }
-        synchronized (table) {
-            if (table.countCards() > 0) {
-                ArrayList<Integer> optionalSlots1 = new ArrayList<>();
-                //  checks if there are already someone that inside my slot[]
-
-                for (Integer i : table.slotToCard) {
-                    if (i != null) {
-                       // if (filter) {
-                            //if (!pickedSlots.contains(i)) {
-                                //optionalSlots1.add(i);
-                            //}
-                        //} else {
-                            optionalSlots1.add(i);
-                        //}
-                    }
-                }
-                if (optionalSlots1.size() > 0) {
-                    Random rand = new Random();
-                    int chosenRandom = rand.nextInt(optionalSlots1.size());
-                    keyPressed(table.cardToSlot[optionalSlots1.get(chosenRandom)]);
-                }
-/*                Random rand = new Random();
-                int chosenRandom = rand.nextInt(12);
-                if(table.slotToCard[chosenRandom] != null){
-                keyPressed(chosenRandom);*/
-                    env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " player picked is now " + pickedSlots.toString());
-                }
-                //}
-            }
-        }
-
-
     /**
      * Called when the game should be terminated due to an external event.
      */
     public void terminate() {
         // TODO implement
         terminate = true;
-        try{
-            Thread.currentThread().join();
-        }
-        catch (InterruptedException ignored){}
-        //Thread.currentThread().interrupt();
     }
 
     /**
@@ -337,25 +277,11 @@ public class Player implements Runnable {
                     Thread.sleep((long) (goSleep / 3 * 0.98));
                 }
                 //   if (dealer.timeIsRun && freeze - System.currentTimeMillis()>0)
-                //       Thread.sleep(freeze - System.currentTimeMillis());
+                //      Thread.sleep(freeze - System.currentTimeMillis());
                 env.ui.setFreeze(this.id, 0);
                 penalty = NO_NEED_TO_FREEZE;
             } catch (InterruptedException ignored) {
             }
-               /* try {
-                    this.point();
-                    long freeze = env.config.pointFreezeMillis + System.currentTimeMillis(); // 1000 + 50
-                    while (dealer.timeIsRun && freeze - System.currentTimeMillis() > env.config.pointFreezeMillis / 2) {
-                        env.ui.setFreeze(this.id, freeze - System.currentTimeMillis());
-                        Thread.sleep((long) (env.config.pointFreezeMillis / 3 * 0.98));
-                    }
-                    if (freeze - System.currentTimeMillis()>0)
-                        //if (dealer.timeIsRun && freeze - System.currentTimeMillis()>0)
-                        Thread.sleep(freeze - System.currentTimeMillis());
-                    env.ui.setFreeze(this.id, 0);
-                    penalty = NO_NEED_TO_FREEZE;
-                } catch (InterruptedException ignored) {
-                }*/
         }
 
         //sleep after illegal set
@@ -374,7 +300,7 @@ public class Player implements Runnable {
             } catch (InterruptedException ignored) {
             }
 
-                /*env.ui.setFreeze(this.id,  env.config.penaltyFreezeMillis);
+/*                env.ui.setFreeze(this.id,  env.config.penaltyFreezeMillis);
                 long freeze = env.config.penaltyFreezeMillis + System.currentTimeMillis();
                 while (dealer.timeIsRun && System.currentTimeMillis() < freeze){
                     long goSleep = freeze - System.currentTimeMillis();
@@ -386,9 +312,7 @@ public class Player implements Runnable {
                 env.ui.setFreeze(this.id, 0);
                 wait = false;
                 penalty = NO_NEED_TO_FREEZE;
-            } catch (InterruptedException ignored) {}
-        }*/
-
+            } catch (InterruptedException ignored) {}*/
         }
 
     }
